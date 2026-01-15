@@ -1585,7 +1585,8 @@
       "rumbleWins": [],
       "rumbleAppearances": 9,
       "isHallOfFamer": false,
-      "imageUrl": "/wrestlers/tna/Jeff Hardy.webp"
+      "imageUrl": "/wrestlers/tna/Jeff Hardy.webp",
+      "isLegend": true
     },
     {
       "id": "matt-hardy",
@@ -1602,7 +1603,8 @@
       "rumbleWins": [],
       "rumbleAppearances": 8,
       "isHallOfFamer": false,
-      "imageUrl": "/wrestlers/tna/Matt Hardy.webp"
+      "imageUrl": "/wrestlers/tna/Matt Hardy.webp",
+      "isLegend": true
     },
     {
       "id": "will-ospreay",
@@ -1713,7 +1715,8 @@
       "rumbleWins": [],
       "rumbleAppearances": 8,
       "isHallOfFamer": true,
-      "imageUrl": "/wrestlers/aew/Adam Copeland Edge.webp"
+      "imageUrl": "/wrestlers/aew/Adam Copeland Edge.webp",
+      "isLegend": true
     },
     {
       "id": "swerve-strickland",
@@ -2134,7 +2137,7 @@
       ],
       "rumbleAppearances": 2,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ronda-rousey.webp"
     },
     {
@@ -2877,7 +2880,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 3,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/tna/Victoria Crawford.webp"
     },
     {
@@ -3509,7 +3512,7 @@
       "name": "Mad Maxine",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -4757,7 +4760,7 @@
       "name": "Alundra Blayze",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -5501,7 +5504,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dean-malenko.webp"
     },
     {
@@ -5517,7 +5520,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/eddieguerrero.webp"
     },
     {
@@ -5533,7 +5536,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/rikishi.webp"
     },
     {
@@ -5549,7 +5552,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tazz.webp"
     },
     {
@@ -5565,7 +5568,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/bubba-ray-dudley.webp"
     },
     {
@@ -5581,7 +5584,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/raven.webp"
     },
     {
@@ -5597,7 +5600,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ron-simmons.webp"
     },
     {
@@ -5613,7 +5616,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/shelton-benjamin.webp"
     },
     {
@@ -5629,7 +5632,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/rhyno.webp"
     },
     {
@@ -5645,7 +5648,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/lancestorm.webp"
     },
     {
@@ -5661,7 +5664,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/billykidman.webp"
     },
     {
@@ -5677,7 +5680,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/stacykeibler.webp"
     },
     {
@@ -5693,7 +5696,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/torriewilson.webp"
     },
     {
@@ -5709,7 +5712,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jazz.webp"
     },
     {
@@ -5725,7 +5728,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/murphy.webp"
     },
     {
@@ -5741,7 +5744,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/drewcarey.webp"
     },
     {
@@ -5757,7 +5760,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/gobbledygooker.webp"
     },
     {
@@ -5773,7 +5776,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jamienoble.webp"
     },
     {
@@ -5789,7 +5792,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/billdemott.webp"
     },
     {
@@ -5805,7 +5808,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kevinnash.webp"
     },
     {
@@ -5821,7 +5824,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/terri-runnels.webp"
     },
     {
@@ -5837,7 +5840,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/batista.webp"
     },
     {
@@ -5853,7 +5856,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/paul-heyman.webp"
     },
     {
@@ -5869,7 +5872,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kenny.webp"
     },
     {
@@ -5885,7 +5888,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/lilian-garcia.webp"
     },
     {
@@ -5917,7 +5920,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/eric-bischoff.webp"
     },
     {
@@ -5933,7 +5936,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jonathan-coachman.webp"
     },
     {
@@ -5949,7 +5952,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/austin-aries.webp"
     },
     {
@@ -5965,7 +5968,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/psicosis.webp"
     },
     {
@@ -5981,7 +5984,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/theodore-long.webp"
     },
     {
@@ -5997,7 +6000,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/chrismasters.webp"
     },
     {
@@ -6013,7 +6016,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/finlay.webp"
     },
     {
@@ -6029,7 +6032,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/joshmathews.webp"
     },
     {
@@ -6045,7 +6048,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/carmella.webp"
     },
     {
@@ -6061,7 +6064,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/carlito.webp"
     },
     {
@@ -6077,7 +6080,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/christy-hemme.webp"
     },
     {
@@ -6093,7 +6096,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/joey-mercury.webp"
     },
     {
@@ -6109,7 +6112,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/bobby-lashley.webp"
     },
     {
@@ -6125,7 +6128,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/melina.webp"
     },
     {
@@ -6141,7 +6144,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mattstriker.webp"
     },
     {
@@ -6157,7 +6160,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/boogeyman.webp"
     },
     {
@@ -6173,7 +6176,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/maria.webp"
     },
     {
@@ -6189,7 +6192,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/michelle-mccool.webp"
     },
     {
@@ -6221,7 +6224,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/nigel-mcguinness.webp"
     },
     {
@@ -6237,7 +6240,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/reymysterio.webp"
     },
     {
@@ -6253,7 +6256,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/roderick-strong.webp"
     },
     {
@@ -6269,7 +6272,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/sandman.webp"
     },
     {
@@ -6285,7 +6288,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/shawn-spears.webp"
     },
     {
@@ -6301,7 +6304,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/finlay.webp"
     },
     {
@@ -6317,7 +6320,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mikey.webp"
     },
     {
@@ -6333,7 +6336,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jillian.webp"
     },
     {
@@ -6349,7 +6352,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jtg.webp"
     },
     {
@@ -6365,7 +6368,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jimmywangyang.webp"
     },
     {
@@ -6381,7 +6384,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/shad.webp"
     },
     {
@@ -6397,7 +6400,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kellykelly.webp"
     },
     {
@@ -6413,7 +6416,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/armandoestrada.webp"
     },
     {
@@ -6421,7 +6424,7 @@
       "name": "Francine",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -6429,7 +6432,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/francine.webp"
     },
     {
@@ -6437,7 +6440,7 @@
       "name": "Mercedes Martinez",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -6445,7 +6448,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mercedes-martinez.webp"
     },
     {
@@ -6461,7 +6464,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/santinomarella.webp"
     },
     {
@@ -6477,7 +6480,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/john-morrison.webp"
     },
     {
@@ -6493,7 +6496,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/bigdaddyv.webp"
     },
     {
@@ -6509,7 +6512,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/hornswoggle.webp"
     },
     {
@@ -6525,7 +6528,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dhsmith.webp"
     },
     {
@@ -6541,7 +6544,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/maryse.webp"
     },
     {
@@ -6557,7 +6560,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/boogeyman.webp"
     },
     {
@@ -6573,7 +6576,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/armandoestrada.webp"
     },
     {
@@ -6589,7 +6592,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/curthawkins.webp"
     },
     {
@@ -6605,7 +6608,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/teddibiase.webp"
     },
     {
@@ -6621,7 +6624,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ranjinsingh.webp"
     },
     {
@@ -6637,7 +6640,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/evanbourne.webp"
     },
     {
@@ -6653,7 +6656,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jack-swagger.webp"
     },
     {
@@ -6669,7 +6672,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/cherry.webp"
     },
     {
@@ -6685,7 +6688,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ezekieljackson.webp"
     },
     {
@@ -6701,7 +6704,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/brie-bella.webp"
     },
     {
@@ -6717,7 +6720,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/nikki-bella.webp"
     },
     {
@@ -6733,7 +6736,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/primo-colon.webp"
     },
     {
@@ -6749,7 +6752,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dolph-ziggler.webp"
     },
     {
@@ -6765,7 +6768,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/michael-cole.webp"
     },
     {
@@ -6781,7 +6784,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/batista.webp"
     },
     {
@@ -6797,7 +6800,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tiffany.webp"
     },
     {
@@ -6813,7 +6816,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tyson-kidd.webp"
     },
     {
@@ -6829,7 +6832,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/alicia-fox.webp"
     },
     {
@@ -6845,7 +6848,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/rosa-mendes.webp"
     },
     {
@@ -6861,7 +6864,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/alexriley.webp"
     },
     {
@@ -6877,7 +6880,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tylerreks.webp"
     },
     {
@@ -6893,7 +6896,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/heath-slater.webp"
     },
     {
@@ -6909,7 +6912,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/luke-gallows.webp"
     },
     {
@@ -6925,7 +6928,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ezekiel.webp"
     },
     {
@@ -6941,7 +6944,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/sunny.webp"
     },
     {
@@ -6957,7 +6960,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/alberto-del-rio.webp"
     },
     {
@@ -6973,7 +6976,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/justingabriel.webp"
     },
     {
@@ -6989,7 +6992,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/daniel-bryan.webp"
     },
     {
@@ -7005,7 +7008,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/david-otunga.webp"
     },
     {
@@ -7021,7 +7024,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/darren-young.webp"
     },
     {
@@ -7037,7 +7040,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tamina.webp"
     },
     {
@@ -7053,7 +7056,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/percy-watson.webp"
     },
     {
@@ -7069,7 +7072,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mason-ryan.webp"
     },
     {
@@ -7085,7 +7088,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/aksana.webp"
     },
     {
@@ -7101,7 +7104,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kaitlyn.webp"
     },
     {
@@ -7117,7 +7120,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/maxine.webp"
     },
     {
@@ -7133,7 +7136,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/brodusclay.webp"
     },
     {
@@ -7149,7 +7152,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/byron-saxton.webp"
     },
     {
@@ -7165,7 +7168,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/titus-oneil.webp"
     },
     {
@@ -7181,7 +7184,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/aj-lee.webp"
     },
     {
@@ -7197,7 +7200,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mike-tyson.webp"
     },
     {
@@ -7213,7 +7216,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jinder-mahal.webp"
     },
     {
@@ -7229,7 +7232,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/sin-cara.webp"
     },
     {
@@ -7245,7 +7248,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/sheamus.webp"
     },
     {
@@ -7261,7 +7264,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/damien-sandow.webp"
     },
     {
@@ -7277,7 +7280,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dean-ambrose.webp"
     },
     {
@@ -7293,7 +7296,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ricardorodriguez.webp"
     },
     {
@@ -7309,7 +7312,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/cesaro.webp"
     },
     {
@@ -7325,7 +7328,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/brad-maddox.webp"
     },
     {
@@ -7341,7 +7344,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/cameron.webp"
     },
     {
@@ -7357,7 +7360,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ryback.webp"
     },
     {
@@ -7373,7 +7376,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kassius-ohno.webp"
     },
     {
@@ -7389,7 +7392,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/paige.webp"
     },
     {
@@ -7405,7 +7408,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/john-laurinaitis.webp"
     },
     {
@@ -7421,7 +7424,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/corey-graves.webp"
     },
     {
@@ -7437,7 +7440,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/aiden-english.webp"
     },
     {
@@ -7445,7 +7448,7 @@
       "name": "Emma",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -7453,7 +7456,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/emma.webp"
     },
     {
@@ -7469,7 +7472,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/rowan.webp"
     },
     {
@@ -7485,7 +7488,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/harper.webp"
     },
     {
@@ -7501,7 +7504,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/bray-wyatt.webp"
     },
     {
@@ -7517,7 +7520,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/summer-rae.webp"
     },
     {
@@ -7533,7 +7536,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/neville.webp"
     },
     {
@@ -7549,7 +7552,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jason-jordan.webp"
     },
     {
@@ -7565,7 +7568,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/sasha-banks.webp"
     },
     {
@@ -7581,7 +7584,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/fandango.webp"
     },
     {
@@ -7597,7 +7600,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/baron-corbin.webp"
     },
     {
@@ -7613,7 +7616,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mojo-rawley.webp"
     },
     {
@@ -7629,7 +7632,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/cameron.webp"
     },
     {
@@ -7645,7 +7648,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/geneokerlund.webp"
     },
     {
@@ -7661,7 +7664,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kharma.webp"
     },
     {
@@ -7677,7 +7680,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/scott-dawson.webp"
     },
     {
@@ -7693,7 +7696,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/curtis-axel.webp"
     },
     {
@@ -7709,7 +7712,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/rusev.webp"
     },
     {
@@ -7725,7 +7728,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/danny-burch.webp"
     },
     {
@@ -7741,7 +7744,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tyler-breeze.webp"
     },
     {
@@ -7757,7 +7760,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/eva-marie.webp"
     },
     {
@@ -7773,7 +7776,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kalisto.webp"
     },
     {
@@ -7789,7 +7792,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/adamrose.webp"
     },
     {
@@ -7805,7 +7808,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jojo.webp"
     },
     {
@@ -7821,7 +7824,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/konnor.webp"
     },
     {
@@ -7837,7 +7840,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/simon-gotch.webp"
     },
     {
@@ -7853,7 +7856,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/murphy.webp"
     },
     {
@@ -7869,7 +7872,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/cesaro.webp"
     },
     {
@@ -7885,7 +7888,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/rusev.webp"
     },
     {
@@ -7901,7 +7904,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dash-wilder.webp"
     },
     {
@@ -7917,7 +7920,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/hideo-itami.webp"
     },
     {
@@ -7933,7 +7936,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/steve-cutler.webp"
     },
     {
@@ -7949,7 +7952,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dana-brooke.webp"
     },
     {
@@ -7965,7 +7968,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/big-cass.webp"
     },
     {
@@ -7981,7 +7984,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/neville.webp"
     },
     {
@@ -7997,7 +8000,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/murphy.webp"
     },
     {
@@ -8029,7 +8032,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/riddick-moss.webp"
     },
     {
@@ -8045,7 +8048,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/billie-kay.webp"
     },
     {
@@ -8061,7 +8064,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/peyton-royce.webp"
     },
     {
@@ -8077,7 +8080,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/alexander-wolfe.webp"
     },
     {
@@ -8093,7 +8096,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tino-sabbatelli.webp"
     },
     {
@@ -8101,7 +8104,7 @@
       "name": "Aliyah",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -8109,7 +8112,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/aliyah.webp"
     },
     {
@@ -8133,7 +8136,7 @@
       "name": "Deonna Purrazzo",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -8141,7 +8144,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/deonna-purrazzo.webp"
     },
     {
@@ -8157,7 +8160,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mandy-rose.webp"
     },
     {
@@ -8173,7 +8176,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/karl-anderson.webp"
     },
     {
@@ -8189,7 +8192,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/no-way-jose.webp"
     },
     {
@@ -8205,7 +8208,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ember-moon.webp"
     },
     {
@@ -8221,7 +8224,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/oney-lorcan.webp"
     },
     {
@@ -8237,7 +8240,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/andrade.webp"
     },
     {
@@ -8253,7 +8256,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/cedric-alexander.webp"
     },
     {
@@ -8269,7 +8272,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/lince-dorado.webp"
     },
     {
@@ -8285,7 +8288,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/akam.webp"
     },
     {
@@ -8301,7 +8304,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/rezar.webp"
     },
     {
@@ -8309,7 +8312,7 @@
       "name": "Lana",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -8317,7 +8320,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/lana.webp"
     },
     {
@@ -8333,7 +8336,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/noam-dar.webp"
     },
     {
@@ -8349,7 +8352,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tony-nese.webp"
     },
     {
@@ -8365,7 +8368,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/drew-gulak.webp"
     },
     {
@@ -8381,7 +8384,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ariya-daivari.webp"
     },
     {
@@ -8397,7 +8400,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/gran-metalik.webp"
     },
     {
@@ -8413,7 +8416,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/james-ellsworth.webp"
     },
     {
@@ -8429,7 +8432,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/hoho-lun.webp"
     },
     {
@@ -8445,7 +8448,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/harper.webp"
     },
     {
@@ -8461,7 +8464,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kona-reeves.webp"
     },
     {
@@ -8477,7 +8480,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/scarlett.webp"
     },
     {
@@ -8493,7 +8496,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tozawa.webp"
     },
     {
@@ -8509,7 +8512,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/aleister-black.webp"
     },
     {
@@ -8525,7 +8528,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/killian-dain.webp"
     },
     {
@@ -8557,7 +8560,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/epico-colon.webp"
     },
     {
@@ -8573,7 +8576,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/lars-sullivan.webp"
     },
     {
@@ -8589,7 +8592,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/elias.webp"
     },
     {
@@ -8605,7 +8608,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/lacey-evans.webp"
     },
     {
@@ -8621,7 +8624,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mike-kanellis.webp"
     },
     {
@@ -8637,7 +8640,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tyler-bate.webp"
     },
     {
@@ -8653,7 +8656,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/trent-seven.webp"
     },
     {
@@ -8669,7 +8672,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/bobby-fish.webp"
     },
     {
@@ -8701,7 +8704,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dakota-kai.webp"
     },
     {
@@ -8717,7 +8720,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tjp.webp"
     },
     {
@@ -8749,7 +8752,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mark-andrews.webp"
     },
     {
@@ -8765,7 +8768,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dijak.webp"
     },
     {
@@ -8781,7 +8784,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/joseph-conners.webp"
     },
     {
@@ -8797,7 +8800,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/lio-rush.webp"
     },
     {
@@ -8813,7 +8816,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/rowan.webp"
     },
     {
@@ -8829,7 +8832,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/harper.webp"
     },
     {
@@ -8845,7 +8848,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ruby-riott.webp"
     },
     {
@@ -8861,7 +8864,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/taynara-conti.webp"
     },
     {
@@ -8877,7 +8880,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tyson-t-bone.webp"
     },
     {
@@ -8893,7 +8896,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/sam-gradwell.webp"
     },
     {
@@ -8909,7 +8912,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/saxon-huxley.webp"
     },
     {
@@ -8925,7 +8928,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/samir-singh.webp"
     },
     {
@@ -8941,7 +8944,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/sunil-singh.webp"
     },
     {
@@ -8957,7 +8960,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tucker.webp"
     },
     {
@@ -8965,7 +8968,7 @@
       "name": "Jinny",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -8973,7 +8976,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jinny.webp"
     },
     {
@@ -8989,7 +8992,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ec3.webp"
     },
     {
@@ -9005,7 +9008,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jaxson-ryker.webp"
     },
     {
@@ -9021,7 +9024,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/matt-riddle.webp"
     },
     {
@@ -9029,7 +9032,7 @@
       "name": "Marina Shafir",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -9037,7 +9040,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/marina-shafir.webp"
     },
     {
@@ -9045,7 +9048,7 @@
       "name": "Jessamyn Duke",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -9053,7 +9056,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jessamyn-duke.webp"
     },
     {
@@ -9069,7 +9072,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/boa.webp"
     },
     {
@@ -9085,7 +9088,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/joe-coffey.webp"
     },
     {
@@ -9101,7 +9104,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kenny-williams.webp"
     },
     {
@@ -9117,7 +9120,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mark-coffey.webp"
     },
     {
@@ -9133,7 +9136,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/flash-morgan-webster.webp"
     },
     {
@@ -9149,7 +9152,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dave-mastiff.webp"
     },
     {
@@ -9165,7 +9168,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/amir-jordan.webp"
     },
     {
@@ -9173,7 +9176,7 @@
       "name": "Isla Dawn",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -9181,7 +9184,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/isla-dawn.webp"
     },
     {
@@ -9197,7 +9200,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ashton-smith.webp"
     },
     {
@@ -9213,7 +9216,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/eddie-dennis.webp"
     },
     {
@@ -9221,7 +9224,7 @@
       "name": "Nina Samuels",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -9229,7 +9232,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/nina-samuels.webp"
     },
     {
@@ -9245,7 +9248,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/meiko-satomura.webp"
     },
     {
@@ -9261,7 +9264,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tegan-nox.webp"
     },
     {
@@ -9277,7 +9280,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/drake-maverick.webp"
     },
     {
@@ -9293,7 +9296,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/sid-scala.webp"
     },
     {
@@ -9309,7 +9312,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dijak.webp"
     },
     {
@@ -9325,7 +9328,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dijak.webp"
     },
     {
@@ -9357,7 +9360,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/robert-roode.webp"
     },
     {
@@ -9373,7 +9376,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kushida.webp"
     },
     {
@@ -9389,7 +9392,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mansoor.webp"
     },
     {
@@ -9405,7 +9408,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/cameron-grimes.webp"
     },
     {
@@ -9421,7 +9424,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jessi-kamea.webp"
     },
     {
@@ -9437,7 +9440,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ridge-holland.webp"
     },
     {
@@ -9453,7 +9456,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/arturo-ruas.webp"
     },
     {
@@ -9469,7 +9472,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kayden-carter.webp"
     },
     {
@@ -9485,7 +9488,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/primate.webp"
     },
     {
@@ -9501,7 +9504,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dani-luna.webp"
     },
     {
@@ -9509,7 +9512,7 @@
       "name": "Amale",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -9517,7 +9520,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/amale.webp"
     },
     {
@@ -9533,7 +9536,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/leon-ruff.webp"
     },
     {
@@ -9549,7 +9552,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/sha-samuels.webp"
     },
     {
@@ -9565,7 +9568,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jake-atlas.webp"
     },
     {
@@ -9573,7 +9576,7 @@
       "name": "Indi Hartwell",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -9581,7 +9584,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/indi-hartwell.webp"
     },
     {
@@ -9597,7 +9600,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/timothy-thatcher.webp"
     },
     {
@@ -9613,7 +9616,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ashante-adonis.webp"
     },
     {
@@ -9645,7 +9648,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mace.webp"
     },
     {
@@ -9661,7 +9664,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/rampage-brown.webp"
     },
     {
@@ -9669,7 +9672,7 @@
       "name": "Aleah James",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -9677,7 +9680,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/aleah-james.webp"
     },
     {
@@ -9693,7 +9696,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/pat-mcafee.webp"
     },
     {
@@ -9709,7 +9712,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/saurav.webp"
     },
     {
@@ -9725,7 +9728,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/rick-boogs.webp"
     },
     {
@@ -9741,7 +9744,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ikemen-jiro.webp"
     },
     {
@@ -9757,7 +9760,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/shotzi.webp"
     },
     {
@@ -9765,7 +9768,7 @@
       "name": "Amari Miller",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -9773,7 +9776,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/amari-miller.webp"
     },
     {
@@ -9821,7 +9824,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/joe-gacy.webp"
     },
     {
@@ -9837,7 +9840,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/malik-blade.webp"
     },
     {
@@ -9853,7 +9856,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/sarray.webp"
     },
     {
@@ -9869,7 +9872,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/asher-hale.webp"
     },
     {
@@ -9885,7 +9888,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/gigi-dolin.webp"
     },
     {
@@ -9901,7 +9904,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/teoman.webp"
     },
     {
@@ -9917,7 +9920,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ari-sterling.webp"
     },
     {
@@ -9933,7 +9936,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/trey-baxter.webp"
     },
     {
@@ -9949,7 +9952,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/emilia-mckenzie.webp"
     },
     {
@@ -9965,7 +9968,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/shanky.webp"
     },
     {
@@ -9981,7 +9984,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/stevie-turner.webp"
     },
     {
@@ -9997,7 +10000,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/duke-hudson.webp"
     },
     {
@@ -10013,7 +10016,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/elektra-lopez.webp"
     },
     {
@@ -10029,7 +10032,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/guru-raaj.webp"
     },
     {
@@ -10045,7 +10048,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/rohan-raja.webp"
     },
     {
@@ -10061,7 +10064,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/top-dolla.webp"
     },
     {
@@ -10077,7 +10080,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/persia-pirotta.webp"
     },
     {
@@ -10093,7 +10096,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ru-feng.webp"
     },
     {
@@ -10109,7 +10112,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/blair-davenport.webp"
     },
     {
@@ -10125,7 +10128,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dante-chen.webp"
     },
     {
@@ -10141,7 +10144,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/draco-anthony.webp"
     },
     {
@@ -10157,7 +10160,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/adam-pearce.webp"
     },
     {
@@ -10165,7 +10168,7 @@
       "name": "B-FAB",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -10173,7 +10176,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/b-fab.webp"
     },
     {
@@ -10189,7 +10192,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/harland.webp"
     },
     {
@@ -10205,7 +10208,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/bad-bunny.webp"
     },
     {
@@ -10221,7 +10224,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/damon-kemp.webp"
     },
     {
@@ -10237,7 +10240,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/shanky.webp"
     },
     {
@@ -10253,7 +10256,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/nikkita-lyons.webp"
     },
     {
@@ -10293,7 +10296,7 @@
       "name": "Kiana James",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -10301,7 +10304,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kiana-james.webp"
     },
     {
@@ -10317,7 +10320,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/javier-bernal.webp"
     },
     {
@@ -10333,7 +10336,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ciampa.webp"
     },
     {
@@ -10349,7 +10352,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/bodhi-hayward.webp"
     },
     {
@@ -10357,7 +10360,7 @@
       "name": "Arianna Grace",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -10365,7 +10368,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/arianna-grace.webp"
     },
     {
@@ -10381,7 +10384,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/katana-chance.webp"
     },
     {
@@ -10397,7 +10400,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/rip-fowler.webp"
     },
     {
@@ -10413,7 +10416,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jagger-reid.webp"
     },
     {
@@ -10429,7 +10432,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/myles-borne.webp"
     },
     {
@@ -10445,7 +10448,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/quincy-elliott.webp"
     },
     {
@@ -10461,7 +10464,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mace.webp"
     },
     {
@@ -10477,7 +10480,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mansoor.webp"
     },
     {
@@ -10493,7 +10496,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/hank-walker.webp"
     },
     {
@@ -10509,7 +10512,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/oro-mensah.webp"
     },
     {
@@ -10525,7 +10528,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/sloane-jacobs.webp"
     },
     {
@@ -10541,7 +10544,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/bronco-nima.webp"
     },
     {
@@ -10557,7 +10560,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jakara-jackson.webp"
     },
     {
@@ -10573,7 +10576,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/lucien-price.webp"
     },
     {
@@ -10581,7 +10584,7 @@
       "name": "Dani Palmer",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -10589,7 +10592,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dani-palmer.webp"
     },
     {
@@ -10605,7 +10608,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/scrypts.webp"
     },
     {
@@ -10621,7 +10624,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tank-ledger.webp"
     },
     {
@@ -10637,7 +10640,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/b-fab.webp"
     },
     {
@@ -10653,7 +10656,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tavion-heights.webp"
     },
     {
@@ -10669,7 +10672,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kale-dixon.webp"
     },
     {
@@ -10685,7 +10688,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/eddy-thorpe.webp"
     },
     {
@@ -10701,7 +10704,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/luca-crusifino.webp"
     },
     {
@@ -10717,7 +10720,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/riley-osborne.webp"
     },
     {
@@ -10725,7 +10728,7 @@
       "name": "Izzi Dame",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -10733,7 +10736,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/izzi-dame.webp"
     },
     {
@@ -10749,7 +10752,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/karmen-petrovic.webp"
     },
     {
@@ -10765,7 +10768,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tyriek-igwe.webp"
     },
     {
@@ -10781,7 +10784,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tyson-dupont.webp"
     },
     {
@@ -10797,7 +10800,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dabba-kato.webp"
     },
     {
@@ -10805,7 +10808,7 @@
       "name": "Brinley Reece",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -10813,7 +10816,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/brinley-reece.webp"
     },
     {
@@ -10829,7 +10832,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ava.webp"
     },
     {
@@ -10837,7 +10840,7 @@
       "name": "Maxxine Dupri",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -10845,7 +10848,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/maxxine-dupri.webp"
     },
     {
@@ -10853,7 +10856,7 @@
       "name": "Adriana Rizzo",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -10861,7 +10864,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/adriana-rizzo.webp"
     },
     {
@@ -10877,7 +10880,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/dion-lennox.webp"
     },
     {
@@ -10893,7 +10896,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/mr-stone.webp"
     },
     {
@@ -10909,7 +10912,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/snoopdogg.webp"
     },
     {
@@ -10925,7 +10928,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jazmyn-nyx.webp"
     },
     {
@@ -10933,7 +10936,7 @@
       "name": "Kendal Grey",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -10941,7 +10944,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kendal-grey.webp"
     },
     {
@@ -10949,7 +10952,7 @@
       "name": "Carlee Bright",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -10957,7 +10960,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/carlee-bright.webp"
     },
     {
@@ -10965,7 +10968,7 @@
       "name": "Lainey Reid",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -10973,7 +10976,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/lainey-reid.webp"
     },
     {
@@ -11005,7 +11008,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/cutler-james.webp"
     },
     {
@@ -11021,7 +11024,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jasper-troy.webp"
     },
     {
@@ -11053,7 +11056,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/tyra-mae-steele.webp"
     },
     {
@@ -11061,7 +11064,7 @@
       "name": "Kali Armstrong",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -11069,7 +11072,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/kali-armstrong.webp"
     },
     {
@@ -11085,7 +11088,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/niko-vance.webp"
     },
     {
@@ -11101,7 +11104,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/finlay.webp"
     },
     {
@@ -11117,7 +11120,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/saquon-shugars.webp"
     },
     {
@@ -11133,7 +11136,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/ricky-saints.webp"
     },
     {
@@ -11149,7 +11152,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/osiris-griffin.webp"
     },
     {
@@ -11165,7 +11168,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/rey-fenix.webp"
     },
     {
@@ -11181,7 +11184,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jc-mateo.webp"
     },
     {
@@ -11197,7 +11200,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/el-grande-americano.webp"
     },
     {
@@ -11213,7 +11216,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/jackson-drake.webp"
     },
     {
@@ -11221,7 +11224,7 @@
       "name": "Blake Monroe",
       "promotion": "WWE",
       "brand": null,
-      "gender": "male",
+      "gender": "female",
       "isCurrentChampion": false,
       "championships": [],
       "isFormerChampion": false,
@@ -11229,7 +11232,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/blake-monroe.webp"
     },
     {
@@ -11245,7 +11248,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/talla-tonga.webp"
     },
     {
@@ -11261,7 +11264,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "isLegend": true,
+      "isLegend": false,
       "imageUrl": "/wrestlers/wwe/la-parka.webp"
     }
   ]
