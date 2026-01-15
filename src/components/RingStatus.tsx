@@ -35,7 +35,7 @@ export default function RingStatus({ rumbleType }: RingStatusProps) {
         </h3>
         {winner && (
           <div className="flex items-center gap-3 p-2 bg-yellow-900/20 rounded-lg">
-            <div className="w-12 h-12 rounded-full bg-gray-700 overflow-hidden">
+            <div className="w-12 h-12 rounded-lg bg-gray-700 overflow-hidden">
               {winner.imageUrl ? (
                 <img src={winner.imageUrl} alt={winner.name} className="w-full h-full object-cover" />
               ) : (
@@ -81,7 +81,7 @@ export default function RingStatus({ rumbleType }: RingStatusProps) {
                 </div>
 
                 {/* Wrestler Image */}
-                <div className="w-10 h-10 rounded-full bg-gray-700 overflow-hidden flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-gray-700 overflow-hidden flex-shrink-0">
                   {wrestler.imageUrl ? (
                     <img src={wrestler.imageUrl} alt={wrestler.name} className="w-full h-full object-cover" />
                   ) : (

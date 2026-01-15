@@ -136,7 +136,7 @@ export default function AdminPanel({ rumbleType }: AdminPanelProps) {
                 <div className="w-6 h-6 rounded-full bg-purple-600 text-white text-xs flex items-center justify-center font-bold flex-shrink-0">
                   {entryNumber}
                 </div>
-                <div className="w-8 h-8 rounded-full bg-gray-700 overflow-hidden flex-shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-gray-700 overflow-hidden flex-shrink-0">
                   {wrestler.imageUrl ? (
                     <img src={wrestler.imageUrl} alt={wrestler.name} className="w-full h-full object-cover" />
                   ) : (

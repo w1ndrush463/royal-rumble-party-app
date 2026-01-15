@@ -72,7 +72,7 @@ export default function WrestlerCard({
 
       <div className="flex items-center gap-3">
         {/* Wrestler Image */}
-        <div className={`${imageSize[size]} rounded-full bg-gray-700 flex-shrink-0 overflow-hidden`}>
+        <div className={`${imageSize[size]} rounded-lg bg-gray-700 flex-shrink-0 overflow-hidden`}>
           {wrestler.imageUrl ? (
             <img
               src={wrestler.imageUrl}
