@@ -240,7 +240,7 @@
       "rumbleAppearances": 14,
       "isHallOfFamer": true,
       "isLegend": true,
-      "imageUrl": ""
+      "imageUrl": "/wrestlers/wwe/undertaker.webp"
     },
     {
       "id": "damian-priest",
@@ -722,7 +722,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 8,
       "isHallOfFamer": false,
-      "imageUrl": ""
+      "imageUrl": "/wrestlers/wwe/xavier-woods.webp"
     },
     {
       "id": "big-e",
@@ -1354,7 +1354,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "imageUrl": ""
+      "imageUrl": "/wrestlers/wwe/uncle-howdy.webp"
     },
     {
       "id": "elton-prince",
@@ -2331,7 +2331,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 2,
       "isHallOfFamer": false,
-      "imageUrl": ""
+      "imageUrl": "/wrestlers/wwe/zoey-stark.webp"
     },
     {
       "id": "zelina-vega",
@@ -2346,7 +2346,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 5,
       "isHallOfFamer": false,
-      "imageUrl": ""
+      "imageUrl": "/wrestlers/wwe/zelina-vega.webp"
     },
     {
       "id": "roxanne-perez",
@@ -2535,7 +2535,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 1,
       "isHallOfFamer": false,
-      "imageUrl": ""
+      "imageUrl": "/wrestlers/wwe/wendy-choo.webp"
     },
     {
       "id": "tatum-paxley",
@@ -2565,7 +2565,7 @@
       "rumbleWins": [],
       "rumbleAppearances": 0,
       "isHallOfFamer": false,
-      "imageUrl": ""
+      "imageUrl": "/wrestlers/wwe/zaria.webp"
     },
     {
       "id": "jacy-jayne",
