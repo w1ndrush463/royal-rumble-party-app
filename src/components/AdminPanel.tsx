@@ -133,8 +133,17 @@ export default function AdminPanel({ rumbleType }: AdminPanelProps) {
                 onClick={() => handleEliminate(wrestler.id)}
                 className="flex items-center gap-2 p-2 bg-gray-800 hover:bg-red-900/50 rounded-lg text-left transition-colors group"
               >
-                <div className="w-6 h-6 rounded-full bg-purple-600 text-white text-xs flex items-center justify-center font-bold">
+                <div className="w-6 h-6 rounded-full bg-purple-600 text-white text-xs flex items-center justify-center font-bold flex-shrink-0">
                   {entryNumber}
+                </div>
+                <div className="w-8 h-8 rounded-full bg-gray-700 overflow-hidden flex-shrink-0">
+                  {wrestler.imageUrl ? (
+                    <img src={wrestler.imageUrl} alt={wrestler.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs font-bold">
+                      {wrestler.name.charAt(0)}
+                    </div>
+                  )}
                 </div>
                 <span className="text-white text-sm truncate flex-1">{wrestler.name}</span>
                 <span className="text-red-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
