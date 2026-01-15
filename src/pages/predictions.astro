@@ -21,61 +21,206 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- Prediction Categories -->
     <div class="grid md:grid-cols-2 gap-6">
-      <!-- Pre-Match Predictions -->
-      <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+      <!-- Men's Rumble Predictions -->
+      <section class="bg-gray-900 rounded-xl p-6 border border-blue-800">
         <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-          <span class="text-2xl">🎯</span>
-          Pre-Match Predictions
+          <span class="text-2xl">👔</span>
+          Men's Rumble Predictions
         </h2>
-        <p class="text-gray-400 text-sm mb-4">Make these picks before the match starts</p>
+        <p class="text-gray-400 text-sm mb-4">Make your picks for the Men's Royal Rumble</p>
 
         <div class="space-y-4">
-          <!-- Winner Prediction -->
           <div class="p-4 bg-gray-800 rounded-lg">
             <h4 class="text-white font-medium mb-2">Who wins the Men's Rumble?</h4>
-            <select id="mens-winner" class="w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-purple-500">
+            <select id="mens-winner" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-blue-500">
               <option value="">Select wrestler...</option>
             </select>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Who wins the Women's Rumble?</h4>
-            <select id="womens-winner" class="w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-purple-500">
-              <option value="">Select wrestler...</option>
-            </select>
-          </div>
-
-          <!-- Lucky 27 -->
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Will Entry #27 win?</h4>
-            <p class="text-gray-400 text-xs mb-2">#27 has historically been the "lucky number"</p>
-            <div class="flex gap-2">
-              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-green-600 hover:text-white" data-prediction="lucky27" data-value="yes">
-                Yes
-              </button>
-              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-red-600 hover:text-white" data-prediction="lucky27" data-value="no">
-                No
-              </button>
-            </div>
-          </div>
-
-          <!-- Iron Man -->
           <div class="p-4 bg-gray-800 rounded-lg">
             <h4 class="text-white font-medium mb-2">Who gets Iron Man (longest time)?</h4>
-            <select id="ironman" class="w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-purple-500">
+            <select id="mens-ironman" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-blue-500">
               <option value="">Select wrestler...</option>
             </select>
           </div>
 
-          <!-- Most Eliminations -->
           <div class="p-4 bg-gray-800 rounded-lg">
             <h4 class="text-white font-medium mb-2">Who gets most eliminations?</h4>
-            <select id="most-elims" class="w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-purple-500">
+            <select id="mens-elims" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-blue-500">
               <option value="">Select wrestler...</option>
+            </select>
+          </div>
+
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">First elimination?</h4>
+            <select id="mens-first-elim" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-blue-500">
+              <option value="">Select wrestler...</option>
+            </select>
+          </div>
+
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Final two wrestlers?</h4>
+            <div class="grid grid-cols-2 gap-2">
+              <select id="mens-final-1" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-blue-500 text-sm">
+                <option value="">First finalist...</option>
+              </select>
+              <select id="mens-final-2" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-blue-500 text-sm">
+                <option value="">Second finalist...</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Women's Rumble Predictions -->
+      <section class="bg-gray-900 rounded-xl p-6 border border-pink-800">
+        <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+          <span class="text-2xl">👗</span>
+          Women's Rumble Predictions
+        </h2>
+        <p class="text-gray-400 text-sm mb-4">Make your picks for the Women's Royal Rumble</p>
+
+        <div class="space-y-4">
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Who wins the Women's Rumble?</h4>
+            <select id="womens-winner" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-pink-500">
+              <option value="">Select wrestler...</option>
+            </select>
+          </div>
+
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Who gets Iron Woman (longest time)?</h4>
+            <select id="womens-ironwoman" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-pink-500">
+              <option value="">Select wrestler...</option>
+            </select>
+          </div>
+
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Who gets most eliminations?</h4>
+            <select id="womens-elims" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-pink-500">
+              <option value="">Select wrestler...</option>
+            </select>
+          </div>
+
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">First elimination?</h4>
+            <select id="womens-first-elim" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-pink-500">
+              <option value="">Select wrestler...</option>
+            </select>
+          </div>
+
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Final two wrestlers?</h4>
+            <div class="grid grid-cols-2 gap-2">
+              <select id="womens-final-1" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-pink-500 text-sm">
+                <option value="">First finalist...</option>
+              </select>
+              <select id="womens-final-2" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-pink-500 text-sm">
+                <option value="">Second finalist...</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Surprise Entrants & Special Predictions -->
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Surprise Entrants -->
+      <section class="bg-gray-900 rounded-xl p-6 border border-yellow-800">
+        <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+          <span class="text-2xl">🎭</span>
+          Surprise Entrant Predictions
+        </h2>
+        <p class="text-gray-400 text-sm mb-4">Which non-WWE wrestlers might show up?</p>
+
+        <div class="space-y-4">
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">AEW surprise entrant?</h4>
+            <p class="text-gray-400 text-xs mb-2">Will anyone from AEW make a shock appearance?</p>
+            <select id="aew-surprise" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-yellow-500">
+              <option value="">Select wrestler or "None"...</option>
+              <option value="none">No AEW surprise</option>
+            </select>
+          </div>
+
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">TNA surprise entrant?</h4>
+            <p class="text-gray-400 text-xs mb-2">Will anyone from TNA make an appearance?</p>
+            <select id="tna-surprise" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-yellow-500">
+              <option value="">Select wrestler or "None"...</option>
+              <option value="none">No TNA surprise</option>
+            </select>
+          </div>
+
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Legend/HOF return?</h4>
+            <p class="text-gray-400 text-xs mb-2">Which legend will make a surprise return?</p>
+            <select id="legend-return" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-yellow-500">
+              <option value="">Select legend or "None"...</option>
+              <option value="none">No legend return</option>
             </select>
           </div>
         </div>
       </section>
+
+      <!-- Special Predictions -->
+      <section class="bg-gray-900 rounded-xl p-6 border border-purple-800">
+        <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+          <span class="text-2xl">🎲</span>
+          Special Predictions
+        </h2>
+        <p class="text-gray-400 text-sm mb-4">Bold predictions and fun bets</p>
+
+        <div class="space-y-4">
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Will Entry #27 win either Rumble?</h4>
+            <p class="text-gray-400 text-xs mb-2">#27 has historically been the "lucky number"</p>
+            <div class="flex gap-2">
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-green-600 hover:text-white" data-prediction="lucky27" data-value="yes">Yes</button>
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-red-600 hover:text-white" data-prediction="lucky27" data-value="no">No</button>
+            </div>
+          </div>
+
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Will a champion enter the Rumble?</h4>
+            <div class="flex gap-2">
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-green-600 hover:text-white" data-prediction="champion-enters" data-value="yes">Yes</button>
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-red-600 hover:text-white" data-prediction="champion-enters" data-value="no">No</button>
+            </div>
+          </div>
+
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Will there be a celebrity entrant?</h4>
+            <div class="flex gap-2">
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-green-600 hover:text-white" data-prediction="celebrity" data-value="yes">Yes</button>
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-red-600 hover:text-white" data-prediction="celebrity" data-value="no">No</button>
+            </div>
+          </div>
+
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Will CM Punk and Seth Rollins be in the ring together?</h4>
+            <div class="flex gap-2">
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-green-600 hover:text-white" data-prediction="punk-seth" data-value="yes">Yes</button>
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-red-600 hover:text-white" data-prediction="punk-seth" data-value="no">No</button>
+            </div>
+          </div>
+
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Winning entry number range?</h4>
+            <p class="text-gray-400 text-xs mb-2">What range will the winner enter from?</p>
+            <div class="grid grid-cols-3 gap-2">
+              <button class="prediction-btn py-2 rounded bg-gray-700 text-gray-300 hover:bg-purple-600 hover:text-white text-sm" data-prediction="entry-range" data-value="1-10">#1-10</button>
+              <button class="prediction-btn py-2 rounded bg-gray-700 text-gray-300 hover:bg-purple-600 hover:text-white text-sm" data-prediction="entry-range" data-value="11-20">#11-20</button>
+              <button class="prediction-btn py-2 rounded bg-gray-700 text-gray-300 hover:bg-purple-600 hover:text-white text-sm" data-prediction="entry-range" data-value="21-30">#21-30</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- During-Match Section -->
+    <div class="grid md:grid-cols-1 gap-6">
 
       <!-- During-Match Predictions -->
       <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
@@ -200,29 +345,43 @@ import Layout from '../layouts/Layout.astro';
   const wrestlers = $wrestlers.get();
   const maleWrestlers = wrestlers.filter(w => w.gender === 'male').sort((a, b) => a.name.localeCompare(b.name));
   const femaleWrestlers = wrestlers.filter(w => w.gender === 'female').sort((a, b) => a.name.localeCompare(b.name));
+  const aewWrestlers = wrestlers.filter(w => w.promotion === 'AEW').sort((a, b) => a.name.localeCompare(b.name));
+  const tnaWrestlers = wrestlers.filter(w => w.promotion === 'TNA').sort((a, b) => a.name.localeCompare(b.name));
+  const legends = wrestlers.filter(w => w.isLegend || w.isHallOfFamer).sort((a, b) => a.name.localeCompare(b.name));
 
-  const selects = ['mens-winner', 'ironman', 'most-elims'];
-  selects.forEach(id => {
-    const select = document.getElementById(id) as HTMLSelectElement;
-    if (select) {
-      maleWrestlers.forEach(w => {
-        const option = document.createElement('option');
-        option.value = w.id;
-        option.textContent = w.name + (w.isCurrentChampion ? ' (Champion)' : '') + (w.isFormerRumbleWinner ? ' (Former RR Winner)' : '');
-        select.appendChild(option);
-      });
-    }
-  });
+  // Helper to add options to a select
+  function populateSelect(selectId: string, wrestlerList: typeof wrestlers, showBadges = true) {
+    const select = document.getElementById(selectId) as HTMLSelectElement;
+    if (!select) return;
 
-  const womensWinner = document.getElementById('womens-winner') as HTMLSelectElement;
-  if (womensWinner) {
-    femaleWrestlers.forEach(w => {
+    wrestlerList.forEach(w => {
       const option = document.createElement('option');
       option.value = w.id;
-      option.textContent = w.name + (w.isCurrentChampion ? ' (Champion)' : '') + (w.isFormerRumbleWinner ? ' (Former RR Winner)' : '');
-      womensWinner.appendChild(option);
+      let label = w.name;
+      if (showBadges) {
+        if (w.isCurrentChampion) label += ' (Champion)';
+        if (w.isFormerRumbleWinner) label += ' (RR Winner)';
+        if (w.isHallOfFamer) label += ' (HOF)';
+      }
+      option.textContent = label;
+      select.appendChild(option);
     });
   }
+
+  // Men's Rumble selects
+  ['mens-winner', 'mens-ironman', 'mens-elims', 'mens-first-elim', 'mens-final-1', 'mens-final-2'].forEach(id => {
+    populateSelect(id, maleWrestlers);
+  });
+
+  // Women's Rumble selects
+  ['womens-winner', 'womens-ironwoman', 'womens-elims', 'womens-first-elim', 'womens-final-1', 'womens-final-2'].forEach(id => {
+    populateSelect(id, femaleWrestlers);
+  });
+
+  // Surprise entrant selects
+  populateSelect('aew-surprise', aewWrestlers);
+  populateSelect('tna-surprise', tnaWrestlers);
+  populateSelect('legend-return', legends);
 
   // Handle prediction button clicks
   document.querySelectorAll('.prediction-btn').forEach(btn => {
@@ -232,17 +391,72 @@ import Layout from '../layouts/Layout.astro';
 
       // Remove selected from siblings
       document.querySelectorAll(`[data-prediction="${prediction}"]`).forEach(b => {
-        b.classList.remove('selected', 'bg-green-600', 'bg-red-600', 'text-white');
+        b.classList.remove('selected', 'bg-green-600', 'bg-red-600', 'bg-purple-600', 'text-white');
         b.classList.add('bg-gray-700', 'text-gray-300');
       });
 
       // Add selected to this one
-      btn.classList.add('selected', value === 'yes' ? 'bg-green-600' : 'bg-red-600', 'text-white');
+      const colorClass = value === 'yes' ? 'bg-green-600' : value === 'no' ? 'bg-red-600' : 'bg-purple-600';
+      btn.classList.add('selected', colorClass, 'text-white');
       btn.classList.remove('bg-gray-700', 'text-gray-300');
 
+      savePredictions();
       updatePredictionsSummary();
     });
   });
+
+  // Save predictions to localStorage
+  function savePredictions() {
+    const user = $currentUser.get();
+    if (!user) return;
+
+    const predictions: Record<string, string> = {};
+
+    // Save all select values
+    document.querySelectorAll('.prediction-select').forEach(select => {
+      const el = select as HTMLSelectElement;
+      if (el.value) {
+        predictions[el.id] = el.value;
+      }
+    });
+
+    // Save all button predictions
+    document.querySelectorAll('.prediction-btn.selected').forEach(btn => {
+      const el = btn as HTMLElement;
+      if (el.dataset.prediction && el.dataset.value) {
+        predictions[el.dataset.prediction] = el.dataset.value;
+      }
+    });
+
+    localStorage.setItem(`predictions-${user.id}`, JSON.stringify(predictions));
+  }
+
+  // Load predictions from localStorage
+  function loadPredictions() {
+    const user = $currentUser.get();
+    if (!user) return;
+
+    const saved = localStorage.getItem(`predictions-${user.id}`);
+    if (!saved) return;
+
+    const predictions = JSON.parse(saved);
+
+    // Restore select values
+    Object.entries(predictions).forEach(([key, value]) => {
+      const select = document.getElementById(key) as HTMLSelectElement;
+      if (select) {
+        select.value = value as string;
+      } else {
+        // It's a button prediction
+        const btn = document.querySelector(`[data-prediction="${key}"][data-value="${value}"]`) as HTMLElement;
+        if (btn) {
+          btn.click();
+        }
+      }
+    });
+
+    updatePredictionsSummary();
+  }
 
   // Update predictions summary
   function updatePredictionsSummary() {
@@ -251,36 +465,71 @@ import Layout from '../layouts/Layout.astro';
 
     const predictions: string[] = [];
 
+    // Helper to get wrestler name
+    const getName = (id: string) => wrestlers.find(w => w.id === id)?.name || id;
+
+    // Men's predictions
     const mensWinner = (document.getElementById('mens-winner') as HTMLSelectElement)?.value;
-    if (mensWinner) {
-      const wrestler = wrestlers.find(w => w.id === mensWinner);
-      predictions.push(`Men's Winner: ${wrestler?.name}`);
-    }
+    if (mensWinner) predictions.push(`Men's Winner: ${getName(mensWinner)}`);
 
-    const womensWinnerVal = (document.getElementById('womens-winner') as HTMLSelectElement)?.value;
-    if (womensWinnerVal) {
-      const wrestler = wrestlers.find(w => w.id === womensWinnerVal);
-      predictions.push(`Women's Winner: ${wrestler?.name}`);
-    }
+    const mensIronman = (document.getElementById('mens-ironman') as HTMLSelectElement)?.value;
+    if (mensIronman) predictions.push(`Men's Iron Man: ${getName(mensIronman)}`);
 
+    const mensElims = (document.getElementById('mens-elims') as HTMLSelectElement)?.value;
+    if (mensElims) predictions.push(`Men's Most Eliminations: ${getName(mensElims)}`);
+
+    // Women's predictions
+    const womensWinner = (document.getElementById('womens-winner') as HTMLSelectElement)?.value;
+    if (womensWinner) predictions.push(`Women's Winner: ${getName(womensWinner)}`);
+
+    const womensIronwoman = (document.getElementById('womens-ironwoman') as HTMLSelectElement)?.value;
+    if (womensIronwoman) predictions.push(`Women's Iron Woman: ${getName(womensIronwoman)}`);
+
+    const womensElims = (document.getElementById('womens-elims') as HTMLSelectElement)?.value;
+    if (womensElims) predictions.push(`Women's Most Eliminations: ${getName(womensElims)}`);
+
+    // Surprise entrants
+    const aewSurprise = (document.getElementById('aew-surprise') as HTMLSelectElement)?.value;
+    if (aewSurprise) predictions.push(`AEW Surprise: ${aewSurprise === 'none' ? 'None' : getName(aewSurprise)}`);
+
+    const tnaSurprise = (document.getElementById('tna-surprise') as HTMLSelectElement)?.value;
+    if (tnaSurprise) predictions.push(`TNA Surprise: ${tnaSurprise === 'none' ? 'None' : getName(tnaSurprise)}`);
+
+    // Button predictions
     const lucky27 = document.querySelector('[data-prediction="lucky27"].selected') as HTMLElement;
-    if (lucky27) {
-      predictions.push(`Lucky #27 wins: ${lucky27.dataset.value === 'yes' ? 'Yes' : 'No'}`);
-    }
+    if (lucky27) predictions.push(`Lucky #27 wins: ${lucky27.dataset.value === 'yes' ? 'Yes' : 'No'}`);
+
+    const championEnters = document.querySelector('[data-prediction="champion-enters"].selected') as HTMLElement;
+    if (championEnters) predictions.push(`Champion enters: ${championEnters.dataset.value === 'yes' ? 'Yes' : 'No'}`);
+
+    const celebrity = document.querySelector('[data-prediction="celebrity"].selected') as HTMLElement;
+    if (celebrity) predictions.push(`Celebrity entrant: ${celebrity.dataset.value === 'yes' ? 'Yes' : 'No'}`);
+
+    const entryRange = document.querySelector('[data-prediction="entry-range"].selected') as HTMLElement;
+    if (entryRange) predictions.push(`Winner entry range: ${entryRange.dataset.value}`);
 
     if (predictions.length === 0) {
       summary.innerHTML = '<p class="text-gray-400">No predictions made yet. Select options above!</p>';
     } else {
       summary.innerHTML = `
-        <ul class="space-y-1">
-          ${predictions.map(p => `<li class="text-white">• ${p}</li>`).join('')}
-        </ul>
+        <div class="grid sm:grid-cols-2 gap-2">
+          ${predictions.map(p => `<div class="text-white text-sm">• ${p}</div>`).join('')}
+        </div>
       `;
     }
   }
 
   // Listen for select changes
-  document.querySelectorAll('select').forEach(select => {
-    select.addEventListener('change', updatePredictionsSummary);
+  document.querySelectorAll('.prediction-select').forEach(select => {
+    select.addEventListener('change', () => {
+      savePredictions();
+      updatePredictionsSummary();
+    });
   });
+
+  // Load saved predictions when user changes
+  $currentUser.subscribe(() => {
+    setTimeout(loadPredictions, 100);
+  });
+  setTimeout(loadPredictions, 100);
 </script>
