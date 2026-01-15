@@ -1,0 +1,119 @@
+{
+  "luckyNumbers": {
+    "description": "Entry numbers with the most Royal Rumble wins",
+    "men": {
+      "30": { "wins": 5, "winners": ["Undertaker (2007)", "John Cena (2008)", "Triple H (2016)", "Brock Lesnar (2022)", "Cody Rhodes (2023)"] },
+      "27": { "wins": 5, "winners": ["Big John Studd (1989)", "Yokozuna (1993)", "Bret Hart (1994)", "Stone Cold (2001)", "Jey Uso (2025)"] },
+      "28": { "wins": 4, "winners": ["Batista (2005)", "Batista (2014)", "Becky Lynch (W-2019)", "Ronda Rousey (W-2022)"] },
+      "1": { "wins": 4, "winners": ["Shawn Michaels (1995)", "Chris Benoit (2004)", "Edge (2021)", "Rhea Ripley (W-2023)"] }
+    },
+    "women": {
+      "28": { "wins": 2, "winners": ["Becky Lynch (2019)", "Ronda Rousey (2022)"] },
+      "3": { "wins": 2, "winners": ["Bianca Belair (2021)", "Bayley (2024)"] },
+      "1": { "wins": 1, "winners": ["Rhea Ripley (2023)"] },
+      "27": { "wins": 1, "winners": ["Charlotte Flair (2025)"] }
+    },
+    "neverWon": [4, 6, 7, 9, 11, 12, 21, 26]
+  },
+  "records": {
+    "men": {
+      "mostWins": { "wrestler": "Stone Cold Steve Austin", "count": 3, "years": [1997, 1998, 2001] },
+      "mostAppearances": { "wrestler": "Kane", "count": 18 },
+      "longestTime": { "wrestler": "Daniel Bryan", "time": "1:16:05", "year": 2018, "note": "Greatest Royal Rumble" },
+      "longestTimeTraditional": { "wrestler": "Gunther", "time": "1:11:25", "year": 2023 },
+      "shortestTime": { "wrestler": "Santino Marella", "time": "1 second", "year": 2009 },
+      "mostEliminationsSingle": { "wrestlers": ["Braun Strowman", "Brock Lesnar"], "count": 13 },
+      "mostEliminationsCareer": { "wrestler": "Kane", "count": 45 },
+      "fastestWin": { "wrestler": "Brock Lesnar", "time": "2:32", "year": 2022 },
+      "oldestWinner": { "wrestler": "Vince McMahon", "age": 53, "year": 1999 }
+    },
+    "women": {
+      "mostWins": { "wrestler": "Charlotte Flair", "count": 2, "years": [2020, 2025] },
+      "mostAppearances": { "wrestlers": ["Liv Morgan", "Natalya"], "count": 8 },
+      "longestTime": { "wrestler": "Roxanne Perez", "time": "1:07:47", "year": 2025 },
+      "shortestTime": { "wrestler": "Chelsea Green", "time": "4 seconds", "year": 2023 },
+      "mostEliminationsSingle": { "wrestler": "Nia Jax", "count": 9, "year": 2025 },
+      "mostEliminationsCareer": { "wrestler": "Nia Jax", "count": 28 }
+    }
+  },
+  "multiTimeWinners": {
+    "men": [
+      { "wrestler": "Stone Cold Steve Austin", "wins": 3 },
+      { "wrestler": "John Cena", "wins": 2 },
+      { "wrestler": "Shawn Michaels", "wins": 2 },
+      { "wrestler": "Triple H", "wins": 2 },
+      { "wrestler": "Batista", "wins": 2 },
+      { "wrestler": "Randy Orton", "wins": 2 },
+      { "wrestler": "Edge", "wins": 2 },
+      { "wrestler": "Brock Lesnar", "wins": 2 },
+      { "wrestler": "Cody Rhodes", "wins": 2 },
+      { "wrestler": "Hulk Hogan", "wins": 2 }
+    ],
+    "women": [
+      { "wrestler": "Charlotte Flair", "wins": 2 }
+    ]
+  },
+  "backToBackWinners": [
+    { "wrestler": "Hulk Hogan", "years": [1990, 1991] },
+    { "wrestler": "Shawn Michaels", "years": [1995, 1996] },
+    { "wrestler": "Stone Cold Steve Austin", "years": [1997, 1998] },
+    { "wrestler": "Cody Rhodes", "years": [2023, 2024] }
+  ],
+  "famousFinalFour": {
+    "2023": ["Cody Rhodes", "Gunther", "Cody Rhodes", "Gunther"],
+    "2024": ["Cody Rhodes", "CM Punk", "John Cena", "Damian Priest"],
+    "2025": ["Jey Uso", "John Cena", "CM Punk", "Drew McIntyre"]
+  },
+  "tropes": [
+    {
+      "name": "The Kofi Save",
+      "description": "Wrestler avoids elimination by only landing on one foot, using barricades, chairs, or other creative methods to get back in the ring",
+      "famousExamples": ["Kofi Kingston (multiple years)", "Naomi (multiple years)"]
+    },
+    {
+      "name": "The Legend Return",
+      "description": "A Hall of Famer or retired legend makes a surprise appearance",
+      "famousExamples": ["Edge (2020)", "John Cena (2008)", "Trish Stratus"]
+    },
+    {
+      "name": "The Monster Entrance",
+      "description": "When a dominant wrestler enters and everyone stops fighting to face the new threat",
+      "famousExamples": ["Kane", "Undertaker", "Brock Lesnar", "Nia Jax"]
+    },
+    {
+      "name": "The Staredown",
+      "description": "Two top wrestlers have a dramatic face-off in the middle of the ring",
+      "famousExamples": ["Roman vs Triple H (2016)", "Cena vs Batista (2005)"]
+    },
+    {
+      "name": "The Sore Loser",
+      "description": "Eliminated wrestler returns to attack someone still in the match",
+      "famousExamples": ["Undertaker eliminating Maven (2002)", "Hulk Hogan pulling Sid (1992)"]
+    },
+    {
+      "name": "Enemy Mine",
+      "description": "Rivals team up temporarily to eliminate a bigger threat",
+      "famousExamples": ["Everyone vs Muhammad Hassan (2005)", "Everyone vs Nia Jax (2023)"]
+    },
+    {
+      "name": "Iron Man Performance",
+      "description": "Early entrant lasts an exceptionally long time",
+      "famousExamples": ["Rey Mysterio #2 winning (2006)", "Gunther #1 runner-up (2023)"]
+    },
+    {
+      "name": "Lucky #27",
+      "description": "The 27th entry position, historically one of the most successful",
+      "note": "Tied with #30 for most wins at 5 each"
+    },
+    {
+      "name": "The Quick Exit",
+      "description": "A wrestler is eliminated almost immediately after entering",
+      "famousExamples": ["Santino Marella (1 second, 2009)", "Chelsea Green (4 seconds, 2023)"]
+    },
+    {
+      "name": "Champion in the Rumble",
+      "description": "When the current champion participates in the Rumble match",
+      "famousExamples": ["Brock Lesnar (2020)", "Roman Reigns (2016)", "Charlotte Flair (2022)"]
+    }
+  ]
+}

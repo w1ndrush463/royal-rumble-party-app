@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[edge_functions]]
+  path = "/api/state"
+  function = "state"
+
+[[edge_functions]]
+  path = "/api/update"
+  function = "update"
+
+[dev]
+  command = "npm run dev"
+  targetPort = 4321

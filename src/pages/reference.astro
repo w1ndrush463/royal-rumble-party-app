@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+import rumbleHistory from '../data/rumble-history.json';
+---
+
+<Layout title="Reference">
+  <div class="space-y-8">
+    <!-- Header -->
+    <div class="text-center">
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">
+        Royal Rumble <span class="text-purple-400">Reference</span>
+      </h1>
+      <p class="text-gray-400 max-w-lg mx-auto">
+        History, records, and tropes to help you enjoy the show
+      </p>
+    </div>
+
+    <!-- Lucky Numbers -->
+    <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+        <span class="text-2xl">🍀</span>
+        Lucky Entry Numbers
+      </h2>
+      <p class="text-gray-400 text-sm mb-4">
+        These entry positions have produced the most Royal Rumble winners throughout history.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Men's -->
+        <div>
+          <h3 class="text-blue-400 font-medium mb-3">Men's Rumble</h3>
+          <div class="space-y-2">
+            {Object.entries(rumbleHistory.luckyNumbers.men)
+              .sort((a, b) => b[1].wins - a[1].wins)
+              .map(([num, data]) => (
+                <div class="flex items-center gap-3 p-2 bg-gray-800 rounded-lg">
+                  <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">
+                    {num}
+                  </div>
+                  <div class="flex-1">
+                    <div class="text-white font-medium">{data.wins} wins</div>
+                    <div class="text-gray-400 text-xs truncate" title={data.winners.join(', ')}>
+                      {data.winners.slice(0, 2).join(', ')}{data.winners.length > 2 ? '...' : ''}
+                    </div>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
+
+        <!-- Women's -->
+        <div>
+          <h3 class="text-pink-400 font-medium mb-3">Women's Rumble</h3>
+          <div class="space-y-2">
+            {Object.entries(rumbleHistory.luckyNumbers.women)
+              .sort((a, b) => b[1].wins - a[1].wins)
+              .map(([num, data]) => (
+                <div class="flex items-center gap-3 p-2 bg-gray-800 rounded-lg">
+                  <div class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white font-bold">
+                    {num}
+                  </div>
+                  <div class="flex-1">
+                    <div class="text-white font-medium">{data.wins} {data.wins === 1 ? 'win' : 'wins'}</div>
+                    <div class="text-gray-400 text-xs truncate">
+                      {data.winners.join(', ')}
+                    </div>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Numbers that never won -->
+      <div class="mt-4 p-3 bg-gray-800 rounded-lg">
+        <div class="text-gray-400 text-sm">
+          <strong class="text-white">Numbers that have NEVER won:</strong>{' '}
+          {rumbleHistory.luckyNumbers.neverWon.join(', ')}
+        </div>
+      </div>
+    </section>
+
+    <!-- Records -->
+    <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+        <span class="text-2xl">🏆</span>
+        Royal Rumble Records
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Men's Records -->
+        <div>
+          <h3 class="text-blue-400 font-medium mb-3">Men's Records</h3>
+          <div class="space-y-2">
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
+              <span class="text-gray-400 text-sm">Most Wins</span>
+              <span class="text-white text-sm font-medium">Stone Cold (3)</span>
+            </div>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
+              <span class="text-gray-400 text-sm">Most Appearances</span>
+              <span class="text-white text-sm font-medium">Kane (18)</span>
+            </div>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
+              <span class="text-gray-400 text-sm">Iron Man Record</span>
+              <span class="text-white text-sm font-medium">Gunther 1:11:25</span>
+            </div>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
+              <span class="text-gray-400 text-sm">Most Eliminations</span>
+              <span class="text-white text-sm font-medium">Lesnar/Strowman (13)</span>
+            </div>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
+              <span class="text-gray-400 text-sm">Career Eliminations</span>
+              <span class="text-white text-sm font-medium">Kane (45)</span>
+            </div>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
+              <span class="text-gray-400 text-sm">Fastest Win</span>
+              <span class="text-white text-sm font-medium">Lesnar 2:32</span>
+            </div>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
+              <span class="text-gray-400 text-sm">Shortest Time</span>
+              <span class="text-white text-sm font-medium">Santino 1 second</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Women's Records -->
+        <div>
+          <h3 class="text-pink-400 font-medium mb-3">Women's Records</h3>
+          <div class="space-y-2">
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
+              <span class="text-gray-400 text-sm">Most Wins</span>
+              <span class="text-white text-sm font-medium">Charlotte (2)</span>
+            </div>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
+              <span class="text-gray-400 text-sm">Most Appearances</span>
+              <span class="text-white text-sm font-medium">Liv/Natalya (8)</span>
+            </div>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
+              <span class="text-gray-400 text-sm">Iron Woman Record</span>
+              <span class="text-white text-sm font-medium">Roxanne 1:07:47</span>
+            </div>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
+              <span class="text-gray-400 text-sm">Most Eliminations</span>
+              <span class="text-white text-sm font-medium">Nia Jax (9)</span>
+            </div>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
+              <span class="text-gray-400 text-sm">Career Eliminations</span>
+              <span class="text-white text-sm font-medium">Nia Jax (28)</span>
+            </div>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
+              <span class="text-gray-400 text-sm">Shortest Time</span>
+              <span class="text-white text-sm font-medium">Chelsea 4 seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Multi-time Winners -->
+    <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+        <span class="text-2xl">⭐</span>
+        Multi-Time Winners
+      </h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {rumbleHistory.multiTimeWinners.men.map(winner => (
+          <div class="flex items-center gap-3 p-3 bg-gray-800 rounded-lg">
+            <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold">
+              {winner.wins}x
+            </div>
+            <span class="text-white">{winner.wrestler}</span>
+          </div>
+        ))}
+        {rumbleHistory.multiTimeWinners.women.map(winner => (
+          <div class="flex items-center gap-3 p-3 bg-gray-800 rounded-lg border border-pink-600/50">
+            <div class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white font-bold">
+              {winner.wins}x
+            </div>
+            <span class="text-white">{winner.wrestler}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Tropes -->
+    <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+        <span class="text-2xl">🎭</span>
+        Royal Rumble Tropes
+      </h2>
+      <p class="text-gray-400 text-sm mb-4">
+        Common situations and moments to watch for during the match.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        {rumbleHistory.tropes.map(trope => (
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-1">{trope.name}</h4>
+            <p class="text-gray-400 text-sm mb-2">{trope.description}</p>
+            {trope.famousExamples && (
+              <div class="text-xs text-purple-400">
+                Examples: {trope.famousExamples.slice(0, 2).join(', ')}
+              </div>
+            )}
+            {trope.note && (
+              <div class="text-xs text-yellow-400 mt-1">{trope.note}</div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Rules -->
+    <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+        <span class="text-2xl">📋</span>
+        The Rules
+      </h2>
+
+      <div class="prose prose-invert max-w-none">
+        <ul class="space-y-2 text-gray-300">
+          <li>30 participants enter at timed intervals (90 seconds)</li>
+          <li>Entry order is determined by lottery before the match</li>
+          <li>Elimination occurs when a wrestler goes <strong>over the top rope</strong> with <strong>both feet</strong> touching the floor</li>
+          <li>Going under/through the ropes does NOT count as elimination</li>
+          <li>The last wrestler remaining wins</li>
+          <li>Winner receives a World Championship match at WrestleMania</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .record-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: rgba(31, 41, 55, 0.5);
+    border-radius: 0.25rem;
+  }
+</style>

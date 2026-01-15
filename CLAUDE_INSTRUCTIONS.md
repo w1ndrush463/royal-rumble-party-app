@@ -1,0 +1,19 @@
+Hi Claude. Each year, WWE puts on an annual event, the Royal Rumble. Here's the Pro Wrestling wiki page about it: https://prowrestling.fandom.com/wiki/Royal_Rumble
+
+Due to the rules of the Royal Rumble match (both mens and womens), it makes it a very exciting, unpredictable match, which lends itself well to being watched by wrestling fans and casual fans alike. As such, my friends organise a watch party for the event every year.
+
+Each year, viewers at the watch party are each given a certain number of 30 lottery balls (this year there will be 15 people, so they will get 2 balls each per Royal Rumble match). The number on the ball corresponds to the name of the wrestler entering their respective Royal Rumble match at that number. If that wrestler wins the whole match, the person who drew that number "wins" the mens/womens Royal Rumble for that year's watch party respectively, and gets to bring home a toy replica championship belt.
+
+Because the Royal Rumble is so unpredictable and celebrated, it has its own number of tropes and predictable situations that occur. These are largely documented in its TV tropes page: https://tvtropes.org/pmwiki/pmwiki.php/Wrestling/RoyalRumble. For example, two big wrestlers who have never fought before could tease a rivalry by having a stand off in the middle of the ring, or a wrestler could be thrown over the top rope, only for one of their feet to touch the floor but not the other - so they can return to the match having not been eliminated, usually in grandiose or dramatic fashion.
+
+There are "lucky numbers", too - numbers that have produced the greatest number of winners over the years. These kinds of spots and situations would lend themselves well to a companion app, or a drinking game or betting game element ("Who will next be eliminated? [choose from options]" "Who will next jump from the top rope? [choose options]"). This, combined with the lottery aspect (somewhere for users to mark down and track their numbers/entrants), and some other facts and interesting stats to help contextualise the event (eg. last year's final four competitors in both Royal Rumbles, former champions in both matches, record holders in the last year's matches for longest time, shortest time, most eliminations, etc) and other tropes (legendary wrestlers returning, wrestlers from other companies showing up, etc) all lend themselves well to an app that fans and casuals alike can follow to improve their enjoyment of the show. It is not for commercial use, so I am not concerned about using official photos of the wrestlers, as we won't be selling this or having it for use outside of our small friends group.
+
+As such, I am proposing we build such an app. In Astro 5. Deployed via GitHub repo and Netlify. Users will be able to:
+
+- Track their numbers and competitors in their own app
+- See the competitors in the match updated in real time (I will update them myself as the event continues)
+- Be able to place friendly wagers or "next one drinks" bets on different aspects of the matches
+- Track stats and points for each user to see who "won" or got awards at the end (eg. "most time in the Royal Rumble", "most eliminations" etc)
+- Feature a list in the back end of every wrestler currently working for WWE, AEW, TNA, NXT, Evolve, EVE, Shimmer, WXW, or Progress; as any of them have a chance of showing up in the Royal Rumble match - so I can update each entrant in real time using just a search box. We would build this list from all the information on https://www.cagematch.net/ (and schema markup it all)
+- Have badges denoting if each wrestler is a champion, former champion, former Royal Rumble winner, etc
+- For all of it to work and look great on mobile, and be easy to use for casual fans

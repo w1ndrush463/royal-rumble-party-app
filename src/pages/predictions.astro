@@ -1,0 +1,286 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Predictions">
+  <div class="space-y-8">
+    <!-- Header -->
+    <div class="text-center">
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">
+        Predictions <span class="text-yellow-400">& Bets</span>
+      </h1>
+      <p class="text-gray-400 max-w-lg mx-auto">
+        Make predictions before and during the match. Right answers earn points!
+      </p>
+    </div>
+
+    <!-- Current User -->
+    <div id="current-user-display" class="text-center text-gray-400">
+      Loading...
+    </div>
+
+    <!-- Prediction Categories -->
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Pre-Match Predictions -->
+      <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+        <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+          <span class="text-2xl">🎯</span>
+          Pre-Match Predictions
+        </h2>
+        <p class="text-gray-400 text-sm mb-4">Make these picks before the match starts</p>
+
+        <div class="space-y-4">
+          <!-- Winner Prediction -->
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Who wins the Men's Rumble?</h4>
+            <select id="mens-winner" class="w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-purple-500">
+              <option value="">Select wrestler...</option>
+            </select>
+          </div>
+
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Who wins the Women's Rumble?</h4>
+            <select id="womens-winner" class="w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-purple-500">
+              <option value="">Select wrestler...</option>
+            </select>
+          </div>
+
+          <!-- Lucky 27 -->
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Will Entry #27 win?</h4>
+            <p class="text-gray-400 text-xs mb-2">#27 has historically been the "lucky number"</p>
+            <div class="flex gap-2">
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-green-600 hover:text-white" data-prediction="lucky27" data-value="yes">
+                Yes
+              </button>
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-red-600 hover:text-white" data-prediction="lucky27" data-value="no">
+                No
+              </button>
+            </div>
+          </div>
+
+          <!-- Iron Man -->
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Who gets Iron Man (longest time)?</h4>
+            <select id="ironman" class="w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-purple-500">
+              <option value="">Select wrestler...</option>
+            </select>
+          </div>
+
+          <!-- Most Eliminations -->
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h4 class="text-white font-medium mb-2">Who gets most eliminations?</h4>
+            <select id="most-elims" class="w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-purple-500">
+              <option value="">Select wrestler...</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- During-Match Predictions -->
+      <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+        <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+          <span class="text-2xl">🍺</span>
+          Drinking Game / Live Bets
+        </h2>
+        <p class="text-gray-400 text-sm mb-4">Call these during the match for fun!</p>
+
+        <div class="space-y-3">
+          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+            <span class="text-2xl">🦶</span>
+            <div>
+              <div class="text-white font-medium">Kofi Save</div>
+              <div class="text-gray-400 text-xs">Someone saves themselves from elimination creatively</div>
+            </div>
+          </button>
+          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+            <span class="text-2xl">👴</span>
+            <div>
+              <div class="text-white font-medium">Legend Surprise</div>
+              <div class="text-gray-400 text-xs">A Hall of Famer or legend makes a surprise return</div>
+            </div>
+          </button>
+          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+            <span class="text-2xl">👹</span>
+            <div>
+              <div class="text-white font-medium">Monster Entrance</div>
+              <div class="text-gray-400 text-xs">Everyone stops fighting when a big wrestler enters</div>
+            </div>
+          </button>
+          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+            <span class="text-2xl">👀</span>
+            <div>
+              <div class="text-white font-medium">The Staredown</div>
+              <div class="text-gray-400 text-xs">Two wrestlers have a dramatic face-off</div>
+            </div>
+          </button>
+          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+            <span class="text-2xl">😤</span>
+            <div>
+              <div class="text-white font-medium">Sore Loser</div>
+              <div class="text-gray-400 text-xs">Eliminated wrestler returns to attack someone</div>
+            </div>
+          </button>
+          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+            <span class="text-2xl">🤝</span>
+            <div>
+              <div class="text-white font-medium">Enemy Mine</div>
+              <div class="text-gray-400 text-xs">Rivals team up to eliminate a bigger threat</div>
+            </div>
+          </button>
+          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+            <span class="text-2xl">⚡</span>
+            <div>
+              <div class="text-white font-medium">Quick Exit</div>
+              <div class="text-gray-400 text-xs">Someone eliminated in under 10 seconds</div>
+            </div>
+          </button>
+          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+            <span class="text-2xl">🏆</span>
+            <div>
+              <div class="text-white font-medium">Champion Enters</div>
+              <div class="text-gray-400 text-xs">A current champion participates in the Rumble</div>
+            </div>
+          </button>
+        </div>
+
+        <div class="mt-4 p-3 bg-yellow-900/20 border border-yellow-600 rounded-lg">
+          <p class="text-yellow-400 text-sm">
+            <strong>Drinking Rules:</strong> Take a drink every time one of these happens!
+            Or assign points for being the first to call it.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Your Predictions Summary -->
+    <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+      <h2 class="text-xl font-semibold text-white mb-4">Your Predictions</h2>
+      <div id="predictions-summary" class="text-gray-400">
+        No predictions made yet. Select options above!
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .prediction-btn.selected {
+    box-shadow: 0 0 0 2px #a855f7;
+  }
+</style>
+
+<script>
+  import { initCurrentUser, $currentUser, $wrestlers } from '../stores/matchStore';
+
+  // Initialize current user
+  initCurrentUser();
+
+  // Display current user
+  function updateUserDisplay() {
+    const display = document.getElementById('current-user-display');
+    if (!display) return;
+
+    const user = $currentUser.get();
+    if (user) {
+      display.innerHTML = `
+        <span class="text-white font-medium">Making predictions as: ${user.name}</span>
+        <a href="/" class="text-purple-400 hover:underline text-sm ml-2">(change)</a>
+      `;
+    } else {
+      display.innerHTML = `
+        <span class="text-yellow-400">Please <a href="/" class="underline">select your name</a> first</span>
+      `;
+    }
+  }
+
+  $currentUser.subscribe(updateUserDisplay);
+  updateUserDisplay();
+
+  // Populate wrestler selects
+  const wrestlers = $wrestlers.get();
+  const maleWrestlers = wrestlers.filter(w => w.gender === 'male').sort((a, b) => a.name.localeCompare(b.name));
+  const femaleWrestlers = wrestlers.filter(w => w.gender === 'female').sort((a, b) => a.name.localeCompare(b.name));
+
+  const selects = ['mens-winner', 'ironman', 'most-elims'];
+  selects.forEach(id => {
+    const select = document.getElementById(id) as HTMLSelectElement;
+    if (select) {
+      maleWrestlers.forEach(w => {
+        const option = document.createElement('option');
+        option.value = w.id;
+        option.textContent = w.name + (w.isCurrentChampion ? ' (Champion)' : '') + (w.isFormerRumbleWinner ? ' (Former RR Winner)' : '');
+        select.appendChild(option);
+      });
+    }
+  });
+
+  const womensWinner = document.getElementById('womens-winner') as HTMLSelectElement;
+  if (womensWinner) {
+    femaleWrestlers.forEach(w => {
+      const option = document.createElement('option');
+      option.value = w.id;
+      option.textContent = w.name + (w.isCurrentChampion ? ' (Champion)' : '') + (w.isFormerRumbleWinner ? ' (Former RR Winner)' : '');
+      womensWinner.appendChild(option);
+    });
+  }
+
+  // Handle prediction button clicks
+  document.querySelectorAll('.prediction-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const prediction = (btn as HTMLElement).dataset.prediction;
+      const value = (btn as HTMLElement).dataset.value;
+
+      // Remove selected from siblings
+      document.querySelectorAll(`[data-prediction="${prediction}"]`).forEach(b => {
+        b.classList.remove('selected', 'bg-green-600', 'bg-red-600', 'text-white');
+        b.classList.add('bg-gray-700', 'text-gray-300');
+      });
+
+      // Add selected to this one
+      btn.classList.add('selected', value === 'yes' ? 'bg-green-600' : 'bg-red-600', 'text-white');
+      btn.classList.remove('bg-gray-700', 'text-gray-300');
+
+      updatePredictionsSummary();
+    });
+  });
+
+  // Update predictions summary
+  function updatePredictionsSummary() {
+    const summary = document.getElementById('predictions-summary');
+    if (!summary) return;
+
+    const predictions: string[] = [];
+
+    const mensWinner = (document.getElementById('mens-winner') as HTMLSelectElement)?.value;
+    if (mensWinner) {
+      const wrestler = wrestlers.find(w => w.id === mensWinner);
+      predictions.push(`Men's Winner: ${wrestler?.name}`);
+    }
+
+    const womensWinnerVal = (document.getElementById('womens-winner') as HTMLSelectElement)?.value;
+    if (womensWinnerVal) {
+      const wrestler = wrestlers.find(w => w.id === womensWinnerVal);
+      predictions.push(`Women's Winner: ${wrestler?.name}`);
+    }
+
+    const lucky27 = document.querySelector('[data-prediction="lucky27"].selected') as HTMLElement;
+    if (lucky27) {
+      predictions.push(`Lucky #27 wins: ${lucky27.dataset.value === 'yes' ? 'Yes' : 'No'}`);
+    }
+
+    if (predictions.length === 0) {
+      summary.innerHTML = '<p class="text-gray-400">No predictions made yet. Select options above!</p>';
+    } else {
+      summary.innerHTML = `
+        <ul class="space-y-1">
+          ${predictions.map(p => `<li class="text-white">• ${p}</li>`).join('')}
+        </ul>
+      `;
+    }
+  }
+
+  // Listen for select changes
+  document.querySelectorAll('select').forEach(select => {
+    select.addEventListener('change', updatePredictionsSummary);
+  });
+</script>
