@@ -1,19 +1,188 @@
 @import "tailwindcss";
 
-/* Custom theme colors */
+/* 80s Wrestling Vaporwave Theme */
 @theme {
+  /* Neon colors */
+  --color-neon-pink: #ff00ff;
+  --color-neon-cyan: #00ffff;
+  --color-neon-purple: #bf00ff;
+  --color-neon-blue: #0080ff;
+  --color-neon-gold: #ffd700;
+  --color-neon-red: #ff0040;
+
+  /* Chrome/metallic */
+  --color-chrome-light: #e8e8e8;
+  --color-chrome-mid: #b0b0b0;
+  --color-chrome-dark: #606060;
+
+  /* Legacy colors */
   --color-rumble-purple: #7c3aed;
   --color-rumble-gold: #fbbf24;
   --color-rumble-dark: #111827;
 }
 
-/* Base styles */
+/* Base styles with 80s grid background */
 body {
-  background-color: #030712;
+  background-color: #0a0a1a;
+  background-image:
+    linear-gradient(rgba(191, 0, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(191, 0, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(ellipse at bottom, #1a0a2e 0%, #0a0a1a 100%);
+  background-size: 50px 50px, 50px 50px, 100% 100%;
   color: #f3f4f6;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Scanline overlay effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1) 0px,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  z-index: 9999;
+  opacity: 0.3;
+}
+
+/* Chrome text effect */
+.chrome-text {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #e8e8e8 25%,
+    #b0b0b0 50%,
+    #808080 75%,
+    #606060 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(2px 2px 0px #000) drop-shadow(-1px -1px 0px #444);
+}
+
+/* Gold chrome text */
+.gold-chrome-text {
+  background: linear-gradient(
+    180deg,
+    #ffd700 0%,
+    #ffec8b 25%,
+    #daa520 50%,
+    #b8860b 75%,
+    #8b6914 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(2px 2px 0px #000) drop-shadow(-1px -1px 0px #ffd700);
+}
+
+/* Neon glow effects */
+.neon-pink {
+  color: #ff00ff;
+  text-shadow:
+    0 0 5px #ff00ff,
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff;
+}
+
+.neon-cyan {
+  color: #00ffff;
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #00ffff;
+}
+
+.neon-gold {
+  color: #ffd700;
+  text-shadow:
+    0 0 5px #ffd700,
+    0 0 10px #ffd700,
+    0 0 20px #ffd700;
+}
+
+/* Gradient border effect */
+.gradient-border {
+  position: relative;
+  background: #1a1a2e;
+  border-radius: 12px;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 14px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #00ffff);
+  background-size: 400% 400%;
+  animation: gradient-rotate 3s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradient-rotate {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Vaporwave card style */
+.vaporwave-card {
+  background: linear-gradient(135deg, rgba(26, 10, 46, 0.9) 0%, rgba(10, 10, 26, 0.95) 100%);
+  border: 1px solid rgba(191, 0, 255, 0.3);
+  box-shadow:
+    0 0 20px rgba(191, 0, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.vaporwave-card:hover {
+  border-color: rgba(0, 255, 255, 0.5);
+  box-shadow:
+    0 0 30px rgba(0, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* 80s style button */
+.retro-button {
+  background: linear-gradient(180deg, #ff00ff 0%, #bf00ff 50%, #800080 100%);
+  border: 2px solid #ff00ff;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  box-shadow:
+    0 4px 0 #400040,
+    0 0 20px rgba(255, 0, 255, 0.3);
+  transition: all 0.1s ease;
+}
+
+.retro-button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 0 #400040,
+    0 0 30px rgba(255, 0, 255, 0.5);
+}
+
+.retro-button:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 2px 0 #400040,
+    0 0 20px rgba(255, 0, 255, 0.3);
 }
 
 /* Custom scrollbar */
@@ -90,4 +259,226 @@ body {
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+}
+
+/* ========== PYRO & SPARKLE EFFECTS ========== */
+
+/* Sparkle/star animation */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #fff 0%, transparent 70%);
+  border-radius: 50%;
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+/* Pyro burst animation */
+@keyframes pyro-burst {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(0);
+    opacity: 0;
+  }
+}
+
+.pyro-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  animation: pyro-burst 1s ease-out forwards;
+}
+
+/* Continuous glow pulse */
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px currentColor);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px currentColor) drop-shadow(0 0 30px currentColor);
+  }
+}
+
+.animate-glow {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Electric flicker effect */
+@keyframes electric-flicker {
+  0%, 100% { opacity: 1; }
+  10% { opacity: 0.8; }
+  20% { opacity: 1; }
+  30% { opacity: 0.9; }
+  40% { opacity: 1; }
+  50% { opacity: 0.7; }
+  60% { opacity: 1; }
+  70% { opacity: 0.85; }
+  80% { opacity: 1; }
+  90% { opacity: 0.9; }
+}
+
+.neon-flicker {
+  animation: electric-flicker 3s ease-in-out infinite;
+}
+
+/* Rising stars effect for backgrounds */
+@keyframes rise-star {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Header gradient animation */
+@keyframes header-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-bg {
+  background: linear-gradient(
+    90deg,
+    #1a0a2e,
+    #2d1b4e,
+    #1a0a2e,
+    #0a1a2e,
+    #1a0a2e
+  );
+  background-size: 400% 100%;
+  animation: header-gradient 10s ease infinite;
+}
+
+/* Rumble-specific title effect */
+.rumble-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(
+    180deg,
+    #ff6b6b 0%,
+    #ff0040 30%,
+    #cc0033 50%,
+    #990026 70%,
+    #660019 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter:
+    drop-shadow(2px 2px 0px #000)
+    drop-shadow(4px 4px 0px rgba(255, 0, 64, 0.5));
+  text-shadow: none;
+}
+
+/* Blue chrome effect like "MAIN EVENT" text */
+.blue-chrome-text {
+  background: linear-gradient(
+    180deg,
+    #87ceeb 0%,
+    #4da6ff 25%,
+    #0080ff 50%,
+    #0066cc 75%,
+    #004d99 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(2px 2px 0px #000) drop-shadow(-1px -1px 0px #4da6ff);
+}
+
+/* Video player styling */
+.video-player {
+  border: 3px solid transparent;
+  border-image: linear-gradient(45deg, #ff00ff, #00ffff) 1;
+  box-shadow:
+    0 0 20px rgba(255, 0, 255, 0.3),
+    0 0 40px rgba(0, 255, 255, 0.2);
+}
+
+/* Retro TV static effect (subtle) */
+@keyframes static {
+  0%, 100% { opacity: 0.02; }
+  50% { opacity: 0.05; }
+}
+
+.tv-static::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  animation: static 0.5s infinite;
+}
+
+/* Entrance animation for cards */
+@keyframes card-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-card-entrance {
+  animation: card-entrance 0.4s ease-out forwards;
+}
+
+/* Winner celebration effect */
+@keyframes winner-glow {
+  0%, 100% {
+    box-shadow:
+      0 0 20px rgba(255, 215, 0, 0.5),
+      0 0 40px rgba(255, 215, 0, 0.3),
+      inset 0 0 20px rgba(255, 215, 0, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 40px rgba(255, 215, 0, 0.8),
+      0 0 80px rgba(255, 215, 0, 0.5),
+      inset 0 0 30px rgba(255, 215, 0, 0.2);
+  }
+}
+
+.winner-celebration {
+  animation: winner-glow 1.5s ease-in-out infinite;
+  border-color: #ffd700 !important;
 }

@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # Local Netlify folder
 .netlify
+
+# Original unoptimized videos (optimized versions are in public/videos)
+videos/

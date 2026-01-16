@@ -1,22 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import rumbleHistory from '../data/rumble-history.json';
+import VideoCarousel from '../components/VideoCarousel';
 ---
 
 <Layout title="Reference">
   <div class="space-y-8">
     <!-- Header -->
     <div class="text-center">
-      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">
-        Royal Rumble <span class="text-purple-400">Reference</span>
+      <h1 class="text-4xl sm:text-5xl font-black mb-2">
+        <span class="rumble-title">ROYAL RUMBLE</span>
+        <span class="blue-chrome-text"> REFERENCE</span>
       </h1>
-      <p class="text-gray-400 max-w-lg mx-auto">
-        History, records, and tropes to help you enjoy the show
+      <p class="text-purple-300 max-w-lg mx-auto">
+        History, records, classic commercials, and tropes to get you hyped
       </p>
     </div>
 
+    <!-- Video Carousel -->
+    <VideoCarousel client:load />
+
     <!-- Lucky Numbers -->
-    <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+    <section class="vaporwave-card p-6">
       <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
         <span class="text-2xl">🍀</span>
         Lucky Entry Numbers
@@ -81,7 +86,7 @@ import rumbleHistory from '../data/rumble-history.json';
     </section>
 
     <!-- Records -->
-    <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+    <section class="vaporwave-card p-6">
       <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
         <span class="text-2xl">🏆</span>
         Royal Rumble Records
@@ -157,7 +162,7 @@ import rumbleHistory from '../data/rumble-history.json';
     </section>
 
     <!-- Multi-time Winners -->
-    <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+    <section class="vaporwave-card p-6">
       <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
         <span class="text-2xl">⭐</span>
         Multi-Time Winners
@@ -184,7 +189,7 @@ import rumbleHistory from '../data/rumble-history.json';
     </section>
 
     <!-- Tropes -->
-    <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+    <section class="vaporwave-card p-6">
       <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
         <span class="text-2xl">🎭</span>
         Royal Rumble Tropes
@@ -212,7 +217,7 @@ import rumbleHistory from '../data/rumble-history.json';
     </section>
 
     <!-- Rules -->
-    <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+    <section class="vaporwave-card p-6">
       <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
         <span class="text-2xl">📋</span>
         The Rules
