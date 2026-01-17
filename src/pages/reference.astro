@@ -1,8 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import rumbleHistory from '../data/rumble-history.json';
-import wrestlers from '../data/wrestlers.json';
+import wrestlersData from '../data/wrestlers.json';
 import VideoCarousel from '../components/VideoCarousel';
+
+const wrestlers = wrestlersData.wrestlers;
 
 // Helper to find wrestler image by name (handles partial matches)
 function getWrestlerImage(name: string): string | null {
