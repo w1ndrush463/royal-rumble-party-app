@@ -100,6 +100,7 @@ body::before {
 
 .neon-cyan {
   color: #00ffff;
+  font-weight: 500;
   text-shadow:
     0 0 5px #00ffff,
     0 0 10px #00ffff,
@@ -415,7 +416,9 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(2px 2px 0px #000) drop-shadow(-1px -1px 0px #4da6ff);
+  filter:
+    drop-shadow(2px 2px 0px #000)
+    drop-shadow(4px 4px 0px rgba(0, 128, 255, 0.5));
 }
 
 /* Video player styling */
