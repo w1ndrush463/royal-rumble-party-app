@@ -85,27 +85,26 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(2px 2px 0px #000) drop-shadow(-1px -1px 0px #ffd700);
+  filter:
+    drop-shadow(2px 2px 0px #000)
+    drop-shadow(4px 4px 0px rgba(218, 165, 32, 0.5));
 }
 
-/* Neon glow effects */
+/* Neon glow effects - tighter glow to match chrome text visual size */
 .neon-pink {
-  color: #ff00ff;
-  text-shadow:
-    0 0 5px #ff00ff,
-    0 0 10px #ff00ff,
-    0 0 20px #ff00ff,
-    0 0 40px #ff00ff;
+  color: #ff69b4;
+  filter:
+    drop-shadow(2px 2px 0px #000)
+    drop-shadow(0 0 8px #ff00ff)
+    drop-shadow(0 0 15px rgba(255, 0, 255, 0.5));
 }
 
 .neon-cyan {
   color: #00ffff;
-  font-weight: 500;
-  text-shadow:
-    0 0 5px #00ffff,
-    0 0 10px #00ffff,
-    0 0 20px #00ffff,
-    0 0 40px #00ffff;
+  filter:
+    drop-shadow(2px 2px 0px #000)
+    drop-shadow(0 0 8px #00ffff)
+    drop-shadow(0 0 15px rgba(0, 255, 255, 0.5));
 }
 
 .neon-gold {
