@@ -16,25 +16,36 @@ function getWrestlerImage(name: string): string | null {
   return wrestler?.imageUrl || null;
 }
 
-// Records data with images
+// Records data with images - precompute URLs
 const mensRecords = [
-  { label: "Most Wins", value: "Stone Cold (3)", wrestler: "Stone Cold Steve Austin" },
-  { label: "Most Appearances", value: "Kane (18)", wrestler: "Kane" },
-  { label: "Iron Man Record", value: "Gunther 1:11:25", wrestler: "Gunther" },
-  { label: "Most Eliminations", value: "Lesnar/Strowman (13)", wrestler: "Brock Lesnar" },
-  { label: "Career Eliminations", value: "Kane (45)", wrestler: "Kane" },
-  { label: "Fastest Win", value: "Lesnar 2:32", wrestler: "Brock Lesnar" },
-  { label: "Shortest Time", value: "Santino 1 second", wrestler: "Santino Marella" },
+  { label: "Most Wins", value: "Stone Cold (3)", wrestler: "Stone Cold Steve Austin", image: getWrestlerImage("Stone Cold Steve Austin") },
+  { label: "Most Appearances", value: "Kane (18)", wrestler: "Kane", image: getWrestlerImage("Kane") },
+  { label: "Iron Man Record", value: "Gunther 1:11:25", wrestler: "Gunther", image: getWrestlerImage("Gunther") },
+  { label: "Most Eliminations", value: "Lesnar/Strowman (13)", wrestler: "Brock Lesnar", image: getWrestlerImage("Brock Lesnar") },
+  { label: "Career Eliminations", value: "Kane (45)", wrestler: "Kane", image: getWrestlerImage("Kane") },
+  { label: "Fastest Win", value: "Lesnar 2:32", wrestler: "Brock Lesnar", image: getWrestlerImage("Brock Lesnar") },
+  { label: "Shortest Time", value: "Santino 1 second", wrestler: "Santino Marella", image: getWrestlerImage("Santino Marella") },
 ];
 
 const womensRecords = [
-  { label: "Most Wins", value: "Charlotte (2)", wrestler: "Charlotte Flair" },
-  { label: "Most Appearances", value: "Liv/Natalya (8)", wrestler: "Liv Morgan" },
-  { label: "Iron Woman Record", value: "Roxanne 1:07:47", wrestler: "Roxanne Perez" },
-  { label: "Most Eliminations", value: "Nia Jax (9)", wrestler: "Nia Jax" },
-  { label: "Career Eliminations", value: "Nia Jax (28)", wrestler: "Nia Jax" },
-  { label: "Shortest Time", value: "Chelsea 4 seconds", wrestler: "Chelsea Green" },
+  { label: "Most Wins", value: "Charlotte (2)", wrestler: "Charlotte Flair", image: getWrestlerImage("Charlotte Flair") },
+  { label: "Most Appearances", value: "Liv/Natalya (8)", wrestler: "Liv Morgan", image: getWrestlerImage("Liv Morgan") },
+  { label: "Iron Woman Record", value: "Roxanne 1:07:47", wrestler: "Roxanne Perez", image: getWrestlerImage("Roxanne Perez") },
+  { label: "Most Eliminations", value: "Nia Jax (9)", wrestler: "Nia Jax", image: getWrestlerImage("Nia Jax") },
+  { label: "Career Eliminations", value: "Nia Jax (28)", wrestler: "Nia Jax", image: getWrestlerImage("Nia Jax") },
+  { label: "Shortest Time", value: "Chelsea 4 seconds", wrestler: "Chelsea Green", image: getWrestlerImage("Chelsea Green") },
 ];
+
+// Multi-time winners with images
+const mensWinners = rumbleHistory.multiTimeWinners.men.map(w => ({
+  ...w,
+  image: getWrestlerImage(w.wrestler)
+}));
+
+const womensWinners = rumbleHistory.multiTimeWinners.women.map(w => ({
+  ...w,
+  image: getWrestlerImage(w.wrestler)
+}));
 ---
 
 <Layout title="Reference">
@@ -137,8 +148,8 @@ const womensRecords = [
             {mensRecords.map(record => (
               <div class="flex items-center gap-3 p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
                 <div class="w-8 h-8 rounded-full bg-gray-700 overflow-hidden flex-shrink-0">
-                  {getWrestlerImage(record.wrestler) ? (
-                    <img src={getWrestlerImage(record.wrestler)} alt={record.wrestler} class="w-full h-full object-cover" />
+                  {record.image ? (
+                    <img src={record.image} alt={record.wrestler} class="w-full h-full object-cover" />
                   ) : (
                     <div class="w-full h-full flex items-center justify-center text-gray-400 text-xs font-bold">
                       {record.wrestler.charAt(0)}
@@ -159,8 +170,8 @@ const womensRecords = [
             {womensRecords.map(record => (
               <div class="flex items-center gap-3 p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
                 <div class="w-8 h-8 rounded-full bg-gray-700 overflow-hidden flex-shrink-0">
-                  {getWrestlerImage(record.wrestler) ? (
-                    <img src={getWrestlerImage(record.wrestler)} alt={record.wrestler} class="w-full h-full object-cover" />
+                  {record.image ? (
+                    <img src={record.image} alt={record.wrestler} class="w-full h-full object-cover" />
                   ) : (
                     <div class="w-full h-full flex items-center justify-center text-gray-400 text-xs font-bold">
                       {record.wrestler.charAt(0)}
@@ -185,12 +196,12 @@ const womensRecords = [
       </h2>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-        {rumbleHistory.multiTimeWinners.men.map(winner => (
+        {mensWinners.map(winner => (
           <div class="flex items-center gap-3 p-3 bg-gradient-to-r from-purple-900/30 to-transparent rounded-lg border border-purple-500/30 hover:border-purple-400/60 transition-all hover:shadow-lg hover:shadow-purple-500/10">
             <div class="relative flex-shrink-0">
               <div class="w-12 h-12 rounded-full bg-gray-700 overflow-hidden">
-                {getWrestlerImage(winner.wrestler) ? (
-                  <img src={getWrestlerImage(winner.wrestler)} alt={winner.wrestler} class="w-full h-full object-cover" />
+                {winner.image ? (
+                  <img src={winner.image} alt={winner.wrestler} class="w-full h-full object-cover" />
                 ) : (
                   <div class="w-full h-full flex items-center justify-center text-gray-400 font-bold">
                     {winner.wrestler.charAt(0)}
@@ -204,12 +215,12 @@ const womensRecords = [
             <span class="text-white font-medium">{winner.wrestler}</span>
           </div>
         ))}
-        {rumbleHistory.multiTimeWinners.women.map(winner => (
+        {womensWinners.map(winner => (
           <div class="flex items-center gap-3 p-3 bg-gradient-to-r from-pink-900/30 to-transparent rounded-lg border border-pink-500/30 hover:border-pink-400/60 transition-all hover:shadow-lg hover:shadow-pink-500/10">
             <div class="relative flex-shrink-0">
               <div class="w-12 h-12 rounded-full bg-gray-700 overflow-hidden">
-                {getWrestlerImage(winner.wrestler) ? (
-                  <img src={getWrestlerImage(winner.wrestler)} alt={winner.wrestler} class="w-full h-full object-cover" />
+                {winner.image ? (
+                  <img src={winner.image} alt={winner.wrestler} class="w-full h-full object-cover" />
                 ) : (
                   <div class="w-full h-full flex items-center justify-center text-gray-400 font-bold">
                     {winner.wrestler.charAt(0)}
