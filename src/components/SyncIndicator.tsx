@@ -25,7 +25,7 @@ export default function SyncIndicator() {
           status === 'syncing' ? 'animate-pulse' : ''
         } ${status === 'idle' ? 'shadow-lg shadow-green-500/50' : ''}`}
       />
-      <span className={`text-xs text-${config.color}-400`}>{config.label}</span>
+      <span className={`text-xs text-${config.color}-400 min-w-[45px]`}>{config.label}</span>
     </button>
   );
 }

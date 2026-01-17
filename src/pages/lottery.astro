@@ -26,13 +26,13 @@ import LotteryDraw from '../components/LotteryDraw';
       <div class="inline-flex bg-gray-800/50 rounded-lg p-1 border border-purple-800/30">
         <button
           id="tab-mens"
-          class="px-6 py-2 rounded-md text-sm font-bold transition-all bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-cyan-500/20"
+          class="tab-btn px-6 py-2 rounded-md text-sm font-bold transition-all tab-active-mens"
         >
           Men's Rumble
         </button>
         <button
           id="tab-womens"
-          class="px-6 py-2 rounded-md text-sm font-bold transition-all text-purple-300 hover:text-white"
+          class="tab-btn px-6 py-2 rounded-md text-sm font-bold transition-all tab-inactive"
         >
           Women's Rumble
         </button>
@@ -114,21 +114,43 @@ import LotteryDraw from '../components/LotteryDraw';
 
   if (tabMens && tabWomens && mensLottery && womensLottery) {
     tabMens.addEventListener('click', () => {
-      tabMens.classList.add('bg-blue-600', 'text-white');
-      tabMens.classList.remove('text-gray-400');
-      tabWomens.classList.remove('bg-pink-600', 'text-white');
-      tabWomens.classList.add('text-gray-400');
+      tabMens.classList.remove('tab-inactive');
+      tabMens.classList.add('tab-active-mens');
+      tabWomens.classList.remove('tab-active-womens');
+      tabWomens.classList.add('tab-inactive');
       mensLottery.classList.remove('hidden');
       womensLottery.classList.add('hidden');
     });
 
     tabWomens.addEventListener('click', () => {
-      tabWomens.classList.add('bg-pink-600', 'text-white');
-      tabWomens.classList.remove('text-gray-400');
-      tabMens.classList.remove('bg-blue-600', 'text-white');
-      tabMens.classList.add('text-gray-400');
+      tabWomens.classList.remove('tab-inactive');
+      tabWomens.classList.add('tab-active-womens');
+      tabMens.classList.remove('tab-active-mens');
+      tabMens.classList.add('tab-inactive');
       womensLottery.classList.remove('hidden');
       mensLottery.classList.add('hidden');
     });
   }
 </script>
+
+<style>
+  .tab-active-mens {
+    background: linear-gradient(to right, #2563eb, #0891b2);
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(6, 182, 212, 0.2);
+  }
+
+  .tab-active-womens {
+    background: linear-gradient(to right, #db2777, #e879f9);
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(236, 72, 153, 0.2);
+  }
+
+  .tab-inactive {
+    color: #d8b4fe;
+  }
+
+  .tab-inactive:hover {
+    color: white;
+  }
+</style>
