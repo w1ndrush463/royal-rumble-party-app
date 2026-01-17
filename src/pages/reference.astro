@@ -1,7 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import rumbleHistory from '../data/rumble-history.json';
+import wrestlers from '../data/wrestlers.json';
 import VideoCarousel from '../components/VideoCarousel';
+
+// Helper to find wrestler image by name (handles partial matches)
+function getWrestlerImage(name: string): string | null {
+  const normalizedName = name.toLowerCase();
+  const wrestler = wrestlers.find(w => {
+    const wrestlerName = w.name.toLowerCase();
+    return wrestlerName === normalizedName ||
+           wrestlerName.includes(normalizedName) ||
+           normalizedName.includes(wrestlerName);
+  });
+  return wrestler?.imageUrl || null;
+}
+
+// Records data with images
+const mensRecords = [
+  { label: "Most Wins", value: "Stone Cold (3)", wrestler: "Stone Cold Steve Austin" },
+  { label: "Most Appearances", value: "Kane (18)", wrestler: "Kane" },
+  { label: "Iron Man Record", value: "Gunther 1:11:25", wrestler: "Gunther" },
+  { label: "Most Eliminations", value: "Lesnar/Strowman (13)", wrestler: "Brock Lesnar" },
+  { label: "Career Eliminations", value: "Kane (45)", wrestler: "Kane" },
+  { label: "Fastest Win", value: "Lesnar 2:32", wrestler: "Brock Lesnar" },
+  { label: "Shortest Time", value: "Santino 1 second", wrestler: "Santino Marella" },
+];
+
+const womensRecords = [
+  { label: "Most Wins", value: "Charlotte (2)", wrestler: "Charlotte Flair" },
+  { label: "Most Appearances", value: "Liv/Natalya (8)", wrestler: "Liv Morgan" },
+  { label: "Iron Woman Record", value: "Roxanne 1:07:47", wrestler: "Roxanne Perez" },
+  { label: "Most Eliminations", value: "Nia Jax (9)", wrestler: "Nia Jax" },
+  { label: "Career Eliminations", value: "Nia Jax (28)", wrestler: "Nia Jax" },
+  { label: "Shortest Time", value: "Chelsea 4 seconds", wrestler: "Chelsea Green" },
+];
 ---
 
 <Layout title="Reference">
@@ -101,34 +134,21 @@ import VideoCarousel from '../components/VideoCarousel';
         <div class="bg-gradient-to-br from-blue-900/20 to-transparent p-4 rounded-lg border border-blue-800/30">
           <h3 class="blue-chrome-text font-bold mb-3 text-lg">Men's Records</h3>
           <div class="space-y-2">
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
-              <span class="text-cyan-300 text-sm">Most Wins</span>
-              <span class="text-white text-sm font-bold">Stone Cold (3)</span>
-            </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
-              <span class="text-cyan-300 text-sm">Most Appearances</span>
-              <span class="text-white text-sm font-bold">Kane (18)</span>
-            </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
-              <span class="text-cyan-300 text-sm">Iron Man Record</span>
-              <span class="text-white text-sm font-bold">Gunther 1:11:25</span>
-            </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
-              <span class="text-cyan-300 text-sm">Most Eliminations</span>
-              <span class="text-white text-sm font-bold">Lesnar/Strowman (13)</span>
-            </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
-              <span class="text-cyan-300 text-sm">Career Eliminations</span>
-              <span class="text-white text-sm font-bold">Kane (45)</span>
-            </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
-              <span class="text-cyan-300 text-sm">Fastest Win</span>
-              <span class="text-white text-sm font-bold">Lesnar 2:32</span>
-            </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
-              <span class="text-cyan-300 text-sm">Shortest Time</span>
-              <span class="text-white text-sm font-bold">Santino 1 second</span>
-            </div>
+            {mensRecords.map(record => (
+              <div class="flex items-center gap-3 p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
+                <div class="w-8 h-8 rounded-full bg-gray-700 overflow-hidden flex-shrink-0">
+                  {getWrestlerImage(record.wrestler) ? (
+                    <img src={getWrestlerImage(record.wrestler)} alt={record.wrestler} class="w-full h-full object-cover" />
+                  ) : (
+                    <div class="w-full h-full flex items-center justify-center text-gray-400 text-xs font-bold">
+                      {record.wrestler.charAt(0)}
+                    </div>
+                  )}
+                </div>
+                <span class="text-cyan-300 text-sm flex-1">{record.label}</span>
+                <span class="text-white text-sm font-bold">{record.value}</span>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -136,30 +156,21 @@ import VideoCarousel from '../components/VideoCarousel';
         <div class="bg-gradient-to-br from-pink-900/20 to-transparent p-4 rounded-lg border border-pink-800/30">
           <h3 class="pink-chrome-text font-bold mb-3 text-lg">Women's Records</h3>
           <div class="space-y-2">
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
-              <span class="text-pink-300 text-sm">Most Wins</span>
-              <span class="text-white text-sm font-bold">Charlotte (2)</span>
-            </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
-              <span class="text-pink-300 text-sm">Most Appearances</span>
-              <span class="text-white text-sm font-bold">Liv/Natalya (8)</span>
-            </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
-              <span class="text-pink-300 text-sm">Iron Woman Record</span>
-              <span class="text-white text-sm font-bold">Roxanne 1:07:47</span>
-            </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
-              <span class="text-pink-300 text-sm">Most Eliminations</span>
-              <span class="text-white text-sm font-bold">Nia Jax (9)</span>
-            </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
-              <span class="text-pink-300 text-sm">Career Eliminations</span>
-              <span class="text-white text-sm font-bold">Nia Jax (28)</span>
-            </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
-              <span class="text-pink-300 text-sm">Shortest Time</span>
-              <span class="text-white text-sm font-bold">Chelsea 4 seconds</span>
-            </div>
+            {womensRecords.map(record => (
+              <div class="flex items-center gap-3 p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
+                <div class="w-8 h-8 rounded-full bg-gray-700 overflow-hidden flex-shrink-0">
+                  {getWrestlerImage(record.wrestler) ? (
+                    <img src={getWrestlerImage(record.wrestler)} alt={record.wrestler} class="w-full h-full object-cover" />
+                  ) : (
+                    <div class="w-full h-full flex items-center justify-center text-gray-400 text-xs font-bold">
+                      {record.wrestler.charAt(0)}
+                    </div>
+                  )}
+                </div>
+                <span class="text-pink-300 text-sm flex-1">{record.label}</span>
+                <span class="text-white text-sm font-bold">{record.value}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -176,16 +187,38 @@ import VideoCarousel from '../components/VideoCarousel';
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {rumbleHistory.multiTimeWinners.men.map(winner => (
           <div class="flex items-center gap-3 p-3 bg-gradient-to-r from-purple-900/30 to-transparent rounded-lg border border-purple-500/30 hover:border-purple-400/60 transition-all hover:shadow-lg hover:shadow-purple-500/10">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white font-bold shadow-lg shadow-purple-500/30">
-              {winner.wins}x
+            <div class="relative flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-gray-700 overflow-hidden">
+                {getWrestlerImage(winner.wrestler) ? (
+                  <img src={getWrestlerImage(winner.wrestler)} alt={winner.wrestler} class="w-full h-full object-cover" />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center text-gray-400 font-bold">
+                    {winner.wrestler.charAt(0)}
+                  </div>
+                )}
+              </div>
+              <div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white text-xs font-bold shadow-lg shadow-purple-500/30">
+                {winner.wins}x
+              </div>
             </div>
             <span class="text-white font-medium">{winner.wrestler}</span>
           </div>
         ))}
         {rumbleHistory.multiTimeWinners.women.map(winner => (
           <div class="flex items-center gap-3 p-3 bg-gradient-to-r from-pink-900/30 to-transparent rounded-lg border border-pink-500/30 hover:border-pink-400/60 transition-all hover:shadow-lg hover:shadow-pink-500/10">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white font-bold shadow-lg shadow-pink-500/30">
-              {winner.wins}x
+            <div class="relative flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-gray-700 overflow-hidden">
+                {getWrestlerImage(winner.wrestler) ? (
+                  <img src={getWrestlerImage(winner.wrestler)} alt={winner.wrestler} class="w-full h-full object-cover" />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center text-gray-400 font-bold">
+                    {winner.wrestler.charAt(0)}
+                  </div>
+                )}
+              </div>
+              <div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white text-xs font-bold shadow-lg shadow-pink-500/30">
+                {winner.wins}x
+              </div>
             </div>
             <span class="text-white font-medium">{winner.wrestler}</span>
           </div>
