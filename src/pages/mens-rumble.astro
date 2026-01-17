@@ -10,16 +10,17 @@ import AdminPanel from '../components/AdminPanel';
     <!-- Header -->
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
       <div>
-        <h1 class="text-2xl sm:text-3xl font-bold text-white">
-          Men's <span class="text-blue-400">Royal Rumble</span>
+        <h1 class="text-2xl sm:text-4xl font-black">
+          <span class="rumble-title">MEN'S</span>
+          <span class="blue-chrome-text">ROYAL RUMBLE</span>
         </h1>
-        <p class="text-gray-400 mt-1">30 Superstars compete for a WrestleMania title shot</p>
+        <p class="text-purple-300 mt-1">30 Superstars compete for a WrestleMania title shot</p>
       </div>
 
       <!-- Admin Toggle -->
       <button
         id="admin-toggle"
-        class="hidden px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-gray-300 text-sm font-medium transition-colors"
+        class="hidden px-4 py-2 bg-purple-900/50 hover:bg-purple-800/50 rounded-lg text-purple-300 text-sm font-medium transition-colors border border-purple-700/50"
       >
         Show Admin Panel
       </button>
@@ -29,10 +30,10 @@ import AdminPanel from '../components/AdminPanel';
     <div class="grid lg:grid-cols-3 gap-6">
       <!-- Left Column: Entrant List -->
       <div class="lg:col-span-2">
-        <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
-          <h2 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-            <span class="w-3 h-3 bg-blue-500 rounded-full" />
-            Entrants
+        <div class="vaporwave-card p-4">
+          <h2 class="text-lg font-bold mb-4 flex items-center gap-2">
+            <span class="w-3 h-3 bg-cyan-400 rounded-full animate-pulse shadow-lg shadow-cyan-500/50" />
+            <span class="blue-chrome-text">ENTRANTS</span>
           </h2>
           <div id="entrant-list">
             <EntrantList client:load rumbleType="mens" />
@@ -53,35 +54,41 @@ import AdminPanel from '../components/AdminPanel';
         </div>
 
         <!-- User's Numbers -->
-        <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
-          <h3 class="text-white font-semibold mb-3">Your Numbers</h3>
-          <div id="user-numbers" class="text-gray-400 text-sm">
+        <div class="vaporwave-card p-4">
+          <h3 class="font-bold mb-3">
+            <span class="gold-chrome-text">YOUR</span>
+            <span class="text-white">NUMBERS</span>
+          </h3>
+          <div id="user-numbers" class="text-purple-300 text-sm">
             Select your name on the home page to see your numbers.
           </div>
         </div>
 
         <!-- Lucky Numbers Info -->
-        <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
-          <h3 class="text-white font-semibold mb-3">Lucky Numbers</h3>
+        <div class="vaporwave-card p-4">
+          <h3 class="font-bold mb-3">
+            <span class="gold-chrome-text">LUCKY</span>
+            <span class="text-white">NUMBERS</span>
+          </h3>
           <div class="space-y-2 text-sm">
-            <div class="flex justify-between text-gray-400">
-              <span>#30</span>
-              <span class="text-purple-400">5 wins (most)</span>
+            <div class="flex justify-between">
+              <span class="text-cyan-400 font-bold">#30</span>
+              <span class="text-white">5 wins (most)</span>
             </div>
-            <div class="flex justify-between text-gray-400">
-              <span>#27</span>
-              <span class="text-purple-400">5 wins</span>
+            <div class="flex justify-between">
+              <span class="text-cyan-400 font-bold">#27</span>
+              <span class="text-white">5 wins</span>
             </div>
-            <div class="flex justify-between text-gray-400">
-              <span>#28</span>
-              <span class="text-purple-400">4 wins</span>
+            <div class="flex justify-between">
+              <span class="text-cyan-400 font-bold">#28</span>
+              <span class="text-white">4 wins</span>
             </div>
-            <div class="flex justify-between text-gray-400">
-              <span>#1</span>
-              <span class="text-purple-400">4 wins</span>
+            <div class="flex justify-between">
+              <span class="text-cyan-400 font-bold">#1</span>
+              <span class="text-white">4 wins</span>
             </div>
           </div>
-          <a href="/reference" class="block mt-3 text-xs text-blue-400 hover:text-blue-300">
+          <a href="/reference" class="block mt-3 text-xs text-cyan-400 hover:text-cyan-300 transition-colors">
             View all stats &rarr;
           </a>
         </div>

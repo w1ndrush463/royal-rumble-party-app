@@ -57,15 +57,15 @@ export default function WrestlerCard({
       className={`
         relative rounded-lg border transition-all duration-200
         ${sizeClasses[size]}
-        ${isEliminated ? 'opacity-50 bg-gray-800 border-gray-700' : 'bg-gray-900 border-gray-700'}
-        ${isInRing ? 'ring-2 ring-green-500 border-green-500' : ''}
-        ${isHighlighted ? 'ring-2 ring-yellow-400 border-yellow-400 bg-yellow-900/20' : ''}
-        ${onClick ? 'cursor-pointer hover:border-gray-500' : ''}
+        ${isEliminated ? 'opacity-50 bg-gray-800/50 border-gray-700/50' : 'bg-gradient-to-r from-gray-800/80 to-gray-900/80 border-purple-800/30'}
+        ${isInRing ? 'ring-2 ring-green-400 border-green-500 shadow-lg shadow-green-500/20' : ''}
+        ${isHighlighted ? 'ring-2 ring-yellow-400 border-yellow-400 bg-gradient-to-r from-yellow-900/30 to-transparent shadow-lg shadow-yellow-500/20' : ''}
+        ${onClick ? 'cursor-pointer hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10' : ''}
       `}
     >
       {/* Entry Number Badge */}
       {entryNumber && (
-        <div className="absolute -top-2 -left-2 w-7 h-7 rounded-full bg-purple-600 flex items-center justify-center text-white text-sm font-bold shadow-lg">
+        <div className="absolute -top-2 -left-2 w-7 h-7 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white text-sm font-bold shadow-lg shadow-purple-500/30">
           {entryNumber}
         </div>
       )}
@@ -166,15 +166,15 @@ export default function WrestlerCard({
 
       {/* Eliminated Overlay */}
       {isEliminated && (
-        <div className="absolute top-1 right-1 text-xs bg-red-900 text-red-200 px-2 py-0.5 rounded">
+        <div className="absolute top-1 right-1 text-xs bg-red-900/80 text-red-200 px-2 py-0.5 rounded border border-red-600/50 font-bold">
           ELIMINATED
         </div>
       )}
 
       {/* In Ring Indicator */}
       {isInRing && !isEliminated && (
-        <div className="absolute top-1 right-1 text-xs bg-green-900 text-green-200 px-2 py-0.5 rounded flex items-center gap-1">
-          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+        <div className="absolute top-1 right-1 text-xs bg-green-900/80 text-green-200 px-2 py-0.5 rounded flex items-center gap-1 border border-green-500/50 font-bold">
+          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-500/50" />
           IN RING
         </div>
       )}

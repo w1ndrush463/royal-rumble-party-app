@@ -7,10 +7,11 @@ import matchState from '../data/match-state.json';
   <div class="space-y-8">
     <!-- Hero Section -->
     <section class="text-center py-8">
-      <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4">
-        Royal Rumble <span class="text-purple-400">2026</span>
+      <h1 class="text-4xl sm:text-6xl font-black mb-4">
+        <span class="rumble-title">ROYAL RUMBLE</span>
+        <span class="neon-cyan block sm:inline"> 2026</span>
       </h1>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+      <p class="text-purple-300 text-lg max-w-2xl mx-auto">
         Welcome to the official watch party companion app. Track your lottery numbers,
         make predictions, and compete with friends!
       </p>
@@ -18,12 +19,15 @@ import matchState from '../data/match-state.json';
 
     <!-- User Selection -->
     <section class="max-w-md mx-auto">
-      <div class="bg-gray-900 rounded-xl p-6 border border-gray-800">
-        <h2 class="text-xl font-semibold text-white mb-4 text-center">Who are you?</h2>
+      <div class="vaporwave-card p-6">
+        <h2 class="text-xl font-bold text-center mb-4">
+          <span class="gold-chrome-text">WHO</span>
+          <span class="text-white">ARE YOU?</span>
+        </h2>
         <div id="user-selection" class="grid grid-cols-3 gap-3">
           {matchState.users.map(user => (
             <button
-              class="user-btn p-3 rounded-lg bg-gray-800 hover:bg-gray-700 text-white text-sm font-medium transition-colors border-2 border-transparent hover:border-purple-500"
+              class="user-btn p-3 rounded-lg bg-gray-800/50 hover:bg-purple-900/50 text-white text-sm font-medium transition-all border-2 border-purple-800/50 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20"
               data-user-id={user.id}
               data-user-name={user.name}
             >
@@ -37,67 +41,62 @@ import matchState from '../data/match-state.json';
     <!-- Quick Access Cards -->
     <section class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <a href="/mens-rumble" class="quick-card group">
-        <div class="w-12 h-12 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-          </svg>
+        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600/30 to-cyan-600/30 text-cyan-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform group-hover:shadow-lg group-hover:shadow-cyan-500/30">
+          <span class="text-2xl">👔</span>
         </div>
-        <h3 class="text-white font-semibold mb-1">Men's Rumble</h3>
-        <p class="text-gray-400 text-sm">30 superstars, 1 winner</p>
+        <h3 class="text-white font-bold mb-1 group-hover:text-cyan-400 transition-colors">Men's Rumble</h3>
+        <p class="text-purple-300 text-sm">30 superstars, 1 winner</p>
       </a>
 
       <a href="/womens-rumble" class="quick-card group">
-        <div class="w-12 h-12 rounded-lg bg-pink-600/20 text-pink-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-          </svg>
+        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-pink-600/30 to-rose-600/30 text-pink-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform group-hover:shadow-lg group-hover:shadow-pink-500/30">
+          <span class="text-2xl">👗</span>
         </div>
-        <h3 class="text-white font-semibold mb-1">Women's Rumble</h3>
-        <p class="text-gray-400 text-sm">30 superstars, 1 winner</p>
+        <h3 class="text-white font-bold mb-1 group-hover:text-pink-400 transition-colors">Women's Rumble</h3>
+        <p class="text-purple-300 text-sm">30 superstars, 1 winner</p>
       </a>
 
       <a href="/predictions" class="quick-card group">
-        <div class="w-12 h-12 rounded-lg bg-yellow-600/20 text-yellow-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-          </svg>
+        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-yellow-600/30 to-orange-600/30 text-yellow-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform group-hover:shadow-lg group-hover:shadow-yellow-500/30">
+          <span class="text-2xl">🎰</span>
         </div>
-        <h3 class="text-white font-semibold mb-1">Predictions</h3>
-        <p class="text-gray-400 text-sm">Make your bets</p>
+        <h3 class="text-white font-bold mb-1 group-hover:text-yellow-400 transition-colors">Predictions</h3>
+        <p class="text-purple-300 text-sm">Make your bets</p>
       </a>
 
       <a href="/leaderboard" class="quick-card group">
-        <div class="w-12 h-12 rounded-lg bg-purple-600/20 text-purple-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-          </svg>
+        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-600/30 to-indigo-600/30 text-purple-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform group-hover:shadow-lg group-hover:shadow-purple-500/30">
+          <span class="text-2xl">🏆</span>
         </div>
-        <h3 class="text-white font-semibold mb-1">Leaderboard</h3>
-        <p class="text-gray-400 text-sm">Check the standings</p>
+        <h3 class="text-white font-bold mb-1 group-hover:text-purple-400 transition-colors">Leaderboard</h3>
+        <p class="text-purple-300 text-sm">Check the standings</p>
       </a>
     </section>
 
     <!-- Lottery Status -->
-    <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
-      <h2 class="text-xl font-semibold text-white mb-4">Your Lottery Numbers</h2>
-      <div id="lottery-status" class="text-gray-400">
+    <section class="vaporwave-card p-6">
+      <h2 class="text-xl font-bold mb-4">
+        <span class="gold-chrome-text">YOUR</span>
+        <span class="text-white">LOTTERY NUMBERS</span>
+      </h2>
+      <div id="lottery-status" class="text-purple-300">
         Select your name above to see your lottery numbers.
       </div>
     </section>
 
     <!-- Quick Stats -->
     <section class="grid sm:grid-cols-3 gap-4">
-      <div class="bg-gray-900 rounded-xl p-4 border border-gray-800 text-center">
-        <div class="text-3xl font-bold text-purple-400">30</div>
-        <div class="text-gray-400 text-sm">Entrants per match</div>
+      <div class="vaporwave-card p-4 text-center">
+        <div class="text-4xl font-black neon-cyan">30</div>
+        <div class="text-purple-300 text-sm">Entrants per match</div>
       </div>
-      <div class="bg-gray-900 rounded-xl p-4 border border-gray-800 text-center">
-        <div class="text-3xl font-bold text-purple-400">15</div>
-        <div class="text-gray-400 text-sm">Party members</div>
+      <div class="vaporwave-card p-4 text-center">
+        <div class="text-4xl font-black neon-pink" style="text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;">15</div>
+        <div class="text-purple-300 text-sm">Party members</div>
       </div>
-      <div class="bg-gray-900 rounded-xl p-4 border border-gray-800 text-center">
-        <div class="text-3xl font-bold text-purple-400">2</div>
-        <div class="text-gray-400 text-sm">Numbers per person</div>
+      <div class="vaporwave-card p-4 text-center">
+        <div class="text-4xl font-black gold-chrome-text">2</div>
+        <div class="text-purple-300 text-sm">Numbers per person</div>
       </div>
     </section>
   </div>
@@ -106,16 +105,18 @@ import matchState from '../data/match-state.json';
 <style>
   .quick-card {
     display: block;
-    background-color: #111827;
+    background: linear-gradient(135deg, rgba(26, 10, 46, 0.9) 0%, rgba(10, 10, 26, 0.95) 100%);
     border-radius: 0.75rem;
     padding: 1.25rem;
-    border: 1px solid #1f2937;
-    transition: all 0.15s ease;
+    border: 1px solid rgba(191, 0, 255, 0.3);
+    transition: all 0.2s ease;
+    box-shadow: 0 0 20px rgba(191, 0, 255, 0.1);
   }
 
   .quick-card:hover {
-    border-color: #4b5563;
-    transform: scale(1.02);
+    border-color: rgba(0, 255, 255, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
   }
 </style>
 

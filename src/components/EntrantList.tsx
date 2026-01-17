@@ -16,10 +16,10 @@ export default function EntrantList({ rumbleType }: EntrantListProps) {
 
   if (rumble.status === 'not_started') {
     return (
-      <div className="text-center py-12 text-gray-400">
+      <div className="text-center py-12">
         <div className="text-6xl mb-4">🏟️</div>
-        <p className="text-lg">Match hasn't started yet</p>
-        <p className="text-sm mt-2">Entrants will appear here as they enter the ring</p>
+        <p className="text-lg text-purple-300">Match hasn't started yet</p>
+        <p className="text-sm mt-2 text-purple-400">Entrants will appear here as they enter the ring</p>
       </div>
     );
   }
@@ -27,10 +27,10 @@ export default function EntrantList({ rumbleType }: EntrantListProps) {
   return (
     <div className="space-y-3">
       {/* Header */}
-      <div className="flex items-center justify-between text-sm text-gray-400">
-        <span>Entrants: {rumble.currentEntryNumber}/30</span>
-        <span>
-          In Ring: {Object.keys(rumble.entrants).length - rumble.eliminations.length}
+      <div className="flex items-center justify-between text-sm">
+        <span className="text-cyan-400 font-medium">Entrants: <span className="text-white">{rumble.currentEntryNumber}/30</span></span>
+        <span className="text-green-400 font-medium">
+          In Ring: <span className="text-white">{Object.keys(rumble.entrants).length - rumble.eliminations.length}</span>
         </span>
       </div>
 
@@ -45,10 +45,10 @@ export default function EntrantList({ rumbleType }: EntrantListProps) {
           return (
             <div
               key={wrestler.id}
-              className={`relative ${isWinner ? 'ring-2 ring-yellow-400 rounded-lg' : ''}`}
+              className={`relative ${isWinner ? 'ring-2 ring-yellow-400 rounded-lg shadow-lg shadow-yellow-500/30' : ''}`}
             >
               {isWinner && (
-                <div className="absolute -top-2 -right-2 bg-yellow-500 text-black px-2 py-0.5 rounded text-xs font-bold z-10">
+                <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-2 py-0.5 rounded text-xs font-bold z-10 shadow-lg shadow-yellow-500/50">
                   WINNER!
                 </div>
               )}
@@ -67,19 +67,19 @@ export default function EntrantList({ rumbleType }: EntrantListProps) {
 
       {/* Waiting for next entrant */}
       {rumble.currentEntryNumber < 30 && rumble.status === 'in_progress' && (
-        <div className="flex items-center gap-3 p-3 rounded-lg border border-dashed border-gray-700 text-gray-400">
-          <div className="w-7 h-7 rounded-full bg-gray-700 flex items-center justify-center text-sm font-bold animate-pulse">
+        <div className="flex items-center gap-3 p-3 rounded-lg border border-dashed border-purple-600/50 bg-purple-900/20">
+          <div className="w-7 h-7 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-sm font-bold text-white animate-pulse shadow-lg shadow-purple-500/30">
             {rumble.currentEntryNumber + 1}
           </div>
-          <span className="text-sm">Waiting for next entrant...</span>
+          <span className="text-sm text-purple-300">Waiting for next entrant...</span>
         </div>
       )}
 
       {/* Match Complete */}
       {rumble.status === 'completed' && rumble.winner && (
-        <div className="mt-6 p-4 bg-gradient-to-r from-yellow-900/30 to-yellow-600/30 rounded-lg border border-yellow-600 text-center">
+        <div className="mt-6 p-4 bg-gradient-to-r from-yellow-900/40 to-orange-900/30 rounded-lg border border-yellow-500/50 text-center shadow-lg shadow-yellow-500/20 winner-celebration">
           <div className="text-2xl mb-2">🏆</div>
-          <div className="text-yellow-400 font-bold text-lg">
+          <div className="gold-chrome-text font-bold text-lg">
             {getWrestler(rumble.winner)?.name} wins the Royal Rumble!
           </div>
         </div>

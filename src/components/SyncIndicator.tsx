@@ -17,13 +17,13 @@ export default function SyncIndicator() {
   return (
     <button
       onClick={forceSync}
-      className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-800 transition-colors"
+      className="flex items-center gap-2 px-2 py-1 rounded hover:bg-purple-900/50 transition-colors border border-transparent hover:border-purple-600/30"
       title={lastSync ? `Last sync: ${lastSync.toLocaleTimeString()}` : 'Click to sync'}
     >
       <span
         className={`w-2 h-2 rounded-full ${config.bg} ${
           status === 'syncing' ? 'animate-pulse' : ''
-        }`}
+        } ${status === 'idle' ? 'shadow-lg shadow-green-500/50' : ''}`}
       />
       <span className={`text-xs text-${config.color}-400`}>{config.label}</span>
     </button>

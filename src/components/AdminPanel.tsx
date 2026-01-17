@@ -79,18 +79,19 @@ export default function AdminPanel({ rumbleType }: AdminPanelProps) {
   const themeColor = rumbleType === 'mens' ? 'blue' : 'pink';
 
   return (
-    <div className={`bg-gray-900 rounded-xl p-4 border border-gray-800 space-y-4 ${isLoading ? 'opacity-70 pointer-events-none' : ''}`}>
+    <div className={`vaporwave-card p-4 space-y-4 ${isLoading ? 'opacity-70 pointer-events-none' : ''}`}>
       <div className="flex items-center justify-between">
-        <h3 className="text-white font-semibold flex items-center gap-2">
-          Admin Controls
+        <h3 className="font-bold flex items-center gap-2">
+          <span className="gold-chrome-text">ADMIN</span>
+          <span className="text-white">CONTROLS</span>
           {isLoading && (
-            <span className="w-4 h-4 border-2 border-purple-400 border-t-transparent rounded-full animate-spin" />
+            <span className="w-4 h-4 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin" />
           )}
         </h3>
-        <span className={`px-2 py-1 rounded text-xs font-medium ${
-          rumble.status === 'not_started' ? 'bg-gray-700 text-gray-300' :
-          rumble.status === 'in_progress' ? 'bg-green-900 text-green-300' :
-          'bg-yellow-900 text-yellow-300'
+        <span className={`px-2 py-1 rounded text-xs font-bold ${
+          rumble.status === 'not_started' ? 'bg-gray-700/50 text-gray-300 border border-gray-600' :
+          rumble.status === 'in_progress' ? 'bg-green-900/50 text-green-300 border border-green-600' :
+          'bg-yellow-900/50 text-yellow-300 border border-yellow-600'
         }`}>
           {rumble.status.replace('_', ' ').toUpperCase()}
         </span>
@@ -98,7 +99,7 @@ export default function AdminPanel({ rumbleType }: AdminPanelProps) {
 
       {/* Error Display */}
       {error && (
-        <div className="bg-red-900/20 border border-red-600 rounded-lg p-2 text-red-400 text-sm">
+        <div className="bg-red-900/30 border border-red-600/50 rounded-lg p-2 text-red-400 text-sm">
           {error}
         </div>
       )}
@@ -106,7 +107,7 @@ export default function AdminPanel({ rumbleType }: AdminPanelProps) {
       {/* Add Entrant */}
       {rumble.currentEntryNumber < 30 && rumble.status !== 'completed' && (
         <div>
-          <label className="block text-sm text-gray-400 mb-2">
+          <label className="block text-sm text-cyan-400 font-medium mb-2">
             Add Entry #{rumble.currentEntryNumber + 1}
           </label>
           <WrestlerSearch
@@ -123,7 +124,7 @@ export default function AdminPanel({ rumbleType }: AdminPanelProps) {
       {/* Eliminate Wrestler */}
       {wrestlersInRing.length > 0 && rumble.status === 'in_progress' && (
         <div>
-          <label className="block text-sm text-gray-400 mb-2">
+          <label className="block text-sm text-red-400 font-medium mb-2">
             Eliminate Wrestler ({wrestlersInRing.length} in ring)
           </label>
           <div className="grid grid-cols-2 gap-2 max-h-60 overflow-y-auto">
@@ -131,9 +132,9 @@ export default function AdminPanel({ rumbleType }: AdminPanelProps) {
               <button
                 key={wrestler.id}
                 onClick={() => handleEliminate(wrestler.id)}
-                className="flex items-center gap-2 p-2 bg-gray-800 hover:bg-red-900/50 rounded-lg text-left transition-colors group"
+                className="flex items-center gap-2 p-2 bg-gray-800/50 hover:bg-red-900/50 rounded-lg text-left transition-all border border-purple-800/30 hover:border-red-500/50 group"
               >
-                <div className="w-6 h-6 rounded-full bg-purple-600 text-white text-xs flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 text-white text-xs flex items-center justify-center font-bold flex-shrink-0">
                   {entryNumber}
                 </div>
                 <div className="w-8 h-8 rounded-lg bg-gray-700 overflow-hidden flex-shrink-0">
@@ -146,7 +147,7 @@ export default function AdminPanel({ rumbleType }: AdminPanelProps) {
                   )}
                 </div>
                 <span className="text-white text-sm truncate flex-1">{wrestler.name}</span>
-                <span className="text-red-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-red-400 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">
                   OUT
                 </span>
               </button>
@@ -157,34 +158,34 @@ export default function AdminPanel({ rumbleType }: AdminPanelProps) {
 
       {/* Quick Stats */}
       <div className="grid grid-cols-3 gap-2 text-center">
-        <div className="bg-gray-800 rounded-lg p-2">
-          <div className={`text-xl font-bold text-${themeColor}-400`}>{rumble.currentEntryNumber}</div>
-          <div className="text-xs text-gray-400">Entered</div>
+        <div className="bg-gray-800/50 rounded-lg p-2 border border-cyan-800/30">
+          <div className={`text-xl font-bold ${rumbleType === 'mens' ? 'text-cyan-400' : 'text-pink-400'}`}>{rumble.currentEntryNumber}</div>
+          <div className="text-xs text-purple-300">Entered</div>
         </div>
-        <div className="bg-gray-800 rounded-lg p-2">
+        <div className="bg-gray-800/50 rounded-lg p-2 border border-green-800/30">
           <div className="text-xl font-bold text-green-400">{wrestlersInRing.length}</div>
-          <div className="text-xs text-gray-400">In Ring</div>
+          <div className="text-xs text-purple-300">In Ring</div>
         </div>
-        <div className="bg-gray-800 rounded-lg p-2">
+        <div className="bg-gray-800/50 rounded-lg p-2 border border-red-800/30">
           <div className="text-xl font-bold text-red-400">{rumble.eliminations.length}</div>
-          <div className="text-xs text-gray-400">Eliminated</div>
+          <div className="text-xs text-purple-300">Eliminated</div>
         </div>
       </div>
 
       {/* Match Complete */}
       {rumble.status === 'completed' && rumble.winner && (
-        <div className="bg-yellow-900/20 border border-yellow-600 rounded-lg p-3 text-center">
-          <div className="text-yellow-400 font-bold">Match Complete!</div>
+        <div className="bg-gradient-to-r from-yellow-900/40 to-transparent border border-yellow-500/50 rounded-lg p-3 text-center">
+          <div className="gold-chrome-text font-bold">Match Complete!</div>
           <div className="text-white">Winner: {getWrestler(rumble.winner)?.name}</div>
         </div>
       )}
 
       {/* Reset Button */}
-      <div className="pt-2 border-t border-gray-800">
+      <div className="pt-2 border-t border-purple-800/30">
         {!showConfirmReset ? (
           <button
             onClick={() => setShowConfirmReset(true)}
-            className="w-full py-2 text-sm text-gray-400 hover:text-red-400 transition-colors"
+            className="w-full py-2 text-sm text-purple-400 hover:text-red-400 transition-colors"
           >
             Reset Match
           </button>
@@ -194,13 +195,13 @@ export default function AdminPanel({ rumbleType }: AdminPanelProps) {
             <div className="flex gap-2">
               <button
                 onClick={handleReset}
-                className="flex-1 py-2 bg-red-600 hover:bg-red-500 text-white rounded-lg text-sm font-medium transition-colors"
+                className="flex-1 py-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white rounded-lg text-sm font-bold transition-all"
               >
                 Yes, Reset
               </button>
               <button
                 onClick={() => setShowConfirmReset(false)}
-                className="flex-1 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-sm font-medium transition-colors"
+                className="flex-1 py-2 bg-gray-700/50 hover:bg-gray-600/50 text-white rounded-lg text-sm font-medium transition-colors border border-gray-600"
               >
                 Cancel
               </button>

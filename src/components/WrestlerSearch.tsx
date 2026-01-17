@@ -135,9 +135,9 @@ export default function WrestlerSearch({
           onFocus={() => setIsOpen(true)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
-          className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+          className="w-full px-4 py-3 bg-gray-800/80 border border-purple-600/50 rounded-lg text-white placeholder-purple-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 focus:shadow-lg focus:shadow-cyan-500/20 transition-all"
         />
-        <div className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+        <div className="absolute right-3 top-1/2 -translate-y-1/2 text-purple-400">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
@@ -148,10 +148,10 @@ export default function WrestlerSearch({
       {isOpen && (
         <div
           ref={listRef}
-          className="absolute z-50 w-full mt-2 max-h-96 overflow-y-auto bg-gray-900 border border-gray-700 rounded-lg shadow-xl"
+          className="absolute z-50 w-full mt-2 max-h-96 overflow-y-auto bg-gray-900/95 border border-purple-600/50 rounded-lg shadow-xl shadow-purple-500/20 backdrop-blur-sm"
         >
           {displayWrestlers.length === 0 ? (
-            <div className="p-4 text-center text-gray-400">
+            <div className="p-4 text-center text-purple-400">
               {query ? 'No wrestlers found' : 'Start typing to search'}
             </div>
           ) : (
@@ -162,7 +162,7 @@ export default function WrestlerSearch({
                 onMouseEnter={() => setHighlightedIndex(index)}
                 className={`
                   cursor-pointer transition-colors
-                  ${index === highlightedIndex ? 'bg-gray-800' : ''}
+                  ${index === highlightedIndex ? 'bg-purple-900/50' : 'hover:bg-gray-800/50'}
                 `}
               >
                 <WrestlerCard wrestler={wrestler} size="small" />
@@ -171,7 +171,7 @@ export default function WrestlerSearch({
           )}
 
           {sortedWrestlers.length > 20 && (
-            <div className="p-2 text-center text-gray-500 text-sm border-t border-gray-700">
+            <div className="p-2 text-center text-purple-400 text-sm border-t border-purple-800/30">
               Showing 20 of {sortedWrestlers.length} results. Type more to narrow down.
             </div>
           )}

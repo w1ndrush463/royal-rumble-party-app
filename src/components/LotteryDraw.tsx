@@ -102,13 +102,13 @@ export default function LotteryDraw({ rumbleType }: LotteryDrawProps) {
               )}
             </button>
           ) : (
-            <div className="text-gray-400">
+            <div className="text-purple-300">
               <p className="mb-2">Waiting for admin to draw lottery numbers...</p>
-              <p className="text-sm text-gray-500">Numbers will appear here once drawn</p>
+              <p className="text-sm text-purple-400">Numbers will appear here once drawn</p>
             </div>
           )}
           {canDraw && (
-            <p className="text-gray-400 text-sm mt-3">
+            <p className="text-purple-300 text-sm mt-3">
               Each player will receive 2 random numbers (1-30)
             </p>
           )}
@@ -118,8 +118,9 @@ export default function LotteryDraw({ rumbleType }: LotteryDrawProps) {
       {/* Results */}
       {hasAssignments && (
         <div className="space-y-4">
-          <h3 className="text-white font-semibold text-lg text-center">
-            {rumbleType === 'mens' ? "Men's" : "Women's"} Rumble Assignments
+          <h3 className="font-bold text-lg text-center">
+            <span className="gold-chrome-text">{rumbleType === 'mens' ? "MEN'S" : "WOMEN'S"}</span>
+            <span className="text-white"> RUMBLE ASSIGNMENTS</span>
           </h3>
 
           {/* Your Numbers (highlighted) */}
@@ -159,9 +160,9 @@ export default function LotteryDraw({ rumbleType }: LotteryDrawProps) {
                   className={`
                     p-3 rounded-lg border transition-all duration-300
                     ${isCurrentUser
-                      ? `bg-${themeColor}-900/20 border-${themeColor}-600`
-                      : 'bg-gray-800 border-gray-700'}
-                    ${isAnimating ? 'scale-105 ring-2 ring-yellow-400' : ''}
+                      ? `bg-${themeColor}-900/20 border-${themeColor}-600 shadow-lg shadow-${themeColor}-500/20`
+                      : 'bg-gray-800/50 border-purple-800/30 hover:border-purple-500/50'}
+                    ${isAnimating ? 'scale-105 ring-2 ring-yellow-400 shadow-lg shadow-yellow-500/30' : ''}
                   `}
                 >
                   <div className="flex items-center justify-between">
@@ -192,11 +193,11 @@ export default function LotteryDraw({ rumbleType }: LotteryDrawProps) {
 
           {/* Redraw Button (Admin only) */}
           {canDraw && (
-            <div className="text-center pt-4">
+            <div className="text-center pt-4 border-t border-purple-800/30">
               <button
                 onClick={handleDraw}
                 disabled={isDrawing}
-                className="px-4 py-2 text-gray-400 hover:text-white text-sm transition-colors"
+                className="px-4 py-2 text-purple-400 hover:text-white text-sm transition-colors mt-2"
               >
                 Redraw All Numbers
               </button>
@@ -206,8 +207,11 @@ export default function LotteryDraw({ rumbleType }: LotteryDrawProps) {
       )}
 
       {/* Numbers Reference */}
-      <div className="mt-8 p-4 bg-gray-800 rounded-xl">
-        <h4 className="text-white font-medium mb-3">Number Distribution</h4>
+      <div className="mt-8 p-4 vaporwave-card">
+        <h4 className="font-bold mb-3">
+          <span className="gold-chrome-text">NUMBER</span>
+          <span className="text-white"> DISTRIBUTION</span>
+        </h4>
         <div className="grid grid-cols-10 gap-1">
           {Array.from({ length: 30 }, (_, i) => i + 1).map(num => {
             const assignedUserId = rumble.assignments[num];
@@ -234,7 +238,7 @@ export default function LotteryDraw({ rumbleType }: LotteryDrawProps) {
             );
           })}
         </div>
-        <p className="text-gray-500 text-xs mt-2 text-center">
+        <p className="text-purple-400 text-xs mt-2 text-center">
           Hover over numbers to see who has them
         </p>
       </div>

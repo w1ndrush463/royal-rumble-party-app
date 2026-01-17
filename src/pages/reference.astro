@@ -22,29 +22,30 @@ import VideoCarousel from '../components/VideoCarousel';
 
     <!-- Lucky Numbers -->
     <section class="vaporwave-card p-6">
-      <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
         <span class="text-2xl">🍀</span>
-        Lucky Entry Numbers
+        <span class="gold-chrome-text">LUCKY</span>
+        <span class="text-white">ENTRY NUMBERS</span>
       </h2>
-      <p class="text-gray-400 text-sm mb-4">
+      <p class="text-purple-300 text-sm mb-4">
         These entry positions have produced the most Royal Rumble winners throughout history.
       </p>
 
       <div class="grid md:grid-cols-2 gap-6">
         <!-- Men's -->
         <div>
-          <h3 class="text-blue-400 font-medium mb-3">Men's Rumble</h3>
+          <h3 class="blue-chrome-text font-bold mb-3 text-lg">Men's Rumble</h3>
           <div class="space-y-2">
             {Object.entries(rumbleHistory.luckyNumbers.men)
               .sort((a, b) => b[1].wins - a[1].wins)
               .map(([num, data]) => (
-                <div class="flex items-center gap-3 p-2 bg-gray-800 rounded-lg">
-                  <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">
+                <div class="flex items-center gap-3 p-2 bg-gray-800/50 rounded-lg border border-blue-900/50 hover:border-cyan-500/50 transition-colors">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center text-white font-bold shadow-lg shadow-blue-500/20">
                     {num}
                   </div>
                   <div class="flex-1">
                     <div class="text-white font-medium">{data.wins} wins</div>
-                    <div class="text-gray-400 text-xs truncate" title={data.winners.join(', ')}>
+                    <div class="text-cyan-400/70 text-xs truncate" title={data.winners.join(', ')}>
                       {data.winners.slice(0, 2).join(', ')}{data.winners.length > 2 ? '...' : ''}
                     </div>
                   </div>
@@ -55,18 +56,18 @@ import VideoCarousel from '../components/VideoCarousel';
 
         <!-- Women's -->
         <div>
-          <h3 class="text-pink-400 font-medium mb-3">Women's Rumble</h3>
+          <h3 class="neon-pink font-bold mb-3 text-lg" style="text-shadow: 0 0 10px #ff00ff;">Women's Rumble</h3>
           <div class="space-y-2">
             {Object.entries(rumbleHistory.luckyNumbers.women)
               .sort((a, b) => b[1].wins - a[1].wins)
               .map(([num, data]) => (
-                <div class="flex items-center gap-3 p-2 bg-gray-800 rounded-lg">
-                  <div class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white font-bold">
+                <div class="flex items-center gap-3 p-2 bg-gray-800/50 rounded-lg border border-pink-900/50 hover:border-pink-500/50 transition-colors">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-white font-bold shadow-lg shadow-pink-500/20">
                     {num}
                   </div>
                   <div class="flex-1">
                     <div class="text-white font-medium">{data.wins} {data.wins === 1 ? 'win' : 'wins'}</div>
-                    <div class="text-gray-400 text-xs truncate">
+                    <div class="text-pink-400/70 text-xs truncate">
                       {data.winners.join(', ')}
                     </div>
                   </div>
@@ -77,84 +78,85 @@ import VideoCarousel from '../components/VideoCarousel';
       </div>
 
       <!-- Numbers that never won -->
-      <div class="mt-4 p-3 bg-gray-800 rounded-lg">
-        <div class="text-gray-400 text-sm">
-          <strong class="text-white">Numbers that have NEVER won:</strong>{' '}
-          {rumbleHistory.luckyNumbers.neverWon.join(', ')}
+      <div class="mt-4 p-3 bg-red-900/20 rounded-lg border border-red-600/30">
+        <div class="text-sm">
+          <strong class="text-red-400">Numbers that have NEVER won:</strong>{' '}
+          <span class="text-gray-300">{rumbleHistory.luckyNumbers.neverWon.join(', ')}</span>
         </div>
       </div>
     </section>
 
     <!-- Records -->
     <section class="vaporwave-card p-6">
-      <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
         <span class="text-2xl">🏆</span>
-        Royal Rumble Records
+        <span class="gold-chrome-text">ROYAL RUMBLE</span>
+        <span class="text-white">RECORDS</span>
       </h2>
 
       <div class="grid md:grid-cols-2 gap-6">
         <!-- Men's Records -->
-        <div>
-          <h3 class="text-blue-400 font-medium mb-3">Men's Records</h3>
+        <div class="bg-gradient-to-br from-blue-900/20 to-transparent p-4 rounded-lg border border-blue-800/30">
+          <h3 class="blue-chrome-text font-bold mb-3 text-lg">Men's Records</h3>
           <div class="space-y-2">
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
-              <span class="text-gray-400 text-sm">Most Wins</span>
-              <span class="text-white text-sm font-medium">Stone Cold (3)</span>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
+              <span class="text-cyan-300 text-sm">Most Wins</span>
+              <span class="text-white text-sm font-bold">Stone Cold (3)</span>
             </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
-              <span class="text-gray-400 text-sm">Most Appearances</span>
-              <span class="text-white text-sm font-medium">Kane (18)</span>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
+              <span class="text-cyan-300 text-sm">Most Appearances</span>
+              <span class="text-white text-sm font-bold">Kane (18)</span>
             </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
-              <span class="text-gray-400 text-sm">Iron Man Record</span>
-              <span class="text-white text-sm font-medium">Gunther 1:11:25</span>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
+              <span class="text-cyan-300 text-sm">Iron Man Record</span>
+              <span class="text-white text-sm font-bold">Gunther 1:11:25</span>
             </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
-              <span class="text-gray-400 text-sm">Most Eliminations</span>
-              <span class="text-white text-sm font-medium">Lesnar/Strowman (13)</span>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
+              <span class="text-cyan-300 text-sm">Most Eliminations</span>
+              <span class="text-white text-sm font-bold">Lesnar/Strowman (13)</span>
             </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
-              <span class="text-gray-400 text-sm">Career Eliminations</span>
-              <span class="text-white text-sm font-medium">Kane (45)</span>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
+              <span class="text-cyan-300 text-sm">Career Eliminations</span>
+              <span class="text-white text-sm font-bold">Kane (45)</span>
             </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
-              <span class="text-gray-400 text-sm">Fastest Win</span>
-              <span class="text-white text-sm font-medium">Lesnar 2:32</span>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
+              <span class="text-cyan-300 text-sm">Fastest Win</span>
+              <span class="text-white text-sm font-bold">Lesnar 2:32</span>
             </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
-              <span class="text-gray-400 text-sm">Shortest Time</span>
-              <span class="text-white text-sm font-medium">Santino 1 second</span>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
+              <span class="text-cyan-300 text-sm">Shortest Time</span>
+              <span class="text-white text-sm font-bold">Santino 1 second</span>
             </div>
           </div>
         </div>
 
         <!-- Women's Records -->
-        <div>
-          <h3 class="text-pink-400 font-medium mb-3">Women's Records</h3>
+        <div class="bg-gradient-to-br from-pink-900/20 to-transparent p-4 rounded-lg border border-pink-800/30">
+          <h3 class="neon-pink font-bold mb-3 text-lg" style="text-shadow: 0 0 10px #ff00ff;">Women's Records</h3>
           <div class="space-y-2">
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
-              <span class="text-gray-400 text-sm">Most Wins</span>
-              <span class="text-white text-sm font-medium">Charlotte (2)</span>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
+              <span class="text-pink-300 text-sm">Most Wins</span>
+              <span class="text-white text-sm font-bold">Charlotte (2)</span>
             </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
-              <span class="text-gray-400 text-sm">Most Appearances</span>
-              <span class="text-white text-sm font-medium">Liv/Natalya (8)</span>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
+              <span class="text-pink-300 text-sm">Most Appearances</span>
+              <span class="text-white text-sm font-bold">Liv/Natalya (8)</span>
             </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
-              <span class="text-gray-400 text-sm">Iron Woman Record</span>
-              <span class="text-white text-sm font-medium">Roxanne 1:07:47</span>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
+              <span class="text-pink-300 text-sm">Iron Woman Record</span>
+              <span class="text-white text-sm font-bold">Roxanne 1:07:47</span>
             </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
-              <span class="text-gray-400 text-sm">Most Eliminations</span>
-              <span class="text-white text-sm font-medium">Nia Jax (9)</span>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
+              <span class="text-pink-300 text-sm">Most Eliminations</span>
+              <span class="text-white text-sm font-bold">Nia Jax (9)</span>
             </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
-              <span class="text-gray-400 text-sm">Career Eliminations</span>
-              <span class="text-white text-sm font-medium">Nia Jax (28)</span>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
+              <span class="text-pink-300 text-sm">Career Eliminations</span>
+              <span class="text-white text-sm font-bold">Nia Jax (28)</span>
             </div>
-            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded">
-              <span class="text-gray-400 text-sm">Shortest Time</span>
-              <span class="text-white text-sm font-medium">Chelsea 4 seconds</span>
+            <div class="flex justify-between items-center p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
+              <span class="text-pink-300 text-sm">Shortest Time</span>
+              <span class="text-white text-sm font-bold">Chelsea 4 seconds</span>
             </div>
           </div>
         </div>
@@ -163,26 +165,27 @@ import VideoCarousel from '../components/VideoCarousel';
 
     <!-- Multi-time Winners -->
     <section class="vaporwave-card p-6">
-      <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
         <span class="text-2xl">⭐</span>
-        Multi-Time Winners
+        <span class="gold-chrome-text">MULTI-TIME</span>
+        <span class="text-white">WINNERS</span>
       </h2>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {rumbleHistory.multiTimeWinners.men.map(winner => (
-          <div class="flex items-center gap-3 p-3 bg-gray-800 rounded-lg">
-            <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold">
+          <div class="flex items-center gap-3 p-3 bg-gradient-to-r from-purple-900/30 to-transparent rounded-lg border border-purple-500/30 hover:border-purple-400/60 transition-all hover:shadow-lg hover:shadow-purple-500/10">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white font-bold shadow-lg shadow-purple-500/30">
               {winner.wins}x
             </div>
-            <span class="text-white">{winner.wrestler}</span>
+            <span class="text-white font-medium">{winner.wrestler}</span>
           </div>
         ))}
         {rumbleHistory.multiTimeWinners.women.map(winner => (
-          <div class="flex items-center gap-3 p-3 bg-gray-800 rounded-lg border border-pink-600/50">
-            <div class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white font-bold">
+          <div class="flex items-center gap-3 p-3 bg-gradient-to-r from-pink-900/30 to-transparent rounded-lg border border-pink-500/30 hover:border-pink-400/60 transition-all hover:shadow-lg hover:shadow-pink-500/10">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white font-bold shadow-lg shadow-pink-500/30">
               {winner.wins}x
             </div>
-            <span class="text-white">{winner.wrestler}</span>
+            <span class="text-white font-medium">{winner.wrestler}</span>
           </div>
         ))}
       </div>
@@ -190,26 +193,27 @@ import VideoCarousel from '../components/VideoCarousel';
 
     <!-- Tropes -->
     <section class="vaporwave-card p-6">
-      <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
         <span class="text-2xl">🎭</span>
-        Royal Rumble Tropes
+        <span class="gold-chrome-text">ROYAL RUMBLE</span>
+        <span class="text-white">TROPES</span>
       </h2>
-      <p class="text-gray-400 text-sm mb-4">
+      <p class="text-purple-300 text-sm mb-4">
         Common situations and moments to watch for during the match.
       </p>
 
       <div class="grid md:grid-cols-2 gap-4">
         {rumbleHistory.tropes.map(trope => (
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-1">{trope.name}</h4>
-            <p class="text-gray-400 text-sm mb-2">{trope.description}</p>
+          <div class="p-4 bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-lg border border-purple-800/30 hover:border-purple-500/50 transition-all group">
+            <h4 class="text-white font-bold mb-1 group-hover:text-cyan-400 transition-colors">{trope.name}</h4>
+            <p class="text-gray-300 text-sm mb-2">{trope.description}</p>
             {trope.famousExamples && (
-              <div class="text-xs text-purple-400">
+              <div class="text-xs text-cyan-400">
                 Examples: {trope.famousExamples.slice(0, 2).join(', ')}
               </div>
             )}
             {trope.note && (
-              <div class="text-xs text-yellow-400 mt-1">{trope.note}</div>
+              <div class="text-xs text-yellow-400 mt-1 font-medium">{trope.note}</div>
             )}
           </div>
         ))}
@@ -218,19 +222,38 @@ import VideoCarousel from '../components/VideoCarousel';
 
     <!-- Rules -->
     <section class="vaporwave-card p-6">
-      <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
         <span class="text-2xl">📋</span>
-        The Rules
+        <span class="gold-chrome-text">THE</span>
+        <span class="text-white">RULES</span>
       </h2>
 
       <div class="prose prose-invert max-w-none">
-        <ul class="space-y-2 text-gray-300">
-          <li>30 participants enter at timed intervals (90 seconds)</li>
-          <li>Entry order is determined by lottery before the match</li>
-          <li>Elimination occurs when a wrestler goes <strong>over the top rope</strong> with <strong>both feet</strong> touching the floor</li>
-          <li>Going under/through the ropes does NOT count as elimination</li>
-          <li>The last wrestler remaining wins</li>
-          <li>Winner receives a World Championship match at WrestleMania</li>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-gray-200">
+            <span class="text-cyan-400 font-bold">1.</span>
+            <span>30 participants enter at timed intervals (90 seconds)</span>
+          </li>
+          <li class="flex items-start gap-3 text-gray-200">
+            <span class="text-cyan-400 font-bold">2.</span>
+            <span>Entry order is determined by lottery before the match</span>
+          </li>
+          <li class="flex items-start gap-3 text-gray-200">
+            <span class="text-cyan-400 font-bold">3.</span>
+            <span>Elimination occurs when a wrestler goes <strong class="text-red-400">over the top rope</strong> with <strong class="text-red-400">both feet</strong> touching the floor</span>
+          </li>
+          <li class="flex items-start gap-3 text-gray-200">
+            <span class="text-cyan-400 font-bold">4.</span>
+            <span>Going under/through the ropes does <strong class="text-green-400">NOT</strong> count as elimination</span>
+          </li>
+          <li class="flex items-start gap-3 text-gray-200">
+            <span class="text-cyan-400 font-bold">5.</span>
+            <span>The last wrestler remaining <strong class="text-gold-chrome-text text-yellow-400">WINS</strong></span>
+          </li>
+          <li class="flex items-start gap-3 text-gray-200">
+            <span class="text-cyan-400 font-bold">6.</span>
+            <span>Winner receives a <strong class="text-purple-400">World Championship match at WrestleMania</strong></span>
+          </li>
         </ul>
       </div>
     </section>

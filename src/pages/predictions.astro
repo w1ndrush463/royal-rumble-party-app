@@ -6,65 +6,67 @@ import Layout from '../layouts/Layout.astro';
   <div class="space-y-8">
     <!-- Header -->
     <div class="text-center">
-      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">
-        Predictions <span class="text-yellow-400">& Bets</span>
+      <h1 class="text-3xl sm:text-5xl font-black mb-2">
+        <span class="gold-chrome-text">PREDICTIONS</span>
+        <span class="neon-cyan">& BETS</span>
       </h1>
-      <p class="text-gray-400 max-w-lg mx-auto">
+      <p class="text-purple-300 max-w-lg mx-auto">
         Make predictions before and during the match. Right answers earn points!
       </p>
     </div>
 
     <!-- Current User -->
-    <div id="current-user-display" class="text-center text-gray-400">
+    <div id="current-user-display" class="text-center text-purple-300">
       Loading...
     </div>
 
     <!-- Prediction Categories -->
     <div class="grid md:grid-cols-2 gap-6">
       <!-- Men's Rumble Predictions -->
-      <section class="bg-gray-900 rounded-xl p-6 border border-blue-800">
-        <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+      <section class="vaporwave-card p-6 border-blue-800/50">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
           <span class="text-2xl">👔</span>
-          Men's Rumble Predictions
+          <span class="blue-chrome-text">MEN'S RUMBLE</span>
+          <span class="text-white">PREDICTIONS</span>
         </h2>
-        <p class="text-gray-400 text-sm mb-4">Make your picks for the Men's Royal Rumble</p>
+        <p class="text-purple-300 text-sm mb-4">Make your picks for the Men's Royal Rumble</p>
 
         <div class="space-y-4">
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Who wins the Men's Rumble?</h4>
-            <select id="mens-winner" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-blue-500">
+          <div class="p-4 bg-gradient-to-r from-blue-900/30 to-transparent rounded-lg border border-blue-800/30">
+            <h4 class="text-cyan-400 font-bold mb-2">Who wins the Men's Rumble?</h4>
+            <select id="mens-winner" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-cyan-800/50 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400">
               <option value="">Select wrestler...</option>
             </select>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Who gets Iron Man (longest time)?</h4>
-            <select id="mens-ironman" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-blue-500">
+          <div class="p-4 bg-gradient-to-r from-blue-900/30 to-transparent rounded-lg border border-blue-800/30">
+            <h4 class="text-cyan-400 font-bold mb-2">Who gets Iron Man (longest time)?</h4>
+            <select id="mens-ironman" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-cyan-800/50 focus:border-cyan-400">
               <option value="">Select wrestler...</option>
             </select>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Who gets most eliminations?</h4>
-            <select id="mens-elims" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-blue-500">
+          <div class="p-4 bg-gradient-to-r from-blue-900/30 to-transparent rounded-lg border border-blue-800/30">
+            <h4 class="text-cyan-400 font-bold mb-2">Who gets most eliminations?</h4>
+            <select id="mens-elims" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-cyan-800/50 focus:border-cyan-400">
               <option value="">Select wrestler...</option>
             </select>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">First elimination?</h4>
-            <select id="mens-first-elim" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-blue-500">
+          <div class="p-4 bg-gradient-to-r from-blue-900/30 to-transparent rounded-lg border border-blue-800/30">
+            <h4 class="text-cyan-400 font-bold mb-2">First elimination?</h4>
+            <select id="mens-first-elim" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-cyan-800/50 focus:border-cyan-400">
               <option value="">Select wrestler...</option>
             </select>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Final two wrestlers?</h4>
+          <div class="p-4 bg-gradient-to-r from-blue-900/30 to-transparent rounded-lg border border-blue-800/30">
+            <h4 class="text-cyan-400 font-bold mb-2">Final two wrestlers?</h4>
             <div class="grid grid-cols-2 gap-2">
-              <select id="mens-final-1" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-blue-500 text-sm">
+              <select id="mens-final-1" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-cyan-800/50 focus:border-cyan-400 text-sm">
                 <option value="">First finalist...</option>
               </select>
-              <select id="mens-final-2" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-blue-500 text-sm">
+              <select id="mens-final-2" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-cyan-800/50 focus:border-cyan-400 text-sm">
                 <option value="">Second finalist...</option>
               </select>
             </div>
@@ -73,49 +75,50 @@ import Layout from '../layouts/Layout.astro';
       </section>
 
       <!-- Women's Rumble Predictions -->
-      <section class="bg-gray-900 rounded-xl p-6 border border-pink-800">
-        <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+      <section class="vaporwave-card p-6 border-pink-800/50">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
           <span class="text-2xl">👗</span>
-          Women's Rumble Predictions
+          <span class="neon-pink" style="text-shadow: 0 0 10px #ff00ff;">WOMEN'S RUMBLE</span>
+          <span class="text-white">PREDICTIONS</span>
         </h2>
-        <p class="text-gray-400 text-sm mb-4">Make your picks for the Women's Royal Rumble</p>
+        <p class="text-purple-300 text-sm mb-4">Make your picks for the Women's Royal Rumble</p>
 
         <div class="space-y-4">
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Who wins the Women's Rumble?</h4>
-            <select id="womens-winner" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-pink-500">
+          <div class="p-4 bg-gradient-to-r from-pink-900/30 to-transparent rounded-lg border border-pink-800/30">
+            <h4 class="text-pink-400 font-bold mb-2">Who wins the Women's Rumble?</h4>
+            <select id="womens-winner" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-pink-800/50 focus:border-pink-400 focus:ring-1 focus:ring-pink-400">
               <option value="">Select wrestler...</option>
             </select>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Who gets Iron Woman (longest time)?</h4>
-            <select id="womens-ironwoman" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-pink-500">
+          <div class="p-4 bg-gradient-to-r from-pink-900/30 to-transparent rounded-lg border border-pink-800/30">
+            <h4 class="text-pink-400 font-bold mb-2">Who gets Iron Woman (longest time)?</h4>
+            <select id="womens-ironwoman" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-pink-800/50 focus:border-pink-400">
               <option value="">Select wrestler...</option>
             </select>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Who gets most eliminations?</h4>
-            <select id="womens-elims" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-pink-500">
+          <div class="p-4 bg-gradient-to-r from-pink-900/30 to-transparent rounded-lg border border-pink-800/30">
+            <h4 class="text-pink-400 font-bold mb-2">Who gets most eliminations?</h4>
+            <select id="womens-elims" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-pink-800/50 focus:border-pink-400">
               <option value="">Select wrestler...</option>
             </select>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">First elimination?</h4>
-            <select id="womens-first-elim" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-pink-500">
+          <div class="p-4 bg-gradient-to-r from-pink-900/30 to-transparent rounded-lg border border-pink-800/30">
+            <h4 class="text-pink-400 font-bold mb-2">First elimination?</h4>
+            <select id="womens-first-elim" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-pink-800/50 focus:border-pink-400">
               <option value="">Select wrestler...</option>
             </select>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Final two wrestlers?</h4>
+          <div class="p-4 bg-gradient-to-r from-pink-900/30 to-transparent rounded-lg border border-pink-800/30">
+            <h4 class="text-pink-400 font-bold mb-2">Final two wrestlers?</h4>
             <div class="grid grid-cols-2 gap-2">
-              <select id="womens-final-1" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-pink-500 text-sm">
+              <select id="womens-final-1" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-pink-800/50 focus:border-pink-400 text-sm">
                 <option value="">First finalist...</option>
               </select>
-              <select id="womens-final-2" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-pink-500 text-sm">
+              <select id="womens-final-2" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-pink-800/50 focus:border-pink-400 text-sm">
                 <option value="">Second finalist...</option>
               </select>
             </div>
@@ -127,36 +130,37 @@ import Layout from '../layouts/Layout.astro';
     <!-- Surprise Entrants & Special Predictions -->
     <div class="grid md:grid-cols-2 gap-6">
       <!-- Surprise Entrants -->
-      <section class="bg-gray-900 rounded-xl p-6 border border-yellow-800">
-        <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+      <section class="vaporwave-card p-6">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
           <span class="text-2xl">🎭</span>
-          Surprise Entrant Predictions
+          <span class="gold-chrome-text">SURPRISE ENTRANT</span>
+          <span class="text-white">PREDICTIONS</span>
         </h2>
-        <p class="text-gray-400 text-sm mb-4">Which non-WWE wrestlers might show up?</p>
+        <p class="text-purple-300 text-sm mb-4">Which non-WWE wrestlers might show up?</p>
 
         <div class="space-y-4">
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">AEW surprise entrant?</h4>
-            <p class="text-gray-400 text-xs mb-2">Will anyone from AEW make a shock appearance?</p>
-            <select id="aew-surprise" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-yellow-500">
+          <div class="p-4 bg-gradient-to-r from-yellow-900/20 to-transparent rounded-lg border border-yellow-800/30">
+            <h4 class="text-yellow-400 font-bold mb-2">AEW surprise entrant?</h4>
+            <p class="text-purple-300 text-xs mb-2">Will anyone from AEW make a shock appearance?</p>
+            <select id="aew-surprise" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-yellow-800/50 focus:border-yellow-400">
               <option value="">Select wrestler or "None"...</option>
               <option value="none">No AEW surprise</option>
             </select>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">TNA surprise entrant?</h4>
-            <p class="text-gray-400 text-xs mb-2">Will anyone from TNA make an appearance?</p>
-            <select id="tna-surprise" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-yellow-500">
+          <div class="p-4 bg-gradient-to-r from-yellow-900/20 to-transparent rounded-lg border border-yellow-800/30">
+            <h4 class="text-yellow-400 font-bold mb-2">TNA surprise entrant?</h4>
+            <p class="text-purple-300 text-xs mb-2">Will anyone from TNA make an appearance?</p>
+            <select id="tna-surprise" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-yellow-800/50 focus:border-yellow-400">
               <option value="">Select wrestler or "None"...</option>
               <option value="none">No TNA surprise</option>
             </select>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Legend/HOF return?</h4>
-            <p class="text-gray-400 text-xs mb-2">Which legend will make a surprise return?</p>
-            <select id="legend-return" class="prediction-select w-full p-2 bg-gray-700 rounded text-white border border-gray-600 focus:border-yellow-500">
+          <div class="p-4 bg-gradient-to-r from-yellow-900/20 to-transparent rounded-lg border border-yellow-800/30">
+            <h4 class="text-yellow-400 font-bold mb-2">Legend/HOF return?</h4>
+            <p class="text-purple-300 text-xs mb-2">Which legend will make a surprise return?</p>
+            <select id="legend-return" class="prediction-select w-full p-2 bg-gray-800/80 rounded text-white border border-yellow-800/50 focus:border-yellow-400">
               <option value="">Select legend or "None"...</option>
               <option value="none">No legend return</option>
             </select>
@@ -165,54 +169,55 @@ import Layout from '../layouts/Layout.astro';
       </section>
 
       <!-- Special Predictions -->
-      <section class="bg-gray-900 rounded-xl p-6 border border-purple-800">
-        <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+      <section class="vaporwave-card p-6">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
           <span class="text-2xl">🎲</span>
-          Special Predictions
+          <span class="gold-chrome-text">SPECIAL</span>
+          <span class="text-white">PREDICTIONS</span>
         </h2>
-        <p class="text-gray-400 text-sm mb-4">Bold predictions and fun bets</p>
+        <p class="text-purple-300 text-sm mb-4">Bold predictions and fun bets</p>
 
         <div class="space-y-4">
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Will Entry #27 win either Rumble?</h4>
-            <p class="text-gray-400 text-xs mb-2">#27 has historically been the "lucky number"</p>
+          <div class="p-4 bg-gradient-to-r from-purple-900/20 to-transparent rounded-lg border border-purple-800/30">
+            <h4 class="text-purple-400 font-bold mb-2">Will Entry #27 win either Rumble?</h4>
+            <p class="text-purple-300 text-xs mb-2">#27 has historically been the "lucky number"</p>
             <div class="flex gap-2">
-              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-green-600 hover:text-white" data-prediction="lucky27" data-value="yes">Yes</button>
-              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-red-600 hover:text-white" data-prediction="lucky27" data-value="no">No</button>
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-800/80 text-gray-300 hover:bg-green-600 hover:text-white border border-green-800/30 transition-all" data-prediction="lucky27" data-value="yes">Yes</button>
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-800/80 text-gray-300 hover:bg-red-600 hover:text-white border border-red-800/30 transition-all" data-prediction="lucky27" data-value="no">No</button>
             </div>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Will a champion enter the Rumble?</h4>
+          <div class="p-4 bg-gradient-to-r from-purple-900/20 to-transparent rounded-lg border border-purple-800/30">
+            <h4 class="text-purple-400 font-bold mb-2">Will a champion enter the Rumble?</h4>
             <div class="flex gap-2">
-              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-green-600 hover:text-white" data-prediction="champion-enters" data-value="yes">Yes</button>
-              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-red-600 hover:text-white" data-prediction="champion-enters" data-value="no">No</button>
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-800/80 text-gray-300 hover:bg-green-600 hover:text-white border border-green-800/30 transition-all" data-prediction="champion-enters" data-value="yes">Yes</button>
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-800/80 text-gray-300 hover:bg-red-600 hover:text-white border border-red-800/30 transition-all" data-prediction="champion-enters" data-value="no">No</button>
             </div>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Will there be a celebrity entrant?</h4>
+          <div class="p-4 bg-gradient-to-r from-purple-900/20 to-transparent rounded-lg border border-purple-800/30">
+            <h4 class="text-purple-400 font-bold mb-2">Will there be a celebrity entrant?</h4>
             <div class="flex gap-2">
-              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-green-600 hover:text-white" data-prediction="celebrity" data-value="yes">Yes</button>
-              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-red-600 hover:text-white" data-prediction="celebrity" data-value="no">No</button>
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-800/80 text-gray-300 hover:bg-green-600 hover:text-white border border-green-800/30 transition-all" data-prediction="celebrity" data-value="yes">Yes</button>
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-800/80 text-gray-300 hover:bg-red-600 hover:text-white border border-red-800/30 transition-all" data-prediction="celebrity" data-value="no">No</button>
             </div>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Will CM Punk and Seth Rollins be in the ring together?</h4>
+          <div class="p-4 bg-gradient-to-r from-purple-900/20 to-transparent rounded-lg border border-purple-800/30">
+            <h4 class="text-purple-400 font-bold mb-2">Will CM Punk and Seth Rollins be in the ring together?</h4>
             <div class="flex gap-2">
-              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-green-600 hover:text-white" data-prediction="punk-seth" data-value="yes">Yes</button>
-              <button class="prediction-btn flex-1 py-2 rounded bg-gray-700 text-gray-300 hover:bg-red-600 hover:text-white" data-prediction="punk-seth" data-value="no">No</button>
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-800/80 text-gray-300 hover:bg-green-600 hover:text-white border border-green-800/30 transition-all" data-prediction="punk-seth" data-value="yes">Yes</button>
+              <button class="prediction-btn flex-1 py-2 rounded bg-gray-800/80 text-gray-300 hover:bg-red-600 hover:text-white border border-red-800/30 transition-all" data-prediction="punk-seth" data-value="no">No</button>
             </div>
           </div>
 
-          <div class="p-4 bg-gray-800 rounded-lg">
-            <h4 class="text-white font-medium mb-2">Winning entry number range?</h4>
-            <p class="text-gray-400 text-xs mb-2">What range will the winner enter from?</p>
+          <div class="p-4 bg-gradient-to-r from-purple-900/20 to-transparent rounded-lg border border-purple-800/30">
+            <h4 class="text-purple-400 font-bold mb-2">Winning entry number range?</h4>
+            <p class="text-purple-300 text-xs mb-2">What range will the winner enter from?</p>
             <div class="grid grid-cols-3 gap-2">
-              <button class="prediction-btn py-2 rounded bg-gray-700 text-gray-300 hover:bg-purple-600 hover:text-white text-sm" data-prediction="entry-range" data-value="1-10">#1-10</button>
-              <button class="prediction-btn py-2 rounded bg-gray-700 text-gray-300 hover:bg-purple-600 hover:text-white text-sm" data-prediction="entry-range" data-value="11-20">#11-20</button>
-              <button class="prediction-btn py-2 rounded bg-gray-700 text-gray-300 hover:bg-purple-600 hover:text-white text-sm" data-prediction="entry-range" data-value="21-30">#21-30</button>
+              <button class="prediction-btn py-2 rounded bg-gray-800/80 text-gray-300 hover:bg-purple-600 hover:text-white border border-purple-800/30 text-sm transition-all" data-prediction="entry-range" data-value="1-10">#1-10</button>
+              <button class="prediction-btn py-2 rounded bg-gray-800/80 text-gray-300 hover:bg-purple-600 hover:text-white border border-purple-800/30 text-sm transition-all" data-prediction="entry-range" data-value="11-20">#11-20</button>
+              <button class="prediction-btn py-2 rounded bg-gray-800/80 text-gray-300 hover:bg-purple-600 hover:text-white border border-purple-800/30 text-sm transition-all" data-prediction="entry-range" data-value="21-30">#21-30</button>
             </div>
           </div>
         </div>
@@ -223,75 +228,76 @@ import Layout from '../layouts/Layout.astro';
     <div class="grid md:grid-cols-1 gap-6">
 
       <!-- During-Match Predictions -->
-      <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
-        <h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+      <section class="vaporwave-card p-6">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
           <span class="text-2xl">🍺</span>
-          Drinking Game / Live Bets
+          <span class="gold-chrome-text">DRINKING GAME</span>
+          <span class="text-white">/ LIVE BETS</span>
         </h2>
-        <p class="text-gray-400 text-sm mb-4">Call these during the match for fun!</p>
+        <p class="text-purple-300 text-sm mb-4">Call these during the match for fun!</p>
 
-        <div class="space-y-3">
-          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+        <div class="grid sm:grid-cols-2 gap-3">
+          <button class="trope-btn w-full p-3 bg-gradient-to-r from-gray-800/80 to-transparent rounded-lg text-left hover:from-purple-900/50 transition-all flex items-center gap-3 border border-purple-800/30 hover:border-purple-500/50 group">
             <span class="text-2xl">🦶</span>
             <div>
-              <div class="text-white font-medium">Kofi Save</div>
-              <div class="text-gray-400 text-xs">Someone saves themselves from elimination creatively</div>
+              <div class="text-white font-bold group-hover:text-cyan-400 transition-colors">Kofi Save</div>
+              <div class="text-purple-300 text-xs">Someone saves themselves from elimination creatively</div>
             </div>
           </button>
-          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+          <button class="trope-btn w-full p-3 bg-gradient-to-r from-gray-800/80 to-transparent rounded-lg text-left hover:from-purple-900/50 transition-all flex items-center gap-3 border border-purple-800/30 hover:border-purple-500/50 group">
             <span class="text-2xl">👴</span>
             <div>
-              <div class="text-white font-medium">Legend Surprise</div>
-              <div class="text-gray-400 text-xs">A Hall of Famer or legend makes a surprise return</div>
+              <div class="text-white font-bold group-hover:text-cyan-400 transition-colors">Legend Surprise</div>
+              <div class="text-purple-300 text-xs">A Hall of Famer or legend makes a surprise return</div>
             </div>
           </button>
-          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+          <button class="trope-btn w-full p-3 bg-gradient-to-r from-gray-800/80 to-transparent rounded-lg text-left hover:from-purple-900/50 transition-all flex items-center gap-3 border border-purple-800/30 hover:border-purple-500/50 group">
             <span class="text-2xl">👹</span>
             <div>
-              <div class="text-white font-medium">Monster Entrance</div>
-              <div class="text-gray-400 text-xs">Everyone stops fighting when a big wrestler enters</div>
+              <div class="text-white font-bold group-hover:text-cyan-400 transition-colors">Monster Entrance</div>
+              <div class="text-purple-300 text-xs">Everyone stops fighting when a big wrestler enters</div>
             </div>
           </button>
-          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+          <button class="trope-btn w-full p-3 bg-gradient-to-r from-gray-800/80 to-transparent rounded-lg text-left hover:from-purple-900/50 transition-all flex items-center gap-3 border border-purple-800/30 hover:border-purple-500/50 group">
             <span class="text-2xl">👀</span>
             <div>
-              <div class="text-white font-medium">The Staredown</div>
-              <div class="text-gray-400 text-xs">Two wrestlers have a dramatic face-off</div>
+              <div class="text-white font-bold group-hover:text-cyan-400 transition-colors">The Staredown</div>
+              <div class="text-purple-300 text-xs">Two wrestlers have a dramatic face-off</div>
             </div>
           </button>
-          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+          <button class="trope-btn w-full p-3 bg-gradient-to-r from-gray-800/80 to-transparent rounded-lg text-left hover:from-purple-900/50 transition-all flex items-center gap-3 border border-purple-800/30 hover:border-purple-500/50 group">
             <span class="text-2xl">😤</span>
             <div>
-              <div class="text-white font-medium">Sore Loser</div>
-              <div class="text-gray-400 text-xs">Eliminated wrestler returns to attack someone</div>
+              <div class="text-white font-bold group-hover:text-cyan-400 transition-colors">Sore Loser</div>
+              <div class="text-purple-300 text-xs">Eliminated wrestler returns to attack someone</div>
             </div>
           </button>
-          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+          <button class="trope-btn w-full p-3 bg-gradient-to-r from-gray-800/80 to-transparent rounded-lg text-left hover:from-purple-900/50 transition-all flex items-center gap-3 border border-purple-800/30 hover:border-purple-500/50 group">
             <span class="text-2xl">🤝</span>
             <div>
-              <div class="text-white font-medium">Enemy Mine</div>
-              <div class="text-gray-400 text-xs">Rivals team up to eliminate a bigger threat</div>
+              <div class="text-white font-bold group-hover:text-cyan-400 transition-colors">Enemy Mine</div>
+              <div class="text-purple-300 text-xs">Rivals team up to eliminate a bigger threat</div>
             </div>
           </button>
-          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+          <button class="trope-btn w-full p-3 bg-gradient-to-r from-gray-800/80 to-transparent rounded-lg text-left hover:from-purple-900/50 transition-all flex items-center gap-3 border border-purple-800/30 hover:border-purple-500/50 group">
             <span class="text-2xl">⚡</span>
             <div>
-              <div class="text-white font-medium">Quick Exit</div>
-              <div class="text-gray-400 text-xs">Someone eliminated in under 10 seconds</div>
+              <div class="text-white font-bold group-hover:text-cyan-400 transition-colors">Quick Exit</div>
+              <div class="text-purple-300 text-xs">Someone eliminated in under 10 seconds</div>
             </div>
           </button>
-          <button class="trope-btn w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors flex items-center gap-3">
+          <button class="trope-btn w-full p-3 bg-gradient-to-r from-gray-800/80 to-transparent rounded-lg text-left hover:from-purple-900/50 transition-all flex items-center gap-3 border border-purple-800/30 hover:border-purple-500/50 group">
             <span class="text-2xl">🏆</span>
             <div>
-              <div class="text-white font-medium">Champion Enters</div>
-              <div class="text-gray-400 text-xs">A current champion participates in the Rumble</div>
+              <div class="text-white font-bold group-hover:text-cyan-400 transition-colors">Champion Enters</div>
+              <div class="text-purple-300 text-xs">A current champion participates in the Rumble</div>
             </div>
           </button>
         </div>
 
-        <div class="mt-4 p-3 bg-yellow-900/20 border border-yellow-600 rounded-lg">
+        <div class="mt-4 p-3 bg-gradient-to-r from-yellow-900/30 to-orange-900/20 border border-yellow-600/50 rounded-lg">
           <p class="text-yellow-400 text-sm">
-            <strong>Drinking Rules:</strong> Take a drink every time one of these happens!
+            <strong class="text-yellow-300">Drinking Rules:</strong> Take a drink every time one of these happens!
             Or assign points for being the first to call it.
           </p>
         </div>
@@ -299,9 +305,12 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <!-- Your Predictions Summary -->
-    <section class="bg-gray-900 rounded-xl p-6 border border-gray-800">
-      <h2 class="text-xl font-semibold text-white mb-4">Your Predictions</h2>
-      <div id="predictions-summary" class="text-gray-400">
+    <section class="vaporwave-card p-6">
+      <h2 class="text-xl font-bold mb-4">
+        <span class="gold-chrome-text">YOUR</span>
+        <span class="text-white">PREDICTIONS</span>
+      </h2>
+      <div id="predictions-summary" class="text-purple-300">
         No predictions made yet. Select options above!
       </div>
     </section>

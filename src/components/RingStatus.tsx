@@ -15,12 +15,12 @@ export default function RingStatus({ rumbleType }: RingStatusProps) {
 
   if (rumble.status === 'not_started') {
     return (
-      <div className="bg-gray-900 rounded-xl p-4 border border-gray-800">
-        <h3 className="text-white font-semibold mb-3 flex items-center gap-2">
+      <div className="vaporwave-card p-4">
+        <h3 className="font-bold mb-3 flex items-center gap-2">
           <span className="w-3 h-3 bg-gray-500 rounded-full" />
-          Currently in Ring
+          <span className="text-purple-300">CURRENTLY IN RING</span>
         </h3>
-        <p className="text-gray-500 text-sm text-center py-4">Match not started</p>
+        <p className="text-purple-400 text-sm text-center py-4">Match not started</p>
       </div>
     );
   }
@@ -28,14 +28,14 @@ export default function RingStatus({ rumbleType }: RingStatusProps) {
   if (rumble.status === 'completed') {
     const winner = rumble.winner ? getWrestler(rumble.winner) : null;
     return (
-      <div className="bg-gray-900 rounded-xl p-4 border border-yellow-600">
-        <h3 className="text-yellow-400 font-semibold mb-3 flex items-center gap-2">
+      <div className="vaporwave-card p-4 winner-celebration">
+        <h3 className="font-bold mb-3 flex items-center gap-2">
           <span className="text-xl">🏆</span>
-          Winner
+          <span className="gold-chrome-text">WINNER</span>
         </h3>
         {winner && (
-          <div className="flex items-center gap-3 p-2 bg-yellow-900/20 rounded-lg">
-            <div className="w-12 h-12 rounded-lg bg-gray-700 overflow-hidden">
+          <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-yellow-900/40 to-transparent rounded-lg border border-yellow-500/50">
+            <div className="w-12 h-12 rounded-lg bg-gray-700 overflow-hidden shadow-lg shadow-yellow-500/30">
               {winner.imageUrl ? (
                 <img src={winner.imageUrl} alt={winner.name} className="w-full h-full object-cover" />
               ) : (
@@ -45,8 +45,8 @@ export default function RingStatus({ rumbleType }: RingStatusProps) {
               )}
             </div>
             <div>
-              <div className="text-white font-semibold">{winner.name}</div>
-              <div className="text-yellow-400 text-sm">Royal Rumble Winner!</div>
+              <div className="text-white font-bold">{winner.name}</div>
+              <div className="text-yellow-400 text-sm font-medium">Royal Rumble Winner!</div>
             </div>
           </div>
         )}
@@ -55,14 +55,15 @@ export default function RingStatus({ rumbleType }: RingStatusProps) {
   }
 
   return (
-    <div className="bg-gray-900 rounded-xl p-4 border border-gray-800">
-      <h3 className="text-white font-semibold mb-3 flex items-center gap-2">
-        <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-        Currently in Ring ({wrestlersInRing.length})
+    <div className="vaporwave-card p-4">
+      <h3 className="font-bold mb-3 flex items-center gap-2">
+        <span className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-500/50" />
+        <span className="text-white">CURRENTLY IN RING</span>
+        <span className="neon-cyan text-sm">({wrestlersInRing.length})</span>
       </h3>
 
       {wrestlersInRing.length === 0 ? (
-        <p className="text-gray-500 text-sm text-center py-4">Ring is empty</p>
+        <p className="text-purple-400 text-sm text-center py-4">Ring is empty</p>
       ) : (
         <div className="space-y-2 max-h-80 overflow-y-auto">
           {wrestlersInRing.map(({ entryNumber, wrestler }) => {
@@ -71,12 +72,14 @@ export default function RingStatus({ rumbleType }: RingStatusProps) {
             return (
               <div
                 key={wrestler.id}
-                className={`flex items-center gap-3 p-2 rounded-lg transition-colors ${
-                  isUsersWrestler ? 'bg-yellow-900/20 border border-yellow-600/50' : 'bg-gray-800'
+                className={`flex items-center gap-3 p-2 rounded-lg transition-all ${
+                  isUsersWrestler
+                    ? 'bg-gradient-to-r from-yellow-900/40 to-transparent border border-yellow-500/50 shadow-lg shadow-yellow-500/10'
+                    : 'bg-gray-800/50 border border-purple-800/30 hover:border-purple-500/50'
                 }`}
               >
                 {/* Entry Number */}
-                <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0 shadow-lg shadow-purple-500/30">
                   {entryNumber}
                 </div>
 
@@ -96,12 +99,12 @@ export default function RingStatus({ rumbleType }: RingStatusProps) {
                   <div className="text-white font-medium truncate">{wrestler.name}</div>
                   <div className="flex gap-1 flex-wrap">
                     {wrestler.isCurrentChampion && (
-                      <span className="text-xs bg-yellow-600 text-yellow-100 px-1.5 py-0.5 rounded">
+                      <span className="text-xs bg-gradient-to-r from-yellow-600 to-orange-600 text-white px-1.5 py-0.5 rounded font-medium">
                         Champion
                       </span>
                     )}
                     {wrestler.isFormerRumbleWinner && (
-                      <span className="text-xs bg-purple-600 text-purple-100 px-1.5 py-0.5 rounded">
+                      <span className="text-xs bg-gradient-to-r from-purple-600 to-pink-600 text-white px-1.5 py-0.5 rounded font-medium">
                         RR Winner
                       </span>
                     )}
@@ -110,7 +113,7 @@ export default function RingStatus({ rumbleType }: RingStatusProps) {
 
                 {/* Your wrestler indicator */}
                 {isUsersWrestler && (
-                  <div className="text-yellow-400 text-xs font-bold">YOURS</div>
+                  <div className="text-yellow-400 text-xs font-bold animate-pulse">YOURS</div>
                 )}
               </div>
             );
