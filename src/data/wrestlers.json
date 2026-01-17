@@ -1607,6 +1607,21 @@
       "isLegend": true
     },
     {
+      "id": "leon-slater",
+      "name": "Leon Slater",
+      "promotion": "TNA",
+      "brand": null,
+      "gender": "male",
+      "isCurrentChampion": false,
+      "championships": [],
+      "isFormerChampion": false,
+      "isFormerRumbleWinner": false,
+      "rumbleWins": [],
+      "rumbleAppearances": 0,
+      "isHallOfFamer": false,
+      "imageUrl": "/wrestlers/tna/Leon Slater.webp"
+    },
+    {
       "id": "will-ospreay",
       "name": "Will Ospreay",
       "promotion": "AEW",
