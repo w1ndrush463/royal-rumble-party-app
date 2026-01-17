@@ -85,26 +85,40 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter:
-    drop-shadow(2px 2px 0px #000)
-    drop-shadow(4px 4px 0px rgba(218, 165, 32, 0.5));
+  filter: drop-shadow(1px 1px 0px #000);
 }
 
-/* Neon glow effects - tighter glow to match chrome text visual size */
+/* Neon text effects - subtle glow for subheadings */
 .neon-pink {
   color: #ff69b4;
-  filter:
-    drop-shadow(2px 2px 0px #000)
-    drop-shadow(0 0 8px #ff00ff)
-    drop-shadow(0 0 15px rgba(255, 0, 255, 0.5));
+  text-shadow: 0 0 8px rgba(255, 0, 255, 0.6);
 }
 
 .neon-cyan {
   color: #00ffff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+/* Page title class - adds heavy shadow for main h1 titles only */
+.page-title .gold-chrome-text,
+.page-title .rumble-title,
+.page-title .blue-chrome-text,
+.page-title .pink-chrome-text {
   filter:
     drop-shadow(2px 2px 0px #000)
-    drop-shadow(0 0 8px #00ffff)
-    drop-shadow(0 0 15px rgba(0, 255, 255, 0.5));
+    drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.3));
+}
+
+.page-title .neon-cyan {
+  text-shadow:
+    0 0 10px #00ffff,
+    0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.page-title .neon-pink {
+  text-shadow:
+    0 0 10px #ff00ff,
+    0 0 20px rgba(255, 0, 255, 0.5);
 }
 
 .neon-gold {
@@ -396,13 +410,11 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter:
-    drop-shadow(2px 2px 0px #000)
-    drop-shadow(4px 4px 0px rgba(255, 0, 64, 0.5));
+  filter: drop-shadow(1px 1px 0px #000);
   text-shadow: none;
 }
 
-/* Blue chrome effect like "MAIN EVENT" text */
+/* Blue chrome effect */
 .blue-chrome-text {
   background: linear-gradient(
     180deg,
@@ -415,9 +427,23 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter:
-    drop-shadow(2px 2px 0px #000)
-    drop-shadow(4px 4px 0px rgba(0, 128, 255, 0.5));
+  filter: drop-shadow(1px 1px 0px #000);
+}
+
+/* Pink chrome effect - matches blue for women's rumble */
+.pink-chrome-text {
+  background: linear-gradient(
+    180deg,
+    #ffb6c1 0%,
+    #ff69b4 25%,
+    #ff1493 50%,
+    #db7093 75%,
+    #c71585 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(1px 1px 0px #000);
 }
 
 /* Video player styling */
