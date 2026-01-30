@@ -35,14 +35,14 @@ const { title, description = 'Royal Rumble Watch Party Companion App' } = Astro.
             <div class="relative">
               <span class="text-3xl font-black rumble-title neon-flicker">RR</span>
             </div>
-            <div class="hidden sm:block">
-              <span class="text-lg font-bold gold-chrome-text">ROYAL RUMBLE</span>
+            <div class="hidden lg:block">
+              <span class="text-lg font-bold gold-chrome-text">RUMBLE</span>
               <span class="block text-xs text-cyan-400 tracking-widest uppercase">Watch Party 2026</span>
             </div>
           </a>
 
-          <!-- Navigation Links -->
-          <div class="flex items-center gap-1 sm:gap-2">
+          <!-- Navigation Links (desktop/tablet) -->
+          <div class="hidden sm:flex items-center gap-1 sm:gap-2">
             <a href="/mens-rumble" class="nav-link-retro">
               <span class="nav-icon">👔</span>
               <span class="nav-text">Men's</span>
@@ -71,6 +71,11 @@ const { title, description = 'Royal Rumble Watch Party Companion App' } = Astro.
               <SyncIndicator client:load />
             </div>
           </div>
+
+          <!-- Sync indicator (mobile only, shown in top bar) -->
+          <div class="sm:hidden">
+            <SyncIndicator client:load />
+          </div>
         </div>
       </div>
     </nav>
@@ -80,6 +85,40 @@ const { title, description = 'Royal Rumble Watch Party Companion App' } = Astro.
       <slot />
     </main>
 
+    <!-- Bottom Navigation (mobile only) -->
+    <nav class="mobile-bottom-nav sm:hidden fixed bottom-0 left-0 right-0 z-50 animated-gradient-bg backdrop-blur border-t border-purple-900/50">
+      <div class="flex items-center justify-around px-2 py-1">
+        <a href="/" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🏠</span>
+          <span class="bottom-nav-label">Home</span>
+        </a>
+        <a href="/mens-rumble" class="bottom-nav-link">
+          <span class="bottom-nav-icon">👔</span>
+          <span class="bottom-nav-label">Men's</span>
+        </a>
+        <a href="/womens-rumble" class="bottom-nav-link">
+          <span class="bottom-nav-icon">👗</span>
+          <span class="bottom-nav-label">Women's</span>
+        </a>
+        <a href="/predictions" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🎰</span>
+          <span class="bottom-nav-label">Bets</span>
+        </a>
+        <a href="/lottery" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🎲</span>
+          <span class="bottom-nav-label">Lottery</span>
+        </a>
+        <a href="/leaderboard" class="bottom-nav-link">
+          <span class="bottom-nav-icon">🏆</span>
+          <span class="bottom-nav-label">Stats</span>
+        </a>
+        <a href="/reference" class="bottom-nav-link">
+          <span class="bottom-nav-icon">📺</span>
+          <span class="bottom-nav-label">Info</span>
+        </a>
+      </div>
+    </nav>
+
     <!-- Footer -->
     <footer class="border-t border-purple-900/30 mt-auto py-6 text-center">
       <p class="text-sm">
@@ -87,7 +126,7 @@ const { title, description = 'Royal Rumble Watch Party Companion App' } = Astro.
         <span class="text-purple-400"> Watch Party </span>
         <span class="neon-cyan font-bold">2026</span>
       </p>
-      <p class="text-xs text-gray-600 mt-2">30 Superstars. 1 Winner. Endless Drama.</p>
+      <p class="text-xs text-gray-600 mt-2">30 Superstars. 1 Winner.</p>
     </footer>
   </body>
 </html>
@@ -127,6 +166,45 @@ const { title, description = 'Royal Rumble Watch Party Companion App' } = Astro.
     text-shadow: 0 0 10px #ff00ff;
   }
 
+  /* Bottom nav (mobile) */
+  .bottom-nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.125rem;
+    padding: 0.375rem 0.25rem;
+    border-radius: 0.375rem;
+    color: #c4b5fd;
+    transition: all 0.2s ease;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .bottom-nav-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .bottom-nav-label {
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.25px;
+    line-height: 1;
+  }
+
+  .bottom-nav-link.active {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+  }
+
+  /* Add padding at bottom on mobile so content isn't hidden behind bottom nav */
+  @media (max-width: 639px) {
+    body {
+      padding-bottom: 4.5rem;
+    }
+  }
+
   @media (min-width: 640px) {
     .nav-link-retro {
       flex-direction: row;
@@ -153,7 +231,7 @@ const { title, description = 'Royal Rumble Watch Party Companion App' } = Astro.
   // Highlight active nav link
   document.addEventListener('DOMContentLoaded', () => {
     const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-link-retro');
+    const navLinks = document.querySelectorAll('.nav-link-retro, .bottom-nav-link');
 
     navLinks.forEach(link => {
       const href = link.getAttribute('href');

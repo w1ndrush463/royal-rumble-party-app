@@ -63,9 +63,17 @@ async function fetchState() {
     $syncStatus.set('syncing');
 
     const currentVersion = $stateVersion.get();
-    const response = await fetch(`${API_BASE}/state?version=${currentVersion}`, {
-      cache: 'no-store',
-    });
+    let response: Response;
+    try {
+      response = await fetch(`${API_BASE}/state?version=${currentVersion}`, {
+        cache: 'no-store',
+      });
+    } catch (fetchError) {
+      // Network error (e.g. edge functions unavailable in dev)
+      $syncStatus.set('offline');
+      isPolling = false;
+      return;
+    }
 
     if (response.status === 304) {
       // No changes
