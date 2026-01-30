@@ -48,7 +48,7 @@ const playerSprites: Record<string, string> = {
               data-user-id={user.id}
               data-user-name={user.name}
             >
-              <img src={playerSprites[user.id]} alt={user.name} class="w-full max-w-20 aspect-square object-contain" />
+              <img src={playerSprites[user.id]} alt={user.name} class="w-full max-w-20 aspect-square object-contain sprite-glow" />
               {user.name}
             </button>
           ))}
@@ -73,7 +73,7 @@ const playerSprites: Record<string, string> = {
       <a href="/predictions" class="quick-card group text-center">
         <img src="/predictions.gif" alt="Predictions" class="w-full aspect-video object-cover rounded-lg mb-3 transition-transform" />
         <h3 class="text-white font-bold mb-1 uppercase group-hover:text-yellow-400 transition-colors">Predictions</h3>
-        <p class="text-purple-300 text-sm">Make your bets</p>
+        <p class="text-purple-300 text-sm">Place your bets</p>
       </a>
 
       <a href="/leaderboard" class="quick-card group text-center">
@@ -120,6 +120,10 @@ const playerSprites: Record<string, string> = {
     border: 1px solid rgba(191, 0, 255, 0.3);
     transition: all 0.2s ease;
     box-shadow: 0 0 20px rgba(191, 0, 255, 0.1);
+  }
+
+  .sprite-glow {
+    filter: drop-shadow(0 0 6px rgba(191, 0, 255, 0.4)) drop-shadow(0 0 12px rgba(0, 255, 255, 0.2));
   }
 
   .quick-card:hover {

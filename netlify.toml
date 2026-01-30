@@ -14,5 +14,5 @@
   function = "update"
 
 [dev]
-  command = "npm run dev"
+  command = "npm run dev:astro"
   targetPort = 4321

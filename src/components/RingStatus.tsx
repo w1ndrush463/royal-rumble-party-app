@@ -16,7 +16,7 @@ export default function RingStatus({ rumbleType }: RingStatusProps) {
   if (rumble.status === 'not_started') {
     return (
       <div className="vaporwave-card p-4">
-        <h3 className="font-bold mb-3 flex items-center justify-center gap-2">
+        <h3 className="text-lg font-bold mb-3 flex items-center justify-center gap-2">
           <span className="w-3 h-3 bg-gray-500 rounded-full" />
           <span className="text-purple-300">CURRENTLY IN RING</span>
         </h3>
@@ -29,7 +29,7 @@ export default function RingStatus({ rumbleType }: RingStatusProps) {
     const winner = rumble.winner ? getWrestler(rumble.winner) : null;
     return (
       <div className="vaporwave-card p-4 winner-celebration">
-        <h3 className="font-bold mb-3 text-center">
+        <h3 className="text-lg font-bold mb-3 text-center">
           <span className="gold-chrome-text">WINNER</span>
         </h3>
         {winner && (
@@ -55,7 +55,7 @@ export default function RingStatus({ rumbleType }: RingStatusProps) {
 
   return (
     <div className="vaporwave-card p-4">
-      <h3 className="font-bold mb-3 flex items-center justify-center gap-2">
+      <h3 className="text-lg font-bold mb-3 flex items-center justify-center gap-2">
         <span className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-500/50" />
         <span className="text-white">CURRENTLY IN RING</span>
         <span className="neon-cyan text-sm">({wrestlersInRing.length})</span>
