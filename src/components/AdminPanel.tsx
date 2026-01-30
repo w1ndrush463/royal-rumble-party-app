@@ -82,8 +82,7 @@ export default function AdminPanel({ rumbleType }: AdminPanelProps) {
     <div className={`vaporwave-card p-4 space-y-4 ${isLoading ? 'opacity-70 pointer-events-none' : ''}`}>
       <div className="flex items-center justify-between">
         <h3 className="font-bold flex items-center gap-2">
-          <span className="gold-chrome-text">ADMIN</span>
-          <span className="text-white">CONTROLS</span>
+          <span className="gold-chrome-text">ADMIN CONTROLS</span>
           {isLoading && (
             <span className="w-4 h-4 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin" />
           )}

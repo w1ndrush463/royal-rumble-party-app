@@ -119,8 +119,7 @@ export default function LotteryDraw({ rumbleType }: LotteryDrawProps) {
       {hasAssignments && (
         <div className="space-y-4">
           <h3 className="font-bold text-lg text-center">
-            <span className="gold-chrome-text">{rumbleType === 'mens' ? "MEN'S" : "WOMEN'S"}</span>
-            <span className="text-white"> RUMBLE ASSIGNMENTS</span>
+            <span className="gold-chrome-text">{rumbleType === 'mens' ? "MEN'S" : "WOMEN'S"} RUMBLE ASSIGNMENTS</span>
           </h3>
 
           {/* Your Numbers (highlighted) */}
@@ -208,9 +207,8 @@ export default function LotteryDraw({ rumbleType }: LotteryDrawProps) {
 
       {/* Numbers Reference */}
       <div className="mt-8 p-4 vaporwave-card">
-        <h4 className="font-bold mb-3">
-          <span className="gold-chrome-text">NUMBER</span>
-          <span className="text-white"> DISTRIBUTION</span>
+        <h4 className="font-bold mb-3 text-center">
+          <span className="gold-chrome-text">NUMBER DISTRIBUTION</span>
         </h4>
         <div className="grid grid-cols-10 gap-1">
           {Array.from({ length: 30 }, (_, i) => i + 1).map(num => {

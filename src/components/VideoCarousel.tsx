@@ -73,10 +73,9 @@ export default function VideoCarousel() {
 
   return (
     <div className="vaporwave-card p-4 sm:p-6">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg sm:text-xl font-bold">
-          <span className="gold-chrome-text">CLASSIC</span>
-          <span className="text-white"> COMMERCIALS</span>
+      <div className="text-center mb-4">
+        <h3 className="text-lg sm:text-xl font-bold mb-1">
+          <span className="gold-chrome-text">CLASSIC COMMERCIALS</span>
         </h3>
         <span className="text-xs text-purple-400 bg-purple-900/30 px-2 py-1 rounded">
           {currentIndex + 1} / {videos.length}

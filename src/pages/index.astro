@@ -36,20 +36,19 @@ const playerSprites: Record<string, string> = {
     </section>
 
     <!-- User Selection -->
-    <section class="max-w-md mx-auto">
+    <section class="max-w-2xl mx-auto">
       <div class="vaporwave-card p-6">
         <h2 class="text-xl font-bold text-center mb-4">
-          <span class="gold-chrome-text">WHO</span>
-          <span class="text-white">ARE YOU?</span>
+          <span class="gold-chrome-text">WHO ARE YOU?</span>
         </h2>
-        <div id="user-selection" class="grid grid-cols-3 gap-3">
+        <div id="user-selection" class="grid grid-cols-3 sm:grid-cols-5 gap-3">
           {matchState.users.map(user => (
             <button
-              class="user-btn flex flex-col items-center gap-1 p-3 rounded-lg bg-gray-800/50 hover:bg-purple-900/50 text-white text-sm font-medium transition-all border-2 border-purple-800/50 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20"
+              class="user-btn flex flex-col items-center gap-1 p-2 sm:p-3 rounded-lg bg-gray-800/50 hover:bg-purple-900/50 text-white text-xs sm:text-sm font-medium transition-all border-2 border-purple-800/50 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20"
               data-user-id={user.id}
               data-user-name={user.name}
             >
-              <img src={playerSprites[user.id]} alt={user.name} class="w-32 h-32 object-contain" />
+              <img src={playerSprites[user.id]} alt={user.name} class="w-full max-w-20 aspect-square object-contain" />
               {user.name}
             </button>
           ))}
@@ -87,8 +86,7 @@ const playerSprites: Record<string, string> = {
     <!-- Lottery Status -->
     <section class="vaporwave-card p-6 text-center">
       <h2 class="text-xl font-bold mb-4">
-        <span class="gold-chrome-text">YOUR</span>
-        <span class="text-white">LOTTERY NUMBERS</span>
+        <span class="gold-chrome-text">YOUR LOTTERY NUMBERS</span>
       </h2>
       <div id="lottery-status" class="text-purple-300">
         Select your name above to see your lottery numbers.

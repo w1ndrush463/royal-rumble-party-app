@@ -54,9 +54,9 @@ const womensWinners = rumbleHistory.multiTimeWinners.women.map(w => ({
   <div class="space-y-8">
     <!-- Header -->
     <div class="text-center">
-      <h1 class="text-4xl sm:text-5xl font-black mb-2 page-title">
-        <span class="rumble-title">ROYAL RUMBLE</span>
-        <span class="blue-chrome-text"> REFERENCE</span>
+      <h1 class="text-3xl sm:text-5xl font-black mb-2 page-title">
+        <span class="gold-chrome-text">ROYAL RUMBLE</span>
+        <span class="neon-cyan"> REFERENCE</span>
       </h1>
       <p class="text-purple-300 max-w-lg mx-auto">
         History, records, classic commercials, and tropes to get you hyped
@@ -70,19 +70,17 @@ const womensWinners = rumbleHistory.multiTimeWinners.women.map(w => ({
 
     <!-- Lucky Numbers -->
     <section class="vaporwave-card p-6">
-      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-        <span class="text-2xl">🍀</span>
-        <span class="gold-chrome-text">LUCKY</span>
-        <span class="text-white">ENTRY NUMBERS</span>
+      <h2 class="text-xl font-bold mb-1 text-center">
+        <span class="gold-chrome-text">LUCKY ENTRY NUMBERS</span>
       </h2>
-      <p class="text-purple-300 text-sm mb-4">
+      <p class="text-purple-300 text-sm mb-4 text-center">
         These entry positions have produced the most Royal Rumble winners throughout history.
       </p>
 
       <div class="grid md:grid-cols-2 gap-6">
         <!-- Men's -->
         <div>
-          <h3 class="blue-chrome-text font-bold mb-3 text-lg">Men's Rumble</h3>
+          <h3 class="blue-chrome-text font-bold mb-3 text-lg text-center">Men's Rumble</h3>
           <div class="space-y-2">
             {Object.entries(rumbleHistory.luckyNumbers.men)
               .sort((a, b) => b[1].wins - a[1].wins)
@@ -104,7 +102,7 @@ const womensWinners = rumbleHistory.multiTimeWinners.women.map(w => ({
 
         <!-- Women's -->
         <div>
-          <h3 class="pink-chrome-text font-bold mb-3 text-lg">Women's Rumble</h3>
+          <h3 class="pink-chrome-text font-bold mb-3 text-lg text-center">Women's Rumble</h3>
           <div class="space-y-2">
             {Object.entries(rumbleHistory.luckyNumbers.women)
               .sort((a, b) => b[1].wins - a[1].wins)
@@ -136,16 +134,14 @@ const womensWinners = rumbleHistory.multiTimeWinners.women.map(w => ({
 
     <!-- Records -->
     <section class="vaporwave-card p-6">
-      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-        <span class="text-2xl">🏆</span>
-        <span class="gold-chrome-text">ROYAL RUMBLE</span>
-        <span class="text-white">RECORDS</span>
+      <h2 class="text-xl font-bold mb-4 text-center">
+        <span class="gold-chrome-text">ROYAL RUMBLE RECORDS</span>
       </h2>
 
       <div class="grid md:grid-cols-2 gap-6">
         <!-- Men's Records -->
         <div class="bg-gradient-to-br from-blue-900/20 to-transparent p-4 rounded-lg border border-blue-800/30">
-          <h3 class="blue-chrome-text font-bold mb-3 text-lg">Men's Records</h3>
+          <h3 class="blue-chrome-text font-bold mb-3 text-lg text-center">Men's Records</h3>
           <div class="space-y-2">
             {mensRecords.map(record => (
               <div class="flex items-center gap-3 p-2 bg-gray-800/50 rounded border-l-2 border-cyan-500">
@@ -167,7 +163,7 @@ const womensWinners = rumbleHistory.multiTimeWinners.women.map(w => ({
 
         <!-- Women's Records -->
         <div class="bg-gradient-to-br from-pink-900/20 to-transparent p-4 rounded-lg border border-pink-800/30">
-          <h3 class="pink-chrome-text font-bold mb-3 text-lg">Women's Records</h3>
+          <h3 class="pink-chrome-text font-bold mb-3 text-lg text-center">Women's Records</h3>
           <div class="space-y-2">
             {womensRecords.map(record => (
               <div class="flex items-center gap-3 p-2 bg-gray-800/50 rounded border-l-2 border-pink-500">
@@ -191,10 +187,8 @@ const womensWinners = rumbleHistory.multiTimeWinners.women.map(w => ({
 
     <!-- Multi-time Winners -->
     <section class="vaporwave-card p-6">
-      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-        <span class="text-2xl">⭐</span>
-        <span class="gold-chrome-text">MULTI-TIME</span>
-        <span class="text-white">WINNERS</span>
+      <h2 class="text-xl font-bold mb-4 text-center">
+        <span class="gold-chrome-text">MULTI-TIME WINNERS</span>
       </h2>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -241,12 +235,10 @@ const womensWinners = rumbleHistory.multiTimeWinners.women.map(w => ({
 
     <!-- Tropes -->
     <section class="vaporwave-card p-6">
-      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-        <span class="text-2xl">🎭</span>
-        <span class="gold-chrome-text">ROYAL RUMBLE</span>
-        <span class="text-white">TROPES</span>
+      <h2 class="text-xl font-bold mb-1 text-center">
+        <span class="gold-chrome-text">ROYAL RUMBLE TROPES</span>
       </h2>
-      <p class="text-purple-300 text-sm mb-4">
+      <p class="text-purple-300 text-sm mb-4 text-center">
         Common situations and moments to watch for during the match.
       </p>
 
@@ -270,10 +262,8 @@ const womensWinners = rumbleHistory.multiTimeWinners.women.map(w => ({
 
     <!-- Rules -->
     <section class="vaporwave-card p-6">
-      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-        <span class="text-2xl">📋</span>
-        <span class="gold-chrome-text">THE</span>
-        <span class="text-white">RULES</span>
+      <h2 class="text-xl font-bold mb-4 text-center">
+        <span class="gold-chrome-text">THE RULES</span>
       </h2>
 
       <div class="prose prose-invert max-w-none">
