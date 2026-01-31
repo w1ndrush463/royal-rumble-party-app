@@ -4,34 +4,52 @@ import type { MatchState } from '../types';
 
 const API_BASE = '/api';
 
-// Get admin secret from URL param or localStorage
-export function getAdminSecret(): string | null {
-  if (typeof window === 'undefined') return null;
+// Initialize admin mode from URL params, persisting to localStorage.
+// Visit any page with ?admin=true&secret=YOUR_SECRET once to activate.
+// Admin mode then persists across all pages until cleared.
+export function initAdmin(): void {
+  if (typeof window === 'undefined') return;
 
   const urlParams = new URLSearchParams(window.location.search);
   const urlSecret = urlParams.get('secret');
+  const adminParam = urlParams.get('admin');
 
   if (urlSecret) {
     localStorage.setItem('adminSecret', urlSecret);
-    return urlSecret;
   }
 
+  if (adminParam === 'true') {
+    localStorage.setItem('adminMode', 'true');
+  } else if (adminParam === 'false') {
+    localStorage.removeItem('adminMode');
+    localStorage.removeItem('adminSecret');
+  }
+
+  // Clean URL params after persisting (avoid leaking secret in browser history)
+  if (urlSecret || adminParam) {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('secret');
+    url.searchParams.delete('admin');
+    window.history.replaceState({}, '', url.toString());
+  }
+}
+
+// Get admin secret from localStorage (persisted from initial URL visit)
+export function getAdminSecret(): string | null {
+  if (typeof window === 'undefined') return null;
   return localStorage.getItem('adminSecret');
 }
 
+// Check if admin mode is active (both mode flag and secret must be present)
 export function isAdmin(): boolean {
   if (typeof window === 'undefined') return false;
-
-  const urlParams = new URLSearchParams(window.location.search);
-  const hasAdminParam = urlParams.get('admin') === 'true';
-  const hasSecret = getAdminSecret() !== null;
-
-  return hasAdminParam && hasSecret;
+  return localStorage.getItem('adminMode') === 'true' && getAdminSecret() !== null;
 }
 
 export function clearAdminCredentials() {
   if (typeof window === 'undefined') return;
   localStorage.removeItem('adminSecret');
+  localStorage.removeItem('adminMode');
 }
 
 interface AdminResponse {

@@ -17,6 +17,7 @@ interface RumbleMatch {
   winner: string | null;
   currentEntryNumber: number;
   matchStartTime: string | null;
+  entryTimestamps: Record<string, string>;
 }
 
 interface MatchState {
@@ -34,7 +35,11 @@ interface UpdatePayload {
   state?: MatchState;
 }
 
-const ADMIN_SECRET = Deno.env.get("ADMIN_SECRET") || "rumble2026";
+const ADMIN_SECRET = Deno.env.get("ADMIN_SECRET");
+
+if (!ADMIN_SECRET) {
+  console.error("ADMIN_SECRET environment variable is not set. Admin updates will be rejected.");
+}
 
 // Initial state for resets
 function getInitialRumble(existingAssignments: Record<string, string> = {}): RumbleMatch {
@@ -47,6 +52,7 @@ function getInitialRumble(existingAssignments: Record<string, string> = {}): Rum
     winner: null,
     currentEntryNumber: 0,
     matchStartTime: null,
+    entryTimestamps: {},
   };
 }
 
@@ -61,6 +67,7 @@ function applyUpdate(state: MatchState, payload: UpdatePayload): MatchState {
       const nextEntry = rumble.currentEntryNumber + 1;
       if (nextEntry > 30) return state;
 
+      const now = new Date().toISOString();
       return {
         ...state,
         [rumbleKey]: {
@@ -68,9 +75,10 @@ function applyUpdate(state: MatchState, payload: UpdatePayload): MatchState {
           entrants: { ...rumble.entrants, [nextEntry]: payload.wrestlerId },
           currentEntryNumber: nextEntry,
           status: "in_progress" as const,
-          matchStartTime: rumble.matchStartTime || new Date().toISOString(),
+          matchStartTime: rumble.matchStartTime || now,
+          entryTimestamps: { ...rumble.entryTimestamps, [payload.wrestlerId]: now },
         },
-        lastUpdated: new Date().toISOString(),
+        lastUpdated: now,
       };
     }
 
@@ -78,8 +86,32 @@ function applyUpdate(state: MatchState, payload: UpdatePayload): MatchState {
       if (!payload.wrestlerId) return state;
       if (rumble.eliminations.includes(payload.wrestlerId)) return state;
 
+      const elimNow = new Date().toISOString();
       const newEliminations = [...rumble.eliminations, payload.wrestlerId];
       const inRingCount = Object.keys(rumble.entrants).length - newEliminations.length;
+
+      // Find entry number for this wrestler
+      const entryNum = Object.entries(rumble.entrants).find(
+        ([, id]) => id === payload.wrestlerId
+      )?.[0];
+
+      // Calculate time in ring from entry timestamp
+      const entryTime = rumble.entryTimestamps?.[payload.wrestlerId];
+      let timeInRing: string | undefined;
+      if (entryTime) {
+        const seconds = Math.round((new Date(elimNow).getTime() - new Date(entryTime).getTime()) / 1000);
+        const mins = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        timeInRing = `${mins}:${secs.toString().padStart(2, "0")}`;
+      }
+
+      const newDetail = {
+        wrestlerId: payload.wrestlerId,
+        eliminatedBy: null,
+        entryNumber: entryNum ? parseInt(entryNum) : 0,
+        timeInRing,
+        eliminationOrder: newEliminations.length,
+      };
 
       let newStatus = rumble.status;
       let winner = rumble.winner;
@@ -98,10 +130,11 @@ function applyUpdate(state: MatchState, payload: UpdatePayload): MatchState {
         [rumbleKey]: {
           ...rumble,
           eliminations: newEliminations,
+          eliminationDetails: [...rumble.eliminationDetails, newDetail],
           winner,
           status: newStatus,
         },
-        lastUpdated: new Date().toISOString(),
+        lastUpdated: elimNow,
       };
     }
 
@@ -191,6 +224,16 @@ export default async function handler(req: Request, context: Context) {
   }
 
   // Verify admin secret
+  if (!ADMIN_SECRET) {
+    return new Response(JSON.stringify({ error: "ADMIN_SECRET not configured on server" }), {
+      status: 500,
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
+  }
+
   const authHeader = req.headers.get("Authorization");
   if (authHeader !== `Bearer ${ADMIN_SECRET}`) {
     return new Response(JSON.stringify({ error: "Unauthorized" }), {

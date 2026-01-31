@@ -28,7 +28,8 @@ const initialState = {
     eliminationDetails: [],
     winner: null,
     currentEntryNumber: 0,
-    matchStartTime: null
+    matchStartTime: null,
+    entryTimestamps: {}
   },
   womensRumble: {
     status: "not_started",
@@ -38,7 +39,8 @@ const initialState = {
     eliminationDetails: [],
     winner: null,
     currentEntryNumber: 0,
-    matchStartTime: null
+    matchStartTime: null,
+    entryTimestamps: {}
   },
   predictions: {},
   lastUpdated: null

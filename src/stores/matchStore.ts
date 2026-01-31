@@ -171,6 +171,7 @@ export function resetRumble(rumbleType: 'mens' | 'womens') {
     winner: null,
     currentEntryNumber: 0,
     matchStartTime: null,
+    entryTimestamps: {},
   };
 
   $matchState.set({

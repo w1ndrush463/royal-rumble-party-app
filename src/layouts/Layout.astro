@@ -224,6 +224,10 @@ const { title, description = 'Royal Rumble Watch Party Companion App' } = Astro.
 
 <script>
   import { initSync } from '../stores/syncStore';
+  import { initAdmin } from '../stores/adminApi';
+
+  // Initialize admin mode (persists from URL params to localStorage)
+  initAdmin();
 
   // Initialize sync on page load
   initSync();

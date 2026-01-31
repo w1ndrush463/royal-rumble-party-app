@@ -94,15 +94,13 @@ import AdminPanel from '../components/AdminPanel';
 
 <script>
   import { initCurrentUser, $currentUser, getUserLotteryNumbers } from '../stores/matchStore';
+  import { initAdmin, isAdmin } from '../stores/adminApi';
 
-  // Initialize current user from localStorage
+  // Initialize current user and admin mode from localStorage/URL
   initCurrentUser();
+  initAdmin();
 
-  // Check for admin mode (simple URL param for now)
-  const urlParams = new URLSearchParams(window.location.search);
-  const isAdmin = urlParams.get('admin') === 'true';
-
-  if (isAdmin) {
+  if (isAdmin()) {
     const adminToggle = document.getElementById('admin-toggle');
     const adminPanel = document.getElementById('admin-panel');
 
@@ -138,7 +136,7 @@ import AdminPanel from '../components/AdminPanel';
       `;
     } else {
       userNumbers.innerHTML = `
-        <div class="flex gap-2">
+        <div class="flex justify-center gap-2">
           ${numbers.map(num => `
             <span class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white font-bold">
               ${num}

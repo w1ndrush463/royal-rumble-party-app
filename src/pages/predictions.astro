@@ -329,21 +329,177 @@ import Layout from '../layouts/Layout.astro';
       </section>
     </div>
 
-    <!-- Your Predictions Summary -->
-    <section class="vaporwave-card p-6">
-      <h2 class="text-xl font-bold mb-4 text-center">
-        <span class="gold-chrome-text">YOUR PREDICTIONS</span>
-      </h2>
-      <div id="predictions-summary" class="text-purple-300">
-        No predictions made yet. Select options above!
+  </div>
+
+  <!-- Floating Betting Slip Toggle -->
+  <button
+    id="betting-slip-toggle"
+    class="fixed bottom-20 sm:bottom-6 right-4 z-40 w-14 h-14 rounded-full bg-gradient-to-br from-yellow-500 via-pink-500 to-purple-600 text-white shadow-lg shadow-purple-500/40 flex items-center justify-center text-2xl transition-all hover:scale-110 hover:shadow-xl hover:shadow-pink-500/40 border-2 border-yellow-400/50"
+    aria-label="View betting slip"
+  >
+    <span id="slip-icon">🎰</span>
+  </button>
+
+  <!-- Betting Slip Badge -->
+  <span id="slip-badge" class="fixed bottom-[5.5rem] sm:bottom-[3.5rem] right-3 z-50 hidden w-6 h-6 rounded-full bg-cyan-400 text-gray-900 text-xs font-black flex items-center justify-center shadow-lg shadow-cyan-400/50 pointer-events-none">0</span>
+
+  <!-- Betting Slip Drawer -->
+  <div id="betting-slip-drawer" class="fixed inset-0 z-50 pointer-events-none">
+    <!-- Backdrop -->
+    <div id="slip-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300 pointer-events-none"></div>
+
+    <!-- Slip Panel -->
+    <div id="slip-panel" class="absolute bottom-0 left-0 right-0 sm:right-4 sm:left-auto sm:bottom-4 sm:w-96 max-h-[85vh] translate-y-full transition-transform duration-300 ease-out pointer-events-auto">
+      <div class="betting-slip-card rounded-t-2xl sm:rounded-2xl overflow-hidden flex flex-col max-h-[85vh]">
+        <!-- Slip Header -->
+        <div class="betting-slip-header px-5 py-4 flex items-center justify-between flex-shrink-0">
+          <div>
+            <h2 class="text-lg font-black tracking-wider uppercase betting-slip-title">Betting Slip</h2>
+            <p class="text-xs text-purple-300/80 font-medium">Royal Rumble 2026</p>
+          </div>
+          <button id="slip-close" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors text-sm">
+            ✕
+          </button>
+        </div>
+
+        <!-- Torn edge effect -->
+        <div class="betting-slip-tear flex-shrink-0"></div>
+
+        <!-- Slip Body -->
+        <div id="predictions-summary" class="betting-slip-body px-5 py-4 overflow-y-auto flex-1">
+          <p class="text-purple-400 text-sm text-center py-8">No predictions made yet.<br/>Select options above!</p>
+        </div>
+
+        <!-- Slip Footer -->
+        <div class="betting-slip-tear-bottom flex-shrink-0"></div>
+        <div class="betting-slip-footer px-5 py-3 flex-shrink-0">
+          <div class="flex items-center justify-between text-xs">
+            <span class="text-purple-400 font-mono">TICKET #RR2026</span>
+            <span id="slip-count" class="text-cyan-400 font-bold">0 picks</span>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   </div>
 </Layout>
 
 <style>
   .prediction-btn.selected {
     box-shadow: 0 0 0 2px #a855f7;
+  }
+
+  /* Betting Slip Styles */
+  .betting-slip-card {
+    background: linear-gradient(180deg, #1a0a2e 0%, #0d0d1a 50%, #1a0a2e 100%);
+    border: 2px solid rgba(191, 0, 255, 0.4);
+    box-shadow:
+      0 0 30px rgba(191, 0, 255, 0.3),
+      0 0 60px rgba(0, 255, 255, 0.1),
+      inset 0 0 30px rgba(191, 0, 255, 0.05);
+  }
+
+  .betting-slip-header {
+    background: linear-gradient(135deg, rgba(191, 0, 255, 0.2) 0%, rgba(0, 255, 255, 0.1) 100%);
+    border-bottom: 1px solid rgba(191, 0, 255, 0.3);
+  }
+
+  .betting-slip-title {
+    background: linear-gradient(90deg, #ffd700, #ff69b4, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+  }
+
+  .betting-slip-tear {
+    height: 8px;
+    background-image: radial-gradient(circle at 8px 0, transparent 8px, #0d0d1a 8px);
+    background-size: 16px 8px;
+    background-position: -8px 0;
+    opacity: 0.8;
+  }
+
+  .betting-slip-tear-bottom {
+    height: 8px;
+    background-image: radial-gradient(circle at 8px 8px, transparent 8px, #0d0d1a 8px);
+    background-size: 16px 8px;
+    background-position: -8px 0;
+    opacity: 0.8;
+  }
+
+  .betting-slip-body {
+    background: rgba(13, 13, 26, 0.95);
+  }
+
+  .betting-slip-footer {
+    background: linear-gradient(135deg, rgba(191, 0, 255, 0.1) 0%, rgba(0, 255, 255, 0.05) 100%);
+    border-top: 1px dashed rgba(191, 0, 255, 0.3);
+  }
+
+  .slip-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.375rem 0;
+    border-bottom: 1px dotted rgba(128, 90, 213, 0.2);
+  }
+
+  .slip-row:last-child {
+    border-bottom: none;
+  }
+
+  .slip-label {
+    color: #c084fc;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+    max-width: 45%;
+  }
+
+  .slip-value {
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: right;
+    max-width: 55%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .slip-section-header {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.5rem 0 0.25rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid rgba(191, 0, 255, 0.2);
+  }
+
+  .slip-section-header:first-child {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+
+  #betting-slip-drawer.open {
+    pointer-events: auto;
+  }
+
+  #betting-slip-drawer.open #slip-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #betting-slip-drawer.open #slip-panel {
+    transform: translateY(0);
+  }
+
+  #slip-badge.has-picks {
+    display: flex;
   }
 </style>
 
@@ -469,8 +625,22 @@ import Layout from '../layouts/Layout.astro';
     const user = $currentUser.get();
     if (!user) return;
 
+    // Reset all selects
+    document.querySelectorAll('.prediction-select').forEach(select => {
+      (select as HTMLSelectElement).value = '';
+    });
+
+    // Reset all buttons
+    document.querySelectorAll('.prediction-btn.selected').forEach(btn => {
+      btn.classList.remove('selected', 'bg-green-600', 'bg-red-600', 'bg-purple-600', 'text-white');
+      btn.classList.add('bg-gray-700', 'text-gray-300');
+    });
+
     const saved = localStorage.getItem(`predictions-${user.id}`);
-    if (!saved) return;
+    if (!saved) {
+      updatePredictionsSummary();
+      return;
+    }
 
     const predictions = JSON.parse(saved);
 
@@ -483,7 +653,9 @@ import Layout from '../layouts/Layout.astro';
         // It's a button prediction
         const btn = document.querySelector(`[data-prediction="${key}"][data-value="${value}"]`) as HTMLElement;
         if (btn) {
-          btn.click();
+          const colorClass = value === 'yes' ? 'bg-green-600' : value === 'no' ? 'bg-red-600' : 'bg-purple-600';
+          btn.classList.add('selected', colorClass, 'text-white');
+          btn.classList.remove('bg-gray-700', 'text-gray-300');
         }
       }
     });
@@ -491,65 +663,143 @@ import Layout from '../layouts/Layout.astro';
     updatePredictionsSummary();
   }
 
-  // Update predictions summary
+  // Helper to get wrestler name
+  const getName = (id: string) => wrestlers.find(w => w.id === id)?.name || id;
+
+  // Helper to get a select value
+  const getSelect = (id: string) => (document.getElementById(id) as HTMLSelectElement)?.value || '';
+
+  // Update predictions summary in the betting slip
   function updatePredictionsSummary() {
     const summary = document.getElementById('predictions-summary');
+    const badge = document.getElementById('slip-badge');
+    const slipCount = document.getElementById('slip-count');
     if (!summary) return;
 
-    const predictions: string[] = [];
+    type SlipEntry = { label: string; value: string };
+    const sections: { title: string; color: string; entries: SlipEntry[] }[] = [];
 
-    // Helper to get wrestler name
-    const getName = (id: string) => wrestlers.find(w => w.id === id)?.name || id;
-
-    // Men's predictions
-    const mensWinner = (document.getElementById('mens-winner') as HTMLSelectElement)?.value;
-    if (mensWinner) predictions.push(`Men's Winner: ${getName(mensWinner)}`);
-
-    const mensIronman = (document.getElementById('mens-ironman') as HTMLSelectElement)?.value;
-    if (mensIronman) predictions.push(`Men's Iron Man: ${getName(mensIronman)}`);
-
-    const mensElims = (document.getElementById('mens-elims') as HTMLSelectElement)?.value;
-    if (mensElims) predictions.push(`Men's Most Eliminations: ${getName(mensElims)}`);
-
-    // Women's predictions
-    const womensWinner = (document.getElementById('womens-winner') as HTMLSelectElement)?.value;
-    if (womensWinner) predictions.push(`Women's Winner: ${getName(womensWinner)}`);
-
-    const womensIronwoman = (document.getElementById('womens-ironwoman') as HTMLSelectElement)?.value;
-    if (womensIronwoman) predictions.push(`Women's Iron Woman: ${getName(womensIronwoman)}`);
-
-    const womensElims = (document.getElementById('womens-elims') as HTMLSelectElement)?.value;
-    if (womensElims) predictions.push(`Women's Most Eliminations: ${getName(womensElims)}`);
-
-    // Surprise entrants
-    const aewSurprise = (document.getElementById('aew-surprise') as HTMLSelectElement)?.value;
-    if (aewSurprise) predictions.push(`AEW Surprise: ${aewSurprise === 'none' ? 'None' : getName(aewSurprise)}`);
-
-    const tnaSurprise = (document.getElementById('tna-surprise') as HTMLSelectElement)?.value;
-    if (tnaSurprise) predictions.push(`TNA Surprise: ${tnaSurprise === 'none' ? 'None' : getName(tnaSurprise)}`);
-
-    // Button predictions
-    const lucky27 = document.querySelector('[data-prediction="lucky27"].selected') as HTMLElement;
-    if (lucky27) predictions.push(`Lucky #27 wins: ${lucky27.dataset.value === 'yes' ? 'Yes' : 'No'}`);
-
-    const championEnters = document.querySelector('[data-prediction="champion-enters"].selected') as HTMLElement;
-    if (championEnters) predictions.push(`Champion enters: ${championEnters.dataset.value === 'yes' ? 'Yes' : 'No'}`);
-
-    const celebrity = document.querySelector('[data-prediction="celebrity"].selected') as HTMLElement;
-    if (celebrity) predictions.push(`Celebrity entrant: ${celebrity.dataset.value === 'yes' ? 'Yes' : 'No'}`);
-
-    const entryRange = document.querySelector('[data-prediction="entry-range"].selected') as HTMLElement;
-    if (entryRange) predictions.push(`Winner entry range: ${entryRange.dataset.value}`);
-
-    if (predictions.length === 0) {
-      summary.innerHTML = '<p class="text-gray-400">No predictions made yet. Select options above!</p>';
-    } else {
-      summary.innerHTML = `
-        <div class="grid sm:grid-cols-2 gap-2">
-          ${predictions.map(p => `<div class="text-white text-sm">• ${p}</div>`).join('')}
-        </div>
-      `;
+    // --- Men's Rumble ---
+    const mensEntries: SlipEntry[] = [];
+    const mw = getSelect('mens-winner');
+    if (mw) mensEntries.push({ label: 'Winner', value: getName(mw) });
+    const mi = getSelect('mens-ironman');
+    if (mi) mensEntries.push({ label: 'Iron Man', value: getName(mi) });
+    const me = getSelect('mens-elims');
+    if (me) mensEntries.push({ label: 'Most Eliminations', value: getName(me) });
+    const mfe = getSelect('mens-first-elim');
+    if (mfe) mensEntries.push({ label: 'First Eliminated', value: getName(mfe) });
+    const mf1 = getSelect('mens-final-1');
+    const mf2 = getSelect('mens-final-2');
+    if (mf1 || mf2) {
+      const names = [mf1 ? getName(mf1) : '?', mf2 ? getName(mf2) : '?'].join(' & ');
+      mensEntries.push({ label: 'Final Two', value: names });
     }
+    const mf41 = getSelect('mens-final4-1');
+    const mf42 = getSelect('mens-final4-2');
+    const mf43 = getSelect('mens-final4-3');
+    const mf44 = getSelect('mens-final4-4');
+    const mf4vals = [mf41, mf42, mf43, mf44].filter(Boolean);
+    if (mf4vals.length > 0) {
+      mensEntries.push({ label: 'Final Four', value: mf4vals.map(v => getName(v)).join(', ') });
+    }
+    if (mensEntries.length > 0) {
+      sections.push({ title: "Men's Rumble", color: 'text-cyan-400', entries: mensEntries });
+    }
+
+    // --- Women's Rumble ---
+    const womensEntries: SlipEntry[] = [];
+    const ww = getSelect('womens-winner');
+    if (ww) womensEntries.push({ label: 'Winner', value: getName(ww) });
+    const wi = getSelect('womens-ironwoman');
+    if (wi) womensEntries.push({ label: 'Iron Woman', value: getName(wi) });
+    const we = getSelect('womens-elims');
+    if (we) womensEntries.push({ label: 'Most Eliminations', value: getName(we) });
+    const wfe = getSelect('womens-first-elim');
+    if (wfe) womensEntries.push({ label: 'First Eliminated', value: getName(wfe) });
+    const wf1 = getSelect('womens-final-1');
+    const wf2 = getSelect('womens-final-2');
+    if (wf1 || wf2) {
+      const names = [wf1 ? getName(wf1) : '?', wf2 ? getName(wf2) : '?'].join(' & ');
+      womensEntries.push({ label: 'Final Two', value: names });
+    }
+    const wf41 = getSelect('womens-final4-1');
+    const wf42 = getSelect('womens-final4-2');
+    const wf43 = getSelect('womens-final4-3');
+    const wf44 = getSelect('womens-final4-4');
+    const wf4vals = [wf41, wf42, wf43, wf44].filter(Boolean);
+    if (wf4vals.length > 0) {
+      womensEntries.push({ label: 'Final Four', value: wf4vals.map(v => getName(v)).join(', ') });
+    }
+    if (womensEntries.length > 0) {
+      sections.push({ title: "Women's Rumble", color: 'text-pink-400', entries: womensEntries });
+    }
+
+    // --- Surprise Entrants ---
+    const surpriseEntries: SlipEntry[] = [];
+    const aew = getSelect('aew-surprise');
+    if (aew) surpriseEntries.push({ label: 'AEW Surprise', value: aew === 'none' ? 'None' : getName(aew) });
+    const tna = getSelect('tna-surprise');
+    if (tna) surpriseEntries.push({ label: 'TNA Surprise', value: tna === 'none' ? 'None' : getName(tna) });
+    const legend = getSelect('legend-return');
+    if (legend) surpriseEntries.push({ label: 'Legend Return', value: legend === 'none' ? 'None' : getName(legend) });
+    if (surpriseEntries.length > 0) {
+      sections.push({ title: 'Surprise Entrants', color: 'text-yellow-400', entries: surpriseEntries });
+    }
+
+    // --- Special Predictions ---
+    const specialEntries: SlipEntry[] = [];
+    const lucky27 = document.querySelector('[data-prediction="lucky27"].selected') as HTMLElement;
+    if (lucky27) specialEntries.push({ label: '#27 Wins?', value: lucky27.dataset.value === 'yes' ? 'Yes' : 'No' });
+    const championEnters = document.querySelector('[data-prediction="champion-enters"].selected') as HTMLElement;
+    if (championEnters) specialEntries.push({ label: 'Champion Enters?', value: championEnters.dataset.value === 'yes' ? 'Yes' : 'No' });
+    const celebrity = document.querySelector('[data-prediction="celebrity"].selected') as HTMLElement;
+    if (celebrity) specialEntries.push({ label: 'Celebrity Entrant?', value: celebrity.dataset.value === 'yes' ? 'Yes' : 'No' });
+    const punkSeth = document.querySelector('[data-prediction="punk-seth"].selected') as HTMLElement;
+    if (punkSeth) specialEntries.push({ label: 'Punk & Seth Together?', value: punkSeth.dataset.value === 'yes' ? 'Yes' : 'No' });
+    const entryRange = document.querySelector('[data-prediction="entry-range"].selected') as HTMLElement;
+    if (entryRange) specialEntries.push({ label: 'Winner Entry Range', value: `#${entryRange.dataset.value}` });
+    if (specialEntries.length > 0) {
+      sections.push({ title: 'Special Predictions', color: 'text-purple-400', entries: specialEntries });
+    }
+
+    // Count total picks
+    let totalPicks = 0;
+    sections.forEach(s => totalPicks += s.entries.length);
+
+    // Update badge
+    if (badge) {
+      if (totalPicks > 0) {
+        badge.textContent = String(totalPicks);
+        badge.classList.add('has-picks');
+      } else {
+        badge.classList.remove('has-picks');
+      }
+    }
+
+    // Update count in footer
+    if (slipCount) {
+      slipCount.textContent = `${totalPicks} pick${totalPicks !== 1 ? 's' : ''}`;
+    }
+
+    // Render the slip
+    if (totalPicks === 0) {
+      summary.innerHTML = '<p class="text-purple-400 text-sm text-center py-8">No predictions made yet.<br/>Select options above!</p>';
+      return;
+    }
+
+    let html = '';
+    sections.forEach(section => {
+      html += `<div class="slip-section-header ${section.color}">${section.title}</div>`;
+      section.entries.forEach(entry => {
+        html += `<div class="slip-row">
+          <span class="slip-label">${entry.label}</span>
+          <span class="slip-value">${entry.value}</span>
+        </div>`;
+      });
+    });
+
+    summary.innerHTML = html;
   }
 
   // Listen for select changes
@@ -558,6 +808,31 @@ import Layout from '../layouts/Layout.astro';
       savePredictions();
       updatePredictionsSummary();
     });
+  });
+
+  // --- Betting Slip Drawer ---
+  const slipToggle = document.getElementById('betting-slip-toggle');
+  const slipDrawer = document.getElementById('betting-slip-drawer');
+  const slipBackdrop = document.getElementById('slip-backdrop');
+  const slipClose = document.getElementById('slip-close');
+
+  function openSlip() {
+    slipDrawer?.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSlip() {
+    slipDrawer?.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  slipToggle?.addEventListener('click', openSlip);
+  slipBackdrop?.addEventListener('click', closeSlip);
+  slipClose?.addEventListener('click', closeSlip);
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSlip();
   });
 
   // Load saved predictions when user changes

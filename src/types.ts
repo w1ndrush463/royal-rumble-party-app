@@ -57,6 +57,7 @@ export interface RumbleMatch {
   winner: string | null; // wrestlerId
   currentEntryNumber: number;
   matchStartTime: string | null;
+  entryTimestamps: Record<string, string>; // wrestlerId -> ISO timestamp
 }
 
 export interface MatchState {
