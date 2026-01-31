@@ -115,11 +115,31 @@ export async function serverResetRumble(rumbleType: 'mens' | 'womens') {
   });
 }
 
-export async function serverPerformLotteryDraw(rumbleType: 'mens' | 'womens') {
-  return adminRequest({
-    action: 'performLotteryDraw',
-    rumbleType,
+export async function serverClaimNumbers(
+  rumbleType: 'mens' | 'womens',
+  userId: string,
+  numbers: number[]
+): Promise<AdminResponse> {
+  const response = await fetch(`${API_BASE}/claim`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ rumbleType, userId, numbers }),
   });
+
+  const result: AdminResponse = await response.json();
+
+  if (!response.ok) {
+    throw new Error(result.error || `HTTP ${response.status}`);
+  }
+
+  if (result.state) {
+    $matchState.set(result.state);
+  }
+  if (result.version) {
+    $stateVersion.set(result.version);
+  }
+
+  return result;
 }
 
 export async function serverClearAssignments(rumbleType: 'mens' | 'womens') {

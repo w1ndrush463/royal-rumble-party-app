@@ -29,7 +29,7 @@ interface MatchState {
 }
 
 interface UpdatePayload {
-  action: "addEntrant" | "eliminateWrestler" | "resetRumble" | "performLotteryDraw" | "clearAssignments" | "fullUpdate";
+  action: "addEntrant" | "eliminateWrestler" | "resetRumble" | "clearAssignments" | "fullUpdate";
   rumbleType?: "mens" | "womens";
   wrestlerId?: string;
   state?: MatchState;
@@ -142,36 +142,6 @@ function applyUpdate(state: MatchState, payload: UpdatePayload): MatchState {
       return {
         ...state,
         [rumbleKey]: getInitialRumble(rumble.assignments),
-        lastUpdated: new Date().toISOString(),
-      };
-    }
-
-    case "performLotteryDraw": {
-      const users = state.users;
-      const numbers = Array.from({ length: 30 }, (_, i) => i + 1);
-
-      // Fisher-Yates shuffle
-      for (let i = numbers.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
-      }
-
-      // Assign 2 numbers to each of 15 users
-      const assignments: Record<string, string> = {};
-      let numberIndex = 0;
-
-      users.forEach((user) => {
-        assignments[numbers[numberIndex]] = user.id;
-        assignments[numbers[numberIndex + 1]] = user.id;
-        numberIndex += 2;
-      });
-
-      return {
-        ...state,
-        [rumbleKey]: {
-          ...rumble,
-          assignments,
-        },
         lastUpdated: new Date().toISOString(),
       };
     }
