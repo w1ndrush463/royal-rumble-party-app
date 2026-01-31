@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useStore } from '@nanostores/react';
 import { $matchState, $currentUser, getUserLotteryNumbers } from '../stores/matchStore';
-import { serverClaimNumbers } from '../stores/adminApi';
+import { serverClaimNumbers, serverClearAssignments, isAdmin } from '../stores/adminApi';
 
 interface LotteryDrawProps {
   rumbleType: 'mens' | 'womens';
@@ -12,10 +12,13 @@ export default function LotteryDraw({ rumbleType }: LotteryDrawProps) {
   const currentUser = useStore($currentUser);
   const [selected, setSelected] = useState<number[]>([]);
   const [isClaiming, setIsClaiming] = useState(false);
+  const [isClearing, setIsClearing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const rumble = rumbleType === 'mens' ? matchState.mensRumble : matchState.womensRumble;
   const themeColor = rumbleType === 'mens' ? 'blue' : 'pink';
+  const hasAssignments = Object.keys(rumble.assignments).length > 0;
+  const adminMode = isAdmin();
 
   // Current user's already-claimed numbers
   const userNumbers = currentUser ? getUserLotteryNumbers(currentUser.id, rumbleType) : [];
@@ -46,6 +49,19 @@ export default function LotteryDraw({ rumbleType }: LotteryDrawProps) {
       setError(err instanceof Error ? err.message : 'Failed to claim numbers');
     } finally {
       setIsClaiming(false);
+    }
+  };
+
+  const handleClearAll = async () => {
+    if (!confirm('Clear ALL number assignments? Everyone will need to re-pick.')) return;
+    setIsClearing(true);
+    setError(null);
+    try {
+      await serverClearAssignments(rumbleType);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to clear assignments');
+    } finally {
+      setIsClearing(false);
     }
   };
 
@@ -262,6 +278,19 @@ export default function LotteryDraw({ rumbleType }: LotteryDrawProps) {
           Hover over numbers to see who has them
         </p>
       </div>
+
+      {/* Admin: Clear All Assignments */}
+      {adminMode && hasAssignments && (
+        <div className="text-center pt-4 border-t border-purple-800/30">
+          <button
+            onClick={handleClearAll}
+            disabled={isClearing}
+            className="px-4 py-2 text-red-400 hover:text-red-300 text-sm transition-colors"
+          >
+            {isClearing ? 'Clearing...' : 'Clear All Assignments'}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
