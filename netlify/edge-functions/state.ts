@@ -18,7 +18,7 @@ const initialState = {
     { id: "user-12", name: "Player 12", avatar: "12" },
     { id: "user-13", name: "Player 13", avatar: "13" },
     { id: "user-14", name: "Player 14", avatar: "14" },
-    { id: "user-15", name: "Player 15", avatar: "15" }
+    { id: "user-15", name: "Martin", avatar: "15" }
   ],
   mensRumble: {
     status: "not_started",
